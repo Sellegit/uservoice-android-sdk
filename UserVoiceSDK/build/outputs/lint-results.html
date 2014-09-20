@@ -1,0 +1,2157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Lint Report</title>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto" />
+<link rel="stylesheet" type="text/css" href="lint-results_files/hololike.css" />
+<script language="javascript" type="text/javascript"> 
+<!--
+function reveal(id) {
+if (document.getElementById) {
+document.getElementById(id).style.display = 'block';
+document.getElementById(id+'Link').style.display = 'none';
+}
+}
+//--> 
+</script>
+</head>
+<body>
+<h1>Lint Report</h1>
+<div class="titleSeparator"></div>
+Check performed at Fri Sep 19 23:31:38 PDT 2014.<br/>
+37 errors and 105 warnings found:<br/><br/>
+<table class="overview">
+<tr><td></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-error.png" alt="Error" />
+<a href="#DuplicateIds">DuplicateIds: Duplicate ids within a single layout</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-error.png" alt="Error" />
+<a href="#WebViewLayout">WebViewLayout: WebViews in wrap_content parents</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#GradleDeprecated">GradleDeprecated: Deprecated Gradle Construct</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#OldTargetApi">OldTargetApi: Target SDK attribute is not targeting latest version</a>
+</td></tr>
+<tr>
+<td class="countColumn">7</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#UnusedAttribute">UnusedAttribute: Attribute unused on older versions</a>
+</td></tr>
+<tr>
+<td class="countColumn">29</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#InflateParams">InflateParams: Layout Inflation without a Parent</a>
+</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#GradleDependency">GradleDependency: Obsolete Gradle Dependency</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#PxUsage">PxUsage: Using 'px' dimension</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Correctness:Messages">Correctness:Messages</a>
+</td></tr>
+<tr>
+<td class="countColumn">17</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-error.png" alt="Error" />
+<a href="#MissingQuantity">MissingQuantity: Missing quantity translation</a>
+</td></tr>
+<tr>
+<td class="countColumn">8</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-error.png" alt="Error" />
+<a href="#MissingTranslation">MissingTranslation: Incomplete translation</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#Typos">Typos: Spelling error</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-error.png" alt="Error" />
+<a href="#ExtraTranslation">ExtraTranslation: Extra translation</a>
+</td></tr>
+<tr>
+<td class="countColumn">9</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-error.png" alt="Error" />
+<a href="#ImpliedQuantity">ImpliedQuantity: Implied Quantities</a>
+</td></tr>
+<tr>
+<td class="countColumn">11</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#UnusedQuantity">UnusedQuantity: Unused quantity translations</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Security">Security</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#AllowBackup">AllowBackup: Missing <code>allowBackup</code> attribute</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Performance">Performance</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#InefficientWeight">InefficientWeight: Inefficient layout weight</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#Overdraw">Overdraw: Overdraw: Painting regions more than once</a>
+</td></tr>
+<tr>
+<td class="countColumn">13</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#UnusedResources">UnusedResources: Unused resources</a>
+</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#UselessParent">UselessParent: Useless parent layout</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Usability:Icons">Usability:Icons</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#IconDipSize">IconDipSize: Icon density-independent size validation</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Usability">Usability</a>
+</td></tr>
+<tr>
+<td class="countColumn">7</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#SmallSp">SmallSp: Text size is too small</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#AlwaysShowAction">AlwaysShowAction: Usage of <code>showAsAction=always</code></a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Accessibility">Accessibility</a>
+</td></tr>
+<tr>
+<td class="countColumn">5</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#ContentDescription">ContentDescription: Image without <code>contentDescription</code></a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Internationalization">Internationalization</a>
+</td></tr>
+<tr>
+<td class="countColumn">20</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#HardcodedText">HardcodedText: Hardcoded text</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#MissingIssues">Disabled Checks (14)</a>
+</td></tr></table>
+<br/>
+<a name="Correctness"></a>
+<div class="category"><a href="#" title="Return to top">Correctness</a><div class="categorySeparator"></div>
+</div>
+<a name="DuplicateIds"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">DuplicateIds: Duplicate ids within a single layout</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../res/layout/uv_comment_dialog.xml">../../res/layout/uv_comment_dialog.xml</a>:51</span>: <span class="message">Duplicate id @+id/uv_text_field, already defined earlier in this layout</span><br /><pre class="errorlines">
+<span class="lineno">  48</span>             &lt;include layout="@layout/uv_header_item_light_no_padding" />
+<span class="lineno">  49</span> 
+<span class="lineno">  50</span>             &lt;EditText
+<span class="lineno">  51</span>                 <span class="errorspan">android:id="@+id/uv_text_field"</span>
+<span class="lineno">  52</span>                 android:layout_width="match_parent"
+<span class="lineno">  53</span>                 android:layout_height="wrap_content"
+</pre>
+<ul><span class="location"><a href="../../res/layout/uv_comment_dialog.xml">../../res/layout/uv_comment_dialog.xml</a>:34</span>: <span class="message">@+id/uv_text_field originally defined here</span><br /><pre class="errorlines">
+<span class="lineno">  31</span>             &lt;include layout="@layout/uv_header_item_light_no_padding" />
+<span class="lineno">  32</span> 
+<span class="lineno">  33</span>             &lt;EditText
+<span class="lineno">  34</span>                 <span class="errorspan">android:id="@+id/uv_text_field"</span>
+<span class="lineno">  35</span>                 android:layout_width="match_parent"
+<span class="lineno">  36</span>                 android:layout_height="wrap_content"
+</pre></ul></div>
+<div class="metadata">Priority: 7 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="error">Fatal</span><div class="summary">
+Explanation: Checks for duplicate ids within a single layout.</div>
+<div class="explanation">
+Within a layout, id's should be unique since otherwise <code>findViewById()</code> can return an unexpected view.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "DuplicateIds" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="WebViewLayout"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">WebViewLayout: WebViews in wrap_content parents</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../res/layout/uv_article_layout.xml">../../res/layout/uv_article_layout.xml</a>:17</span>: <span class="message">Placing a &lt;WebView> in a parent element that uses a wrap_content size can lead to subtle bugs; use match_parent</span><br /><pre class="errorlines">
+<span class="lineno">  14</span>             android:layout_height="wrap_content"
+<span class="lineno">  15</span>             android:orientation="vertical" >
+<span class="lineno">  16</span> 
+<span class="lineno">  17</span>             <span class="errorspan">&lt;WebView</span>
+<span class="lineno">  18</span>                 android:id="@+id/uv_webview"
+<span class="lineno">  19</span>                 android:layout_width="match_parent"
+</pre>
+<ul></ul><button id="Location1DivLink" onclick="reveal('Location1Div');" />+ 1 Additional Locations...</button>
+<div id="Location1Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../res/layout/uv_article_layout.xml">../../res/layout/uv_article_layout.xml</a>:14</span>
+</ul>
+</div><br/><br/>
+</div>
+<div class="metadata">Priority: 7 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="error">Error</span><div class="summary">
+Explanation: Ensures that WebViews are not placed in parents with wrap_content layout.</div>
+<div class="explanation">
+The WebView implementation has certain performance optimizations which will not work correctly if the parent view is using <code>wrap_content</code> rather than <code>match_parent</code>. This can lead to subtle UI bugs.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "WebViewLayout" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="GradleDeprecated"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">GradleDeprecated: Deprecated Gradle Construct</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:11</span>: <span class="message">'android-library' is deprecated; use 'com.android.library' instead</span><br /><pre class="errorlines">
+<span class="lineno">   8</span>     }
+<span class="lineno">   9</span> }
+<span class="lineno">  10</span> 
+<span class="lineno">  11</span> <span class="errorspan">apply plugin: 'android-library'</span>
+<span class="lineno">  12</span> 
+<span class="lineno">  13</span> apply plugin: 'maven'
+</pre>
+</div>
+<div class="metadata">Priority: 6 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for deprecated Gradle constructs.</div>
+<div class="explanation">
+This detector looks for deprecated Gradle constructs which currently work but will likely stop working in a future update.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "GradleDeprecated" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="OldTargetApi"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">OldTargetApi: Target SDK attribute is not targeting latest version</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../AndroidManifest.xml">../../AndroidManifest.xml</a>:7</span>: <span class="message">Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details.</span><br /><pre class="errorlines">
+<span class="lineno">   4</span>     android:versionCode="1"
+<span class="lineno">   5</span>     android:versionName="0.0.1" >
+<span class="lineno">   6</span> 
+<span class="lineno">   7</span>     <span class="errorspan">&lt;uses-sdk</span>
+<span class="lineno">   8</span>         android:minSdkVersion="8"
+<span class="lineno">   9</span>         android:targetSdkVersion="17" />
+</pre>
+</div>
+<div class="metadata">Priority: 6 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Checks that the manifest specifies a targetSdkVersion that is recent.</div>
+<div class="explanation">
+When your application runs on a version of Android that is more recent than your <code>targetSdkVersion</code> specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the <code>targetSdkVersion</code> is less than 14, your app may get an option button in the UI.<br/>
+<br/>
+To fix this issue, set the <code>targetSdkVersion</code> to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: <a href="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html">http://developer.android.com/reference/android/os/Build.VERSION_CODES.html</a>
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html">http://developer.android.com/reference/android/os/Build.VERSION_CODES.html</a>
+</div><br/>To suppress this error, use the issue id "OldTargetApi" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="UnusedAttribute"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">UnusedAttribute: Attribute unused on older versions</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../res/layout/uv_article_layout.xml">../../res/layout/uv_article_layout.xml</a>:52</span>: <span class="message">Attribute "columnCount" is only used in API level 14 and higher (current min is 8)</span><br /><pre class="errorlines">
+<span class="lineno">  49</span>                     &lt;TableLayout
+<span class="lineno">  50</span>                         android:layout_width="match_parent"
+<span class="lineno">  51</span>                         android:layout_height="wrap_content"
+<span class="lineno">  52</span>                         <span class="errorspan">android:columnCount="2"</span>
+<span class="lineno">  53</span>                         android:paddingTop="10dp" >
+<span class="lineno">  54</span> 
+</pre>
+<span class="location"><a href="../../res/layout/uv_header_item.xml">../../res/layout/uv_header_item.xml</a>:14</span>: <span class="message">Attribute "textIsSelectable" is only used in API level 11 and higher (current min is 8)</span><br /><pre class="errorlines">
+<span class="lineno">  11</span>     &lt;TextView
+<span class="lineno">  12</span>         android:id="@+id/uv_header_text"
+<span class="lineno">  13</span>         android:text="@string/uv_knowledge_base"
+<span class="lineno">  14</span>         <span class="errorspan">android:textIsSelectable="false"</span>
+<span class="lineno">  15</span>         style="@style/uv_ListSeparator" />
+<span class="lineno">  16</span> 
+</pre>
+<span class="location"><a href="../../res/layout/uv_header_item_light.xml">../../res/layout/uv_header_item_light.xml</a>:14</span>: <span class="message">Attribute "textIsSelectable" is only used in API level 11 and higher (current min is 8)</span><br /><pre class="errorlines">
+<span class="lineno">  11</span>     &lt;TextView
+<span class="lineno">  12</span>         android:id="@+id/uv_header_text"
+<span class="lineno">  13</span>         android:text="@string/uv_knowledge_base"
+<span class="lineno">  14</span>         <span class="errorspan">android:textIsSelectable="false"</span>
+<span class="lineno">  15</span>         style="@style/uv_ListSeparatorLight" />
+<span class="lineno">  16</span> 
+</pre>
+<span class="location"><a href="../../res/layout/uv_header_item_light_no_padding.xml">../../res/layout/uv_header_item_light_no_padding.xml</a>:12</span>: <span class="message">Attribute "textIsSelectable" is only used in API level 11 and higher (current min is 8)</span><br /><pre class="errorlines">
+<span class="lineno">   9</span>     &lt;TextView
+<span class="lineno">  10</span>             android:id="@+id/uv_header_text"
+<span class="lineno">  11</span>             android:text="@string/uv_knowledge_base"
+<span class="lineno">  12</span>             <span class="errorspan">android:textIsSelectable="false"</span>
+<span class="lineno">  13</span>             style="@style/uv_ListSeparatorLight" />
+<span class="lineno">  14</span> 
+</pre>
+<span class="location"><a href="../../res/layout/uv_idea_dialog_header.xml">../../res/layout/uv_idea_dialog_header.xml</a>:101</span>: <span class="message">Attribute "textAllCaps" is only used in API level 14 and higher (current min is 8)</span><br /><pre class="errorlines">
+<span class="lineno">  98</span>             android:paddingLeft="5dp"
+<span class="lineno">  99</span>             android:paddingRight="5dp"
+<span class="lineno"> 100</span>             android:text="admin response: started"
+<span class="lineno"> 101</span>             <span class="errorspan">android:textAllCaps="true"</span>
+<span class="lineno"> 102</span>             android:textColor="#8dc13c"
+<span class="lineno"> 103</span>             android:textSize="14sp"
+</pre>
+<span class="location"><a href="../../res/layout/uv_idea_dialog_header.xml">../../res/layout/uv_idea_dialog_header.xml</a>:177</span>: <span class="message">Attribute "textIsSelectable" is only used in API level 11 and higher (current min is 8)</span><br /><pre class="errorlines">
+<span class="lineno"> 174</span>             style="@style/uv_ListSeparatorLight"
+<span class="lineno"> 175</span>             android:paddingLeft="5dp"
+<span class="lineno"> 176</span>             android:text="14 comments"
+<span class="lineno"> 177</span>             <span class="errorspan">android:textIsSelectable="false" /></span>
+<span class="lineno"> 178</span>     &lt;/LinearLayout>
+<span class="lineno"> 179</span> 
+</pre>
+<span class="location"><a href="../../res/layout/uv_select_field_item.xml">../../res/layout/uv_select_field_item.xml</a>:21</span>: <span class="message">Attribute "spinnerMode" is only used in API level 11 and higher (current min is 8)</span><br /><pre class="errorlines">
+<span class="lineno">  18</span>             android:layout_width="match_parent"
+<span class="lineno">  19</span>             android:layout_height="wrap_content"
+<span class="lineno">  20</span>             android:minHeight="?android:attr/listPreferredItemHeight"
+<span class="lineno">  21</span>             <span class="errorspan">android:spinnerMode="dialog" /></span>
+<span class="lineno">  22</span>     &lt;/LinearLayout>
+<span class="lineno">  23</span> 
+</pre>
+</div>
+<div class="metadata">Priority: 6 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Finds usages of attributes that will not be used (read) on all targeted versions.</div>
+<div class="explanation">
+This check finds attributes set in XML files that were introduced in a version newer than the oldest version targeted by your application (with the the <code>minSdkVersion</code> attribute).<br/>
+<br/>
+This is not an error; the application will simply ignore the attribute. However, if the attribute is important to the appearance of functionality of your application, you should consider finding an alternative way to achieve the same result with only available attributes, and then you can optionally create a copy of the layout in a layout-vNN folder which will be used on API NN or higher where you can take advantage of the newer attribute.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "UnusedAttribute" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="InflateParams"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">InflateParams: Layout Inflation without a Parent</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/dialog/CommentDialogFragment.java">../../src/com/uservoice/uservoicesdk/dialog/CommentDialogFragment.java</a>:43</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno">  40</span>         }
+<span class="lineno">  41</span>         builder.setTitle(R.string.uv_post_a_comment);
+<span class="lineno">  42</span> 
+<span class="lineno">  43</span>         View view = getActivity().getLayoutInflater().inflate(R.layout.uv_comment_dialog, <span class="errorspan">null);</span>
+<span class="lineno">  44</span>         final EditText textField = (EditText) view.findViewById(R.id.uv_comment_edit_text);
+<span class="lineno">  45</span> 
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/ContactAdapter.java">../../src/com/uservoice/uservoicesdk/ui/ContactAdapter.java</a>:76</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno">  73</span>         int type = getItemViewType(position);
+<span class="lineno">  74</span>         if (view == null) {
+<span class="lineno">  75</span>             if (type == CUSTOM_TEXT_FIELD) {
+<span class="lineno">  76</span>                 view = inflater.inflate(R.layout.uv_text_field_item, <span class="errorspan">null);</span>
+<span class="lineno">  77</span>             } else if (type == CUSTOM_PREDEFINED_FIELD) {
+<span class="lineno">  78</span>                 view = inflater.inflate(R.layout.uv_select_field_item, null);
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/ContactAdapter.java">../../src/com/uservoice/uservoicesdk/ui/ContactAdapter.java</a>:78</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno">  75</span>             if (type == CUSTOM_TEXT_FIELD) {
+<span class="lineno">  76</span>                 view = inflater.inflate(R.layout.uv_text_field_item, null);
+<span class="lineno">  77</span>             } else if (type == CUSTOM_PREDEFINED_FIELD) {
+<span class="lineno">  78</span>                 view = inflater.inflate(R.layout.uv_select_field_item, <span class="errorspan">null);</span>
+<span class="lineno">  79</span>             } else {
+<span class="lineno">  80</span>                 return super.getView(position, convertView, parent);
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/activity/ForumActivity.java">../../src/com/uservoice/uservoicesdk/activity/ForumActivity.java</a>:116</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 113</span>                     View view = convertView;
+<span class="lineno"> 114</span>                     if (view == null) {
+<span class="lineno"> 115</span>                         if (type == 2) {
+<span class="lineno"> 116</span>                             view = getLayoutInflater().inflate(R.layout.uv_text_item, <span class="errorspan">null);</span>
+<span class="lineno"> 117</span>                             TextView text = (TextView) view.findViewById(R.id.uv_text);
+<span class="lineno"> 118</span>                             text.setText(R.string.uv_post_an_idea);
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/activity/ForumActivity.java">../../src/com/uservoice/uservoicesdk/activity/ForumActivity.java</a>:122</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 119</span>                             view.findViewById(R.id.uv_divider).setVisibility(View.GONE);
+<span class="lineno"> 120</span>                             view.findViewById(R.id.uv_text2).setVisibility(View.GONE);
+<span class="lineno"> 121</span>                         } else {
+<span class="lineno"> 122</span>                             view = getLayoutInflater().inflate(R.layout.uv_header_item_light, <span class="errorspan">null);</span>
+<span class="lineno"> 123</span>                             TextView text = (TextView) view.findViewById(R.id.uv_header_text);
+<span class="lineno"> 124</span>                             text.setText(R.string.uv_idea_text_heading);
+</pre>
+<button id="InflateParamsDivLink" onclick="reveal('InflateParamsDiv');" />+ 24 More Occurrences...</button>
+<div id="InflateParamsDiv" style="display: none">
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/InstantAnswersAdapter.java">../../src/com/uservoice/uservoicesdk/ui/InstantAnswersAdapter.java</a>:155</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 152</span>         int type = getItemViewType(position);
+<span class="lineno"> 153</span>         if (view == null) {
+<span class="lineno"> 154</span>             if (type == LOADING) {
+<span class="lineno"> 155</span>                 view = inflater.inflate(R.layout.uv_loading_item, <span class="errorspan">null);</span>
+<span class="lineno"> 156</span>             } else if (type == BUTTON) {
+<span class="lineno"> 157</span>                 view = inflater.inflate(R.layout.uv_contact_button_item, null);
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/InstantAnswersAdapter.java">../../src/com/uservoice/uservoicesdk/ui/InstantAnswersAdapter.java</a>:157</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 154</span>             if (type == LOADING) {
+<span class="lineno"> 155</span>                 view = inflater.inflate(R.layout.uv_loading_item, null);
+<span class="lineno"> 156</span>             } else if (type == BUTTON) {
+<span class="lineno"> 157</span>                 view = inflater.inflate(R.layout.uv_contact_button_item, <span class="errorspan">null);</span>
+<span class="lineno"> 158</span>                 Button button = (Button) view.findViewById(R.id.uv_contact_button);
+<span class="lineno"> 159</span>                 button.setOnClickListener(new View.OnClickListener() {
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/InstantAnswersAdapter.java">../../src/com/uservoice/uservoicesdk/ui/InstantAnswersAdapter.java</a>:166</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 163</span>                     }
+<span class="lineno"> 164</span>                 });
+<span class="lineno"> 165</span>             } else if (type == HEADING) {
+<span class="lineno"> 166</span>                 view = inflater.inflate(R.layout.uv_header_item, <span class="errorspan">null);</span>
+<span class="lineno"> 167</span>             } else if (type == INSTANT_ANSWER) {
+<span class="lineno"> 168</span>                 view = inflater.inflate(R.layout.uv_instant_answer_item, null);
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/InstantAnswersAdapter.java">../../src/com/uservoice/uservoicesdk/ui/InstantAnswersAdapter.java</a>:168</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 165</span>             } else if (type == HEADING) {
+<span class="lineno"> 166</span>                 view = inflater.inflate(R.layout.uv_header_item, null);
+<span class="lineno"> 167</span>             } else if (type == INSTANT_ANSWER) {
+<span class="lineno"> 168</span>                 view = inflater.inflate(R.layout.uv_instant_answer_item, <span class="errorspan">null);</span>
+<span class="lineno"> 169</span>             } else if (type == SPACE) {
+<span class="lineno"> 170</span>                 view = new LinearLayout(context);
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/InstantAnswersAdapter.java">../../src/com/uservoice/uservoicesdk/ui/InstantAnswersAdapter.java</a>:173</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 170</span>                 view = new LinearLayout(context);
+<span class="lineno"> 171</span>                 view.setPadding(0, 30, 0, 0);
+<span class="lineno"> 172</span>             } else if (type == TEXT) {
+<span class="lineno"> 173</span>                 view = inflater.inflate(R.layout.uv_contact_text_item, <span class="errorspan">null);</span>
+<span class="lineno"> 174</span>                 EditText field = (EditText) view.findViewById(R.id.uv_text);
+<span class="lineno"> 175</span>                 restoreEnteredText(textField, field, "");
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/InstantAnswersAdapter.java">../../src/com/uservoice/uservoicesdk/ui/InstantAnswersAdapter.java</a>:195</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 192</span>                     }
+<span class="lineno"> 193</span>                 });
+<span class="lineno"> 194</span>             } else if (type == EMAIL_FIELD || type == NAME_FIELD) {
+<span class="lineno"> 195</span>                 view = inflater.inflate(R.layout.uv_text_field_item, <span class="errorspan">null);</span>
+<span class="lineno"> 196</span>             }
+<span class="lineno"> 197</span>         }
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/MixedSearchAdapter.java">../../src/com/uservoice/uservoicesdk/ui/MixedSearchAdapter.java</a>:135</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 132</span>         int type = getItemViewType(position);
+<span class="lineno"> 133</span>         if (view == null) {
+<span class="lineno"> 134</span>             if (type == SEARCH_RESULT)
+<span class="lineno"> 135</span>                 view = inflater.inflate(R.layout.uv_instant_answer_item, <span class="errorspan">null);</span>
+<span class="lineno"> 136</span>             else if (type == LOADING)
+<span class="lineno"> 137</span>                 view = inflater.inflate(R.layout.uv_loading_item, null);
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/MixedSearchAdapter.java">../../src/com/uservoice/uservoicesdk/ui/MixedSearchAdapter.java</a>:137</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 134</span>             if (type == SEARCH_RESULT)
+<span class="lineno"> 135</span>                 view = inflater.inflate(R.layout.uv_instant_answer_item, null);
+<span class="lineno"> 136</span>             else if (type == LOADING)
+<span class="lineno"> 137</span>                 view = inflater.inflate(R.layout.uv_loading_item, <span class="errorspan">null);</span>
+<span class="lineno"> 138</span>         }
+<span class="lineno"> 139</span> 
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/dialog/PasswordDialogFragment.java">../../src/com/uservoice/uservoicesdk/dialog/PasswordDialogFragment.java</a>:37</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno">  34</span>         if (!Utils.isDarkTheme(getActivity())) {
+<span class="lineno">  35</span>             builder.setInverseBackgroundForced(true);
+<span class="lineno">  36</span>         }
+<span class="lineno">  37</span>         View view = getActivity().getLayoutInflater().inflate(R.layout.uv_password_dialog, <span class="errorspan">null);</span>
+<span class="lineno">  38</span>         password = (EditText) view.findViewById(R.id.uv_password);
+<span class="lineno">  39</span>         builder.setView(view);
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/PortalAdapter.java">../../src/com/uservoice/uservoicesdk/ui/PortalAdapter.java</a>:216</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 213</span>         int type = getItemViewType(position);
+<span class="lineno"> 214</span>         if (view == null) {
+<span class="lineno"> 215</span>             if (type == LOADING)
+<span class="lineno"> 216</span>                 view = inflater.inflate(R.layout.uv_loading_item, <span class="errorspan">null);</span>
+<span class="lineno"> 217</span>             else if (type == FORUM)
+<span class="lineno"> 218</span>                 view = inflater.inflate(R.layout.uv_text_item, null);
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/PortalAdapter.java">../../src/com/uservoice/uservoicesdk/ui/PortalAdapter.java</a>:218</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 215</span>             if (type == LOADING)
+<span class="lineno"> 216</span>                 view = inflater.inflate(R.layout.uv_loading_item, null);
+<span class="lineno"> 217</span>             else if (type == FORUM)
+<span class="lineno"> 218</span>                 view = inflater.inflate(R.layout.uv_text_item, <span class="errorspan">null);</span>
+<span class="lineno"> 219</span>             else if (type == KB_HEADER)
+<span class="lineno"> 220</span>                 view = inflater.inflate(R.layout.uv_header_item_light, null);
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/PortalAdapter.java">../../src/com/uservoice/uservoicesdk/ui/PortalAdapter.java</a>:220</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 217</span>             else if (type == FORUM)
+<span class="lineno"> 218</span>                 view = inflater.inflate(R.layout.uv_text_item, null);
+<span class="lineno"> 219</span>             else if (type == KB_HEADER)
+<span class="lineno"> 220</span>                 view = inflater.inflate(R.layout.uv_header_item_light, <span class="errorspan">null);</span>
+<span class="lineno"> 221</span>             else if (type == TOPIC)
+<span class="lineno"> 222</span>                 view = inflater.inflate(R.layout.uv_text_item, null);
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/PortalAdapter.java">../../src/com/uservoice/uservoicesdk/ui/PortalAdapter.java</a>:222</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 219</span>             else if (type == KB_HEADER)
+<span class="lineno"> 220</span>                 view = inflater.inflate(R.layout.uv_header_item_light, null);
+<span class="lineno"> 221</span>             else if (type == TOPIC)
+<span class="lineno"> 222</span>                 view = inflater.inflate(R.layout.uv_text_item, <span class="errorspan">null);</span>
+<span class="lineno"> 223</span>             else if (type == CONTACT)
+<span class="lineno"> 224</span>                 view = inflater.inflate(R.layout.uv_text_item, null);
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/PortalAdapter.java">../../src/com/uservoice/uservoicesdk/ui/PortalAdapter.java</a>:224</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 221</span>             else if (type == TOPIC)
+<span class="lineno"> 222</span>                 view = inflater.inflate(R.layout.uv_text_item, null);
+<span class="lineno"> 223</span>             else if (type == CONTACT)
+<span class="lineno"> 224</span>                 view = inflater.inflate(R.layout.uv_text_item, <span class="errorspan">null);</span>
+<span class="lineno"> 225</span>             else if (type == ARTICLE)
+<span class="lineno"> 226</span>                 view = inflater.inflate(R.layout.uv_text_item, null);
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/PortalAdapter.java">../../src/com/uservoice/uservoicesdk/ui/PortalAdapter.java</a>:226</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 223</span>             else if (type == CONTACT)
+<span class="lineno"> 224</span>                 view = inflater.inflate(R.layout.uv_text_item, null);
+<span class="lineno"> 225</span>             else if (type == ARTICLE)
+<span class="lineno"> 226</span>                 view = inflater.inflate(R.layout.uv_text_item, <span class="errorspan">null);</span>
+<span class="lineno"> 227</span>             else if (type == POWERED_BY)
+<span class="lineno"> 228</span>             	view = inflater.inflate(R.layout.uv_powered_by_item, null);
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/PortalAdapter.java">../../src/com/uservoice/uservoicesdk/ui/PortalAdapter.java</a>:228</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 225</span>             else if (type == ARTICLE)
+<span class="lineno"> 226</span>                 view = inflater.inflate(R.layout.uv_text_item, null);
+<span class="lineno"> 227</span>             else if (type == POWERED_BY)
+<span class="lineno"> 228</span>             	view = inflater.inflate(R.layout.uv_powered_by_item, <span class="errorspan">null);</span>
+<span class="lineno"> 229</span>         }
+<span class="lineno"> 230</span> 
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/PostIdeaAdapter.java">../../src/com/uservoice/uservoicesdk/ui/PostIdeaAdapter.java</a>:73</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno">  70</span>         int type = getItemViewType(position);
+<span class="lineno">  71</span>         if (view == null) {
+<span class="lineno">  72</span>             if (type == DESCRIPTION) {
+<span class="lineno">  73</span>                 view = inflater.inflate(R.layout.uv_text_field_item, <span class="errorspan">null);</span>
+<span class="lineno">  74</span>                 TextView title = (TextView) view.findViewById(R.id.uv_header_text);
+<span class="lineno">  75</span>                 title.setText(R.string.uv_idea_description_heading);
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/PostIdeaAdapter.java">../../src/com/uservoice/uservoicesdk/ui/PostIdeaAdapter.java</a>:81</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno">  78</span>                 descriptionField = field;
+<span class="lineno">  79</span>                 descriptionField.setHint(R.string.uv_idea_description_hint);
+<span class="lineno">  80</span>             } else if (type == CATEGORY) {
+<span class="lineno">  81</span>                 view = inflater.inflate(R.layout.uv_select_field_item, <span class="errorspan">null);</span>
+<span class="lineno">  82</span>                 TextView title = (TextView) view.findViewById(R.id.uv_header_text);
+<span class="lineno">  83</span>                 categorySelect = (Spinner) view.findViewById(R.id.uv_select_field);
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/PostIdeaAdapter.java">../../src/com/uservoice/uservoicesdk/ui/PostIdeaAdapter.java</a>:87</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno">  84</span>                 categorySelect.setAdapter(new SpinnerAdapter&lt;Category>(context, Session.getInstance().getForum().getCategories()));
+<span class="lineno">  85</span>                 title.setText(R.string.uv_category);
+<span class="lineno">  86</span>             } else if (type == HELP) {
+<span class="lineno">  87</span>                 view = inflater.inflate(R.layout.uv_idea_help_item, <span class="errorspan">null);</span>
+<span class="lineno">  88</span>             } else if (type == TEXT_HEADING) {
+<span class="lineno">  89</span>                 view = inflater.inflate(R.layout.uv_header_item, null);
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/ui/PostIdeaAdapter.java">../../src/com/uservoice/uservoicesdk/ui/PostIdeaAdapter.java</a>:89</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno">  86</span>             } else if (type == HELP) {
+<span class="lineno">  87</span>                 view = inflater.inflate(R.layout.uv_idea_help_item, null);
+<span class="lineno">  88</span>             } else if (type == TEXT_HEADING) {
+<span class="lineno">  89</span>                 view = inflater.inflate(R.layout.uv_header_item, <span class="errorspan">null);</span>
+<span class="lineno">  90</span>                 TextView textView = (TextView) view.findViewById(R.id.uv_header_text);
+<span class="lineno">  91</span>                 textView.setText(R.string.uv_idea_text_heading);
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/dialog/SigninDialogFragment.java">../../src/com/uservoice/uservoicesdk/dialog/SigninDialogFragment.java</a>:70</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno">  67</span>         }
+<span class="lineno">  68</span>         builder.setTitle(R.string.uv_signin_dialog_title);
+<span class="lineno">  69</span>         LayoutInflater inflater = getActivity().getLayoutInflater();
+<span class="lineno">  70</span>         View view = inflater.inflate(R.layout.uv_signin_layout, <span class="errorspan">null);</span>
+<span class="lineno">  71</span>         emailField = (EditText) view.findViewById(R.id.uv_signin_email);
+<span class="lineno">  72</span>         nameField = (EditText) view.findViewById(R.id.uv_signin_name);
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/dialog/SubscribeDialogFragment.java">../../src/com/uservoice/uservoicesdk/dialog/SubscribeDialogFragment.java</a>:42</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno">  39</span>         if (!Utils.isDarkTheme(getActivity())) {
+<span class="lineno">  40</span>             builder.setInverseBackgroundForced(true);
+<span class="lineno">  41</span>         }
+<span class="lineno">  42</span>         View view = getActivity().getLayoutInflater().inflate(R.layout.uv_subscribe_dialog, <span class="errorspan">null);</span>
+<span class="lineno">  43</span>         final EditText emailField = (EditText) view.findViewById(R.id.uv_email);
+<span class="lineno">  44</span>         emailField.setText(Session.getInstance().getEmail());
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/dialog/SuggestionDialogFragment.java">../../src/com/uservoice/uservoicesdk/dialog/SuggestionDialogFragment.java</a>:55</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno">  52</span>         if (!Utils.isDarkTheme(getActivity())) {
+<span class="lineno">  53</span>             builder.setInverseBackgroundForced(true);
+<span class="lineno">  54</span>         }
+<span class="lineno">  55</span>         view = getActivity().getLayoutInflater().inflate(R.layout.uv_idea_dialog, <span class="errorspan">null);</span>
+<span class="lineno">  56</span>         headerView = getActivity().getLayoutInflater().inflate(R.layout.uv_idea_dialog_header, null);
+<span class="lineno">  57</span>         headerView.findViewById(R.id.uv_subscribe).setOnClickListener(new View.OnClickListener() {
+</pre>
+<span class="location"><a href="../../src/com/uservoice/uservoicesdk/dialog/SuggestionDialogFragment.java">../../src/com/uservoice/uservoicesdk/dialog/SuggestionDialogFragment.java</a>:56</span>: <span class="message">Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno">  53</span>             builder.setInverseBackgroundForced(true);
+<span class="lineno">  54</span>         }
+<span class="lineno">  55</span>         view = getActivity().getLayoutInflater().inflate(R.layout.uv_idea_dialog, null);
+<span class="lineno">  56</span>         headerView = getActivity().getLayoutInflater().inflate(R.layout.uv_idea_dialog_header, <span class="errorspan">null);</span>
+<span class="lineno">  57</span>         headerView.findViewById(R.id.uv_subscribe).setOnClickListener(new View.OnClickListener() {
+<span class="lineno">  58</span>             @Override
+</pre>
+</div>
+</div>
+<div class="metadata">Priority: 5 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Ensures that a proper parent context is passed to a layout inflater.</div>
+<div class="explanation">
+When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://www.doubleencore.com/2013/05/layout-inflation-as-intended">http://www.doubleencore.com/2013/05/layout-inflation-as-intended</a>
+</div><br/>To suppress this error, use the issue id "InflateParams" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="GradleDependency"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">GradleDependency: Obsolete Gradle Dependency</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:57</span>: <span class="message">A newer version of com.android.support:support-v4 than 19 is available: 21.0.0-rc1</span><br /><pre class="errorlines">
+<span class="lineno">  54</span> }
+<span class="lineno">  55</span> 
+<span class="lineno">  56</span> dependencies {
+<span class="lineno">  57</span>     <span class="errorspan">compile 'com.android.support:support-v4:19.'</span>
+<span class="lineno">  58</span>     compile 'com.android.support:appcompat-v7:19.+'
+<span class="lineno">  59</span>     compile 'commons-codec:commons-codec:1.8'
+</pre>
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:58</span>: <span class="message">A newer version of com.android.support:appcompat-v7 than 19.+ is available: 21.0.0-rc1</span><br /><pre class="errorlines">
+<span class="lineno">  55</span> 
+<span class="lineno">  56</span> dependencies {
+<span class="lineno">  57</span>     compile 'com.android.support:support-v4:19.'
+<span class="lineno">  58</span>     <span class="errorspan">compile 'com.android.support:appcompat-v7:19.+'</span>
+<span class="lineno">  59</span>     compile 'commons-codec:commons-codec:1.8'
+<span class="lineno">  60</span>     compile 'oauth.signpost:signpost-commonshttp4:1.2.1.2'
+</pre>
+</div>
+<div class="metadata">Priority: 4 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for old or obsolete Gradle library dependencies.</div>
+<div class="explanation">
+This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "GradleDependency" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="PxUsage"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">PxUsage: Using 'px' dimension</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../res/layout/uv_article_layout.xml">../../res/layout/uv_article_layout.xml</a>:31</span>: <span class="message">Avoid using "px" as units; use "dp" instead</span><br /><pre class="errorlines">
+<span class="lineno">  28</span> 
+<span class="lineno">  29</span>                 &lt;View
+<span class="lineno">  30</span>                     android:layout_width="match_parent"
+<span class="lineno">  31</span>                     <span class="errorspan">android:layout_height="2px"</span>
+<span class="lineno">  32</span>                     android:background="#33c3e7" />
+<span class="lineno">  33</span> 
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 2 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for use of the <code>px</code> dimension.</div>
+<div class="explanation">
+For performance reasons and to keep the code simpler, the Android system uses pixels as the standard unit for expressing dimension or coordinate values. That means that the dimensions of a view are always expressed in the code using pixels, but always based on the current screen density. For instance, if <code>myView.getWidth()</code> returns 10, the view is 10 pixels wide on the current screen, but on a device with a higher density screen, the value returned might be 15. If you use pixel values in your application code to work with bitmaps that are not pre-scaled for the current screen density, you might need to scale the pixel values that you use in your code to match the un-scaled bitmap source.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/screens_support.html#screen-independence">http://developer.android.com/guide/practices/screens_support.html#screen-independence</a>
+</div><br/>To suppress this error, use the issue id "PxUsage" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Correctness:Messages"></a>
+<div class="category"><a href="#" title="Return to top">Correctness:Messages</a><div class="categorySeparator"></div>
+</div>
+<a name="MissingQuantity"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">MissingQuantity: Missing quantity translation</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../res/values-hr/strings.xml">../../res/values-hr/strings.xml</a>:3</span>: <span class="message">For locale "hr" (Croatian) the following quantities should also be defined: few</span><br /><pre class="errorlines">
+<span class="lineno">   1</span> &lt;?xml version="1.0" encoding="utf-8" standalone="no"?>
+<span class="lineno">   2</span> &lt;resources>
+<span class="lineno">   3</span>     <span class="errorspan">&lt;plurals name="uv_comments"></span>
+<span class="lineno">   4</span>         &lt;item quantity="one">komentar&lt;/item>
+<span class="lineno">   5</span>         &lt;item quantity="other">komentari&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-cs/strings.xml">../../res/values-cs/strings.xml</a>:4</span>: <span class="message">For locale "cs" (Czech) the following quantities should also be defined: few</span><br /><pre class="errorlines">
+<span class="lineno">   1</span> &lt;?xml version="1.0" encoding="utf-8"?>
+<span class="lineno">   2</span> &lt;resources>
+<span class="lineno">   3</span> 
+<span class="lineno">   4</span>     <span class="errorspan">&lt;plurals name="uv_comments"></span>
+<span class="lineno">   5</span>         &lt;item quantity="one">komentá&#345;&lt;/item>
+<span class="lineno">   6</span>         &lt;item quantity="other">komentá&#345;e&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:4</span>: <span class="message">For locale "ru" (Russian) the following quantities should also be defined: many</span><br /><pre class="errorlines">
+<span class="lineno">   1</span> &lt;?xml version="1.0" encoding="utf-8"?>
+<span class="lineno">   2</span> &lt;resources>
+<span class="lineno">   3</span> 
+<span class="lineno">   4</span>     <span class="errorspan">&lt;plurals name="uv_comments"></span>
+<span class="lineno">   5</span>         &lt;item quantity="one">&#1082;&#1086;&#1084;&#1084;&#1077;&#1085;&#1090;&#1072;&#1088;&#1080;&#1081;&lt;/item>
+<span class="lineno">   6</span>         &lt;item quantity="few">&#1082;&#1086;&#1084;&#1084;&#1077;&#1085;&#1090;&#1072;&#1088;&#1080;&#1103;&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-hr/strings.xml">../../res/values-hr/strings.xml</a>:7</span>: <span class="message">For locale "hr" (Croatian) the following quantities should also be defined: few</span><br /><pre class="errorlines">
+<span class="lineno">   4</span>         &lt;item quantity="one">komentar&lt;/item>
+<span class="lineno">   5</span>         &lt;item quantity="other">komentari&lt;/item>
+<span class="lineno">   6</span>     &lt;/plurals>
+<span class="lineno">   7</span>     <span class="errorspan">&lt;plurals name="uv_subscribers"></span>
+<span class="lineno">   8</span>         &lt;item quantity="one">pretplatnik&lt;/item>
+<span class="lineno">   9</span>         &lt;item quantity="other">pretplatnici&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-cs/strings.xml">../../res/values-cs/strings.xml</a>:8</span>: <span class="message">For locale "cs" (Czech) the following quantities should also be defined: few</span><br /><pre class="errorlines">
+<span class="lineno">   5</span>         &lt;item quantity="one">komentá&#345;&lt;/item>
+<span class="lineno">   6</span>         &lt;item quantity="other">komentá&#345;e&lt;/item>
+<span class="lineno">   7</span>     &lt;/plurals>
+<span class="lineno">   8</span>     <span class="errorspan">&lt;plurals name="uv_subscribers"></span>
+<span class="lineno">   9</span>         &lt;item quantity="one">odb&#283;ratel&lt;/item>
+<span class="lineno">  10</span>         &lt;item quantity="other">odb&#283;ratelé&lt;/item>
+</pre>
+<button id="MissingQuantityDivLink" onclick="reveal('MissingQuantityDiv');" />+ 12 More Occurrences...</button>
+<div id="MissingQuantityDiv" style="display: none">
+<span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:9</span>: <span class="message">For locale "ru" (Russian) the following quantities should also be defined: many</span><br /><pre class="errorlines">
+<span class="lineno">   6</span>         &lt;item quantity="few">&#1082;&#1086;&#1084;&#1084;&#1077;&#1085;&#1090;&#1072;&#1088;&#1080;&#1103;&lt;/item>
+<span class="lineno">   7</span>         &lt;item quantity="other">&#1082;&#1086;&#1084;&#1084;&#1077;&#1085;&#1090;&#1072;&#1088;&#1080;&#1077;&#1074;&lt;/item>
+<span class="lineno">   8</span>     &lt;/plurals>
+<span class="lineno">   9</span>     <span class="errorspan">&lt;plurals name="uv_subscribers"></span>
+<span class="lineno">  10</span>         &lt;item quantity="one">&#1087;&#1086;&#1076;&#1087;&#1080;&#1089;&#1095;&#1080;&#1082;&lt;/item>
+<span class="lineno">  11</span>         &lt;item quantity="few">&#1087;&#1086;&#1076;&#1087;&#1080;&#1089;&#1095;&#1080;&#1082;&#1072;&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-hr/strings.xml">../../res/values-hr/strings.xml</a>:11</span>: <span class="message">For locale "hr" (Croatian) the following quantities should also be defined: few</span><br /><pre class="errorlines">
+<span class="lineno">   8</span>         &lt;item quantity="one">pretplatnik&lt;/item>
+<span class="lineno">   9</span>         &lt;item quantity="other">pretplatnici&lt;/item>
+<span class="lineno">  10</span>     &lt;/plurals>
+<span class="lineno">  11</span>     <span class="errorspan">&lt;plurals name="uv_articles"></span>
+<span class="lineno">  12</span>         &lt;item quantity="one">&#269;lanak&lt;/item>
+<span class="lineno">  13</span>         &lt;item quantity="other">&#269;lanci&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-cs/strings.xml">../../res/values-cs/strings.xml</a>:12</span>: <span class="message">For locale "cs" (Czech) the following quantities should also be defined: few</span><br /><pre class="errorlines">
+<span class="lineno">   9</span>         &lt;item quantity="one">odb&#283;ratel&lt;/item>
+<span class="lineno">  10</span>         &lt;item quantity="other">odb&#283;ratelé&lt;/item>
+<span class="lineno">  11</span>     &lt;/plurals>
+<span class="lineno">  12</span>     <span class="errorspan">&lt;plurals name="uv_articles"></span>
+<span class="lineno">  13</span>         &lt;item quantity="one">&#269;lánek&lt;/item>
+<span class="lineno">  14</span>         &lt;item quantity="other">&#269;lánky&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:14</span>: <span class="message">For locale "ru" (Russian) the following quantities should also be defined: many</span><br /><pre class="errorlines">
+<span class="lineno">  11</span>         &lt;item quantity="few">&#1087;&#1086;&#1076;&#1087;&#1080;&#1089;&#1095;&#1080;&#1082;&#1072;&lt;/item>
+<span class="lineno">  12</span>         &lt;item quantity="other">&#1087;&#1086;&#1076;&#1087;&#1080;&#1089;&#1095;&#1080;&#1082;&#1086;&#1074;&lt;/item>
+<span class="lineno">  13</span>     &lt;/plurals>
+<span class="lineno">  14</span>     <span class="errorspan">&lt;plurals name="uv_articles"></span>
+<span class="lineno">  15</span>         &lt;item quantity="one">&#1089;&#1090;&#1072;&#1090;&#1100;&#1103;&lt;/item>
+<span class="lineno">  16</span>         &lt;item quantity="few">&#1089;&#1090;&#1072;&#1090;&#1100;&#1080;&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-hr/strings.xml">../../res/values-hr/strings.xml</a>:15</span>: <span class="message">For locale "hr" (Croatian) the following quantities should also be defined: few</span><br /><pre class="errorlines">
+<span class="lineno">  12</span>         &lt;item quantity="one">&#269;lanak&lt;/item>
+<span class="lineno">  13</span>         &lt;item quantity="other">&#269;lanci&lt;/item>
+<span class="lineno">  14</span>     &lt;/plurals>
+<span class="lineno">  15</span>     <span class="errorspan">&lt;plurals name="uv_ideas"></span>
+<span class="lineno">  16</span>         &lt;item quantity="one">ideja&lt;/item>
+<span class="lineno">  17</span>         &lt;item quantity="other">ideje&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-cs/strings.xml">../../res/values-cs/strings.xml</a>:16</span>: <span class="message">For locale "cs" (Czech) the following quantities should also be defined: few</span><br /><pre class="errorlines">
+<span class="lineno">  13</span>         &lt;item quantity="one">&#269;lánek&lt;/item>
+<span class="lineno">  14</span>         &lt;item quantity="other">&#269;lánky&lt;/item>
+<span class="lineno">  15</span>     &lt;/plurals>
+<span class="lineno">  16</span>     <span class="errorspan">&lt;plurals name="uv_ideas"></span>
+<span class="lineno">  17</span>         &lt;item quantity="one">nápad&lt;/item>
+<span class="lineno">  18</span>         &lt;item quantity="other">nápady&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-hr/strings.xml">../../res/values-hr/strings.xml</a>:19</span>: <span class="message">For locale "hr" (Croatian) the following quantities should also be defined: few</span><br /><pre class="errorlines">
+<span class="lineno">  16</span>         &lt;item quantity="one">ideja&lt;/item>
+<span class="lineno">  17</span>         &lt;item quantity="other">ideje&lt;/item>
+<span class="lineno">  18</span>     &lt;/plurals>
+<span class="lineno">  19</span>     <span class="errorspan">&lt;plurals name="uv_people"></span>
+<span class="lineno">  20</span>         &lt;item quantity="one">osoba&lt;/item>
+<span class="lineno">  21</span>         &lt;item quantity="other">osobe&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:19</span>: <span class="message">For locale "ru" (Russian) the following quantities should also be defined: many</span><br /><pre class="errorlines">
+<span class="lineno">  16</span>         &lt;item quantity="few">&#1089;&#1090;&#1072;&#1090;&#1100;&#1080;&lt;/item>
+<span class="lineno">  17</span>         &lt;item quantity="other">&#1089;&#1090;&#1072;&#1090;&#1077;&#1081;&lt;/item>
+<span class="lineno">  18</span>     &lt;/plurals>
+<span class="lineno">  19</span>     <span class="errorspan">&lt;plurals name="uv_ideas"></span>
+<span class="lineno">  20</span>         &lt;item quantity="one">&#1080;&#1076;&#1077;&#1103;&lt;/item>
+<span class="lineno">  21</span>         &lt;item quantity="few">&#1080;&#1076;&#1077;&#1080;&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-cs/strings.xml">../../res/values-cs/strings.xml</a>:20</span>: <span class="message">For locale "cs" (Czech) the following quantities should also be defined: few</span><br /><pre class="errorlines">
+<span class="lineno">  17</span>         &lt;item quantity="one">nápad&lt;/item>
+<span class="lineno">  18</span>         &lt;item quantity="other">nápady&lt;/item>
+<span class="lineno">  19</span>     &lt;/plurals>
+<span class="lineno">  20</span>     <span class="errorspan">&lt;plurals name="uv_people"></span>
+<span class="lineno">  21</span>         &lt;item quantity="one">osoba&lt;/item>
+<span class="lineno">  22</span>         &lt;item quantity="other">osoby&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-hr/strings.xml">../../res/values-hr/strings.xml</a>:23</span>: <span class="message">For locale "hr" (Croatian) the following quantities should also be defined: few</span><br /><pre class="errorlines">
+<span class="lineno">  20</span>         &lt;item quantity="one">osoba&lt;/item>
+<span class="lineno">  21</span>         &lt;item quantity="other">osobe&lt;/item>
+<span class="lineno">  22</span>     &lt;/plurals>
+<span class="lineno">  23</span>     <span class="errorspan">&lt;plurals name="uv_number_of_subscribers_format"></span>
+<span class="lineno">  24</span>         &lt;item quantity="one">%1$s &#382;eli ovu ideju&lt;/item>
+<span class="lineno">  25</span>         &lt;item quantity="other">%1$s &#382;ele ovu ideju&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-cs/strings.xml">../../res/values-cs/strings.xml</a>:24</span>: <span class="message">For locale "cs" (Czech) the following quantities should also be defined: few</span><br /><pre class="errorlines">
+<span class="lineno">  21</span>         &lt;item quantity="one">osoba&lt;/item>
+<span class="lineno">  22</span>         &lt;item quantity="other">osoby&lt;/item>
+<span class="lineno">  23</span>     &lt;/plurals>
+<span class="lineno">  24</span>     <span class="errorspan">&lt;plurals name="uv_number_of_subscribers_format"></span>
+<span class="lineno">  25</span>         &lt;item quantity="one">%1$s u&#382;ivatel&#367;m se líbí tento nápad&lt;/item>
+<span class="lineno">  26</span>         &lt;item quantity="other">%1$s u&#382;ivatel&#367;m se líbí tento nápad&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:24</span>: <span class="message">For locale "ru" (Russian) the following quantities should also be defined: many</span><br /><pre class="errorlines">
+<span class="lineno">  21</span>         &lt;item quantity="few">&#1080;&#1076;&#1077;&#1080;&lt;/item>
+<span class="lineno">  22</span>         &lt;item quantity="other">&#1080;&#1076;&#1077;&#1081;&lt;/item>
+<span class="lineno">  23</span>     &lt;/plurals>
+<span class="lineno">  24</span>     <span class="errorspan">&lt;plurals name="uv_people"></span>
+<span class="lineno">  25</span>         &lt;item quantity="one">&#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082;&lt;/item>
+<span class="lineno">  26</span>         &lt;item quantity="few">&#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082;&#1072;&lt;/item>
+</pre>
+</div>
+</div>
+<div class="metadata">Priority: 8 / 10<br/>
+Category: Correctness:Messages</div>
+Severity: <span class="error">Error</span><div class="summary">
+Explanation: Checks for missing quantity strings relevant to each locale.</div>
+<div class="explanation">
+Different languages have different rules for grammatical agreement with quantity. In English, for example, the quantity 1 is a special case. We write "1 book", but for any other quantity we'd write "n books". This distinction between singular and plural is very common, but other languages make finer distinctions.<br/>
+<br/>
+This lint check looks at each translation of a <code>&lt;plural></code> and makes sure that all the quantity strings considered by the given language are provided by this translation.<br/>
+<br/>
+For example, an English translation must provide a string for <code>quantity="one"</code>. Similarly, a Czech translation must provide a string for <code>quantity="few"</code>.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals">http://developer.android.com/guide/topics/resources/string-resource.html#Plurals</a>
+</div><br/>To suppress this error, use the issue id "MissingQuantity" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="MissingTranslation"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">MissingTranslation: Incomplete translation</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../res/values/strings.xml">../../res/values/strings.xml</a>:72</span>: <span class="message">"uv_unhelpful_article_message_question" is not translated in "fr" (French)</span><br /><pre class="errorlines">
+<span class="lineno">  69</span>     &lt;string name="uv_yes">Yes&lt;/string>
+<span class="lineno">  70</span>     &lt;string name="uv_very_yes">Yes!&lt;/string>
+<span class="lineno">  71</span>     &lt;string name="uv_helpful_article_message_question">Do you still want to send a message?&lt;/string>
+<span class="lineno">  72</span>     &lt;string <span class="errorspan">name="uv_unhelpful_article_message_question">Would you like to send us a message?&lt;/string></span>
+<span class="lineno">  73</span>     &lt;string name="uv_idea_description_heading">Describe your idea in more detail&lt;/string>
+<span class="lineno">  74</span>     &lt;string name="uv_category">Category&lt;/string>
+</pre>
+<span class="location"><a href="../../res/values/strings.xml">../../res/values/strings.xml</a>:108</span>: <span class="message">"uv_post_an_idea" is not translated in "fr" (French)</span><br /><pre class="errorlines">
+<span class="lineno"> 105</span>     &lt;string name="uv_confirm">Confirm&lt;/string>
+<span class="lineno"> 106</span>     &lt;string name="uv_msg_confirm_discard_idea">Are you sure you want to discard your idea?&lt;/string>
+<span class="lineno"> 107</span>     &lt;string name="uv_msg_confirm_discard_message">Are you sure you want to discard your message?&lt;/string>
+<span class="lineno"> 108</span>     &lt;string <span class="errorspan">name="uv_post_an_idea">Post an idea&lt;/string></span>
+<span class="lineno"> 109</span>     &lt;string name="uv_password_dialog_title">Please enter your password&lt;/string>
+<span class="lineno"> 110</span>     &lt;string name="uv_article_browse_question">Was this article helpful?&lt;/string>
+</pre>
+<span class="location"><a href="../../res/values/strings.xml">../../res/values/strings.xml</a>:109</span>: <span class="message">"uv_password_dialog_title" is not translated in "fr" (French)</span><br /><pre class="errorlines">
+<span class="lineno"> 106</span>     &lt;string name="uv_msg_confirm_discard_idea">Are you sure you want to discard your idea?&lt;/string>
+<span class="lineno"> 107</span>     &lt;string name="uv_msg_confirm_discard_message">Are you sure you want to discard your message?&lt;/string>
+<span class="lineno"> 108</span>     &lt;string name="uv_post_an_idea">Post an idea&lt;/string>
+<span class="lineno"> 109</span>     &lt;string <span class="errorspan">name="uv_password_dialog_title">Please enter your password&lt;/string></span>
+<span class="lineno"> 110</span>     &lt;string name="uv_article_browse_question">Was this article helpful?&lt;/string>
+<span class="lineno"> 111</span>     &lt;string name="uv_thanks">Thanks!&lt;/string>
+</pre>
+<span class="location"><a href="../../res/values/strings.xml">../../res/values/strings.xml</a>:110</span>: <span class="message">"uv_article_browse_question" is not translated in "fr" (French)</span><br /><pre class="errorlines">
+<span class="lineno"> 107</span>     &lt;string name="uv_msg_confirm_discard_message">Are you sure you want to discard your message?&lt;/string>
+<span class="lineno"> 108</span>     &lt;string name="uv_post_an_idea">Post an idea&lt;/string>
+<span class="lineno"> 109</span>     &lt;string name="uv_password_dialog_title">Please enter your password&lt;/string>
+<span class="lineno"> 110</span>     &lt;string <span class="errorspan">name="uv_article_browse_question">Was this article helpful?&lt;/string></span>
+<span class="lineno"> 111</span>     &lt;string name="uv_thanks">Thanks!&lt;/string>
+<span class="lineno"> 112</span>     &lt;string name="uv_powered_by_uservoice">Powered by UserVoice&lt;/string>
+</pre>
+<span class="location"><a href="../../res/values/strings.xml">../../res/values/strings.xml</a>:111</span>: <span class="message">"uv_thanks" is not translated in "fr" (French)</span><br /><pre class="errorlines">
+<span class="lineno"> 108</span>     &lt;string name="uv_post_an_idea">Post an idea&lt;/string>
+<span class="lineno"> 109</span>     &lt;string name="uv_password_dialog_title">Please enter your password&lt;/string>
+<span class="lineno"> 110</span>     &lt;string name="uv_article_browse_question">Was this article helpful?&lt;/string>
+<span class="lineno"> 111</span>     &lt;string <span class="errorspan">name="uv_thanks">Thanks!&lt;/string></span>
+<span class="lineno"> 112</span>     &lt;string name="uv_powered_by_uservoice">Powered by UserVoice&lt;/string>
+<span class="lineno"> 113</span>     &lt;string name="uv_android_sdk">Android SDK&lt;/string>
+</pre>
+<span class="location"><a href="../../res/values/strings.xml">../../res/values/strings.xml</a>:112</span>: <span class="message">"uv_powered_by_uservoice" is not translated in "cs" (Czech), "fr" (French), "nl" (Dutch), "ru" (Russian), "zh-rTW" (Chinese: Taiwan, Province of China)</span><br /><pre class="errorlines">
+<span class="lineno"> 109</span>     &lt;string name="uv_password_dialog_title">Please enter your password&lt;/string>
+<span class="lineno"> 110</span>     &lt;string name="uv_article_browse_question">Was this article helpful?&lt;/string>
+<span class="lineno"> 111</span>     &lt;string name="uv_thanks">Thanks!&lt;/string>
+<span class="lineno"> 112</span>     &lt;string <span class="errorspan">name="uv_powered_by_uservoice">Powered by UserVoice&lt;/string></span>
+<span class="lineno"> 113</span>     &lt;string name="uv_android_sdk">Android SDK&lt;/string>
+<span class="lineno"> 114</span>     &lt;string name="uv_msg_bad_email_format">Please enter a valid email address.&lt;/string>
+</pre>
+<span class="location"><a href="../../res/values/strings.xml">../../res/values/strings.xml</a>:113</span>: <span class="message">"uv_android_sdk" is not translated in "cs" (Czech), "fr" (French), "nl" (Dutch), "ru" (Russian), "zh-rTW" (Chinese: Taiwan, Province of China)</span><br /><pre class="errorlines">
+<span class="lineno"> 110</span>     &lt;string name="uv_article_browse_question">Was this article helpful?&lt;/string>
+<span class="lineno"> 111</span>     &lt;string name="uv_thanks">Thanks!&lt;/string>
+<span class="lineno"> 112</span>     &lt;string name="uv_powered_by_uservoice">Powered by UserVoice&lt;/string>
+<span class="lineno"> 113</span>     &lt;string <span class="errorspan">name="uv_android_sdk">Android SDK&lt;/string></span>
+<span class="lineno"> 114</span>     &lt;string name="uv_msg_bad_email_format">Please enter a valid email address.&lt;/string>
+<span class="lineno"> 115</span>     &lt;string name="uv_ranked">Ranked %1$s&lt;/string>
+</pre>
+<span class="location"><a href="../../res/values/strings.xml">../../res/values/strings.xml</a>:115</span>: <span class="message">"uv_ranked" is not translated in "cs" (Czech), "de" (German), "fr" (French), "hr" (Croatian), "nl" (Dutch), "pt" (Portuguese), "ru" (Russian), "zh-rTW" (Chinese: Taiwan, Province of China)</span><br /><pre class="errorlines">
+<span class="lineno"> 112</span>     &lt;string name="uv_powered_by_uservoice">Powered by UserVoice&lt;/string>
+<span class="lineno"> 113</span>     &lt;string name="uv_android_sdk">Android SDK&lt;/string>
+<span class="lineno"> 114</span>     &lt;string name="uv_msg_bad_email_format">Please enter a valid email address.&lt;/string>
+<span class="lineno"> 115</span>     &lt;string <span class="errorspan">name="uv_ranked">Ranked %1$s&lt;/string></span>
+<span class="lineno"> 116</span> 
+<span class="lineno"> 117</span> &lt;/resources>
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 8 / 10<br/>
+Category: Correctness:Messages</div>
+Severity: <span class="error">Fatal</span><div class="summary">
+Explanation: Checks for incomplete translations where not all strings are translated.</div>
+<div class="explanation">
+If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.<br/>
+<br/>
+If the string should <b>not</b> be translated, you can add the attribute <code>translatable="false"</code> on the <code>&lt;string></code> element, or you can define all your non-translatable strings in a resource file called <code>donottranslate.xml</code>. Or, you can ignore the issue with a <code>tools:ignore="MissingTranslation"</code> attribute.<br/>
+<br/>
+By default this detector allows regions of a language to just provide a subset of the strings and fall back to the standard language strings. You can require all regions to provide a full translation by setting the environment variable <code>ANDROID_LINT_COMPLETE_REGIONS</code>.<br/>
+<br/>
+You can tell lint (and other tools) which language is the default language in your <code>res/values/</code> folder by specifying <code>tools:locale="languageCode"</code> for the root <code>&lt;resources></code> element in your resource file. (The <code>tools</code> prefix refers to the namespace declaration <code>http://schemas.android.com/tools</code>.)
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "MissingTranslation" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="Typos"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">Typos: Spelling error</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../res/values-de/strings.xml">../../res/values-de/strings.xml</a>:71</span>: <span class="message">"immernoch" is a common misspelling; did you mean "immer noch" ?</span><br /><pre class="errorlines">
+<span class="lineno">  68</span>     &lt;string name="uv_no">Nein&lt;/string>
+<span class="lineno">  69</span>     &lt;string name="uv_yes">Ja&lt;/string>
+<span class="lineno">  70</span>     &lt;string name="uv_very_yes">Ja!&lt;/string>
+<span class="lineno">  71</span>     &lt;string name="uv_helpful_article_message_question">Möchtest du <span class="errorspan">immernoch eine Nachricht senden?&lt;/string></span>
+<span class="lineno">  72</span>     &lt;string name="uv_unhelpful_article_message_question">Möchtest du uns eine Nachricht schicken?&lt;/string>
+<span class="lineno">  73</span>     &lt;string name="uv_idea_description_heading">Beschreibung (optional)&lt;/string>
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 7 / 10<br/>
+Category: Correctness:Messages</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for typos in messages.</div>
+<div class="explanation">
+This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "Typos" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="ExtraTranslation"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">ExtraTranslation: Extra translation</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:99</span>: <span class="message">"uv_number_of_subscribers_format" is translated here but not found in default locale</span><br /><pre class="errorlines">
+<span class="lineno">  96</span>     &lt;string name="uv_post_idea_continue_button">&#1071; &#1074;&#1089;&#1105; &#1077;&#1097;&#1105; &#1093;&#1086;&#1095;&#1091; &#1086;&#1090;&#1087;&#1088;&#1072;&#1074;&#1080;&#1090;&#1100; &#1089;&#1074;&#1086;&#1102; &#1080;&#1076;&#1077;&#1102;&lt;/string>
+<span class="lineno">  97</span>     &lt;string name="uv_contact_continue_button">&#1071; &#1074;&#1089;&#1105; &#1077;&#1097;&#1105; &#1093;&#1086;&#1095;&#1091; &#1086;&#1090;&#1087;&#1088;&#1072;&#1074;&#1080;&#1090;&#1100; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1077;&lt;/string>
+<span class="lineno">  98</span>     &lt;string name="uv_i_want_this">&#1044;&#1072;, &#1103; &#1093;&#1086;&#1095;&#1091;!&lt;/string>
+<span class="lineno">  99</span>     &lt;string <span class="errorspan">name="uv_number_of_subscribers_format">%1$s &#1093;&#1086;&#1090;&#1103;&#1090; &#1101;&#1090;&#1086;&#1075;&#1086;&lt;/string></span>
+<span class="lineno"> 100</span>     &lt;string name="uv_post_a_comment">&#1054;&#1090;&#1087;&#1088;&#1072;&#1074;&#1080;&#1090;&#1100; &#1082;&#1086;&#1084;&#1084;&#1077;&#1085;&#1090;&#1072;&#1088;&#1080;&#1081;&lt;/string>
+<span class="lineno"> 101</span>     &lt;string name="uv_all_results_filter">&#1042;&#1057;&#1045;&lt;/string>
+</pre>
+</div>
+<div class="metadata">Priority: 6 / 10<br/>
+Category: Correctness:Messages</div>
+Severity: <span class="error">Fatal</span><div class="summary">
+Explanation: Checks for translations that appear to be unused (no default language string)</div>
+<div class="explanation">
+If a string appears in a specific language translation file, but there is no corresponding string in the default locale, then this string is probably unused. (It's technically possible that your application is only intended to run in a specific locale, but it's still a good idea to provide a fallback.).<br/>
+<br/>
+Note that these strings can lead to crashes if the string is looked up on any locale not providing a translation, so it's important to clean them up.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "ExtraTranslation" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="ImpliedQuantity"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">ImpliedQuantity: Implied Quantities</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../res/values-hr/strings.xml">../../res/values-hr/strings.xml</a>:4</span>: <span class="message">The quantity 'one' matches more than one specific number in this locale, but the message did not include a formatting argument (such as %d). This is usually an internationalization error. See full issue explanation for more.</span><br /><pre class="errorlines">
+<span class="lineno">   1</span> &lt;?xml version="1.0" encoding="utf-8" standalone="no"?>
+<span class="lineno">   2</span> &lt;resources>
+<span class="lineno">   3</span>     &lt;plurals name="uv_comments">
+<span class="lineno">   4</span>         <span class="errorspan">&lt;item quantity="one">komentar&lt;/item></span>
+<span class="lineno">   5</span>         &lt;item quantity="other">komentari&lt;/item>
+<span class="lineno">   6</span>     &lt;/plurals>
+</pre>
+<span class="location"><a href="../../res/values-fr/strings.xml">../../res/values-fr/strings.xml</a>:5</span>: <span class="message">The quantity 'one' matches more than one specific number in this locale, but the message did not include a formatting argument (such as %d). This is usually an internationalization error. See full issue explanation for more.</span><br /><pre class="errorlines">
+<span class="lineno">   2</span> &lt;resources>
+<span class="lineno">   3</span>     
+<span class="lineno">   4</span>     &lt;plurals name="uv_comments">
+<span class="lineno">   5</span>         <span class="errorspan">&lt;item quantity="one">commentaire&lt;/item></span>
+<span class="lineno">   6</span>         &lt;item quantity="other">commentaires&lt;/item>
+<span class="lineno">   7</span>     &lt;/plurals>
+</pre>
+<span class="location"><a href="../../res/values-hr/strings.xml">../../res/values-hr/strings.xml</a>:8</span>: <span class="message">The quantity 'one' matches more than one specific number in this locale, but the message did not include a formatting argument (such as %d). This is usually an internationalization error. See full issue explanation for more.</span><br /><pre class="errorlines">
+<span class="lineno">   5</span>         &lt;item quantity="other">komentari&lt;/item>
+<span class="lineno">   6</span>     &lt;/plurals>
+<span class="lineno">   7</span>     &lt;plurals name="uv_subscribers">
+<span class="lineno">   8</span>         <span class="errorspan">&lt;item quantity="one">pretplatnik&lt;/item></span>
+<span class="lineno">   9</span>         &lt;item quantity="other">pretplatnici&lt;/item>
+<span class="lineno">  10</span>     &lt;/plurals>
+</pre>
+<span class="location"><a href="../../res/values-fr/strings.xml">../../res/values-fr/strings.xml</a>:10</span>: <span class="message">The quantity 'one' matches more than one specific number in this locale, but the message did not include a formatting argument (such as %d). This is usually an internationalization error. See full issue explanation for more.</span><br /><pre class="errorlines">
+<span class="lineno">   7</span>     &lt;/plurals>
+<span class="lineno">   8</span>     
+<span class="lineno">   9</span>     &lt;plurals name="uv_subscribers">
+<span class="lineno">  10</span>         <span class="errorspan">&lt;item quantity="one">abonné&lt;/item></span>
+<span class="lineno">  11</span>         &lt;item quantity="other">abonnés&lt;/item>
+<span class="lineno">  12</span>     &lt;/plurals>
+</pre>
+<span class="location"><a href="../../res/values-hr/strings.xml">../../res/values-hr/strings.xml</a>:12</span>: <span class="message">The quantity 'one' matches more than one specific number in this locale, but the message did not include a formatting argument (such as %d). This is usually an internationalization error. See full issue explanation for more.</span><br /><pre class="errorlines">
+<span class="lineno">   9</span>         &lt;item quantity="other">pretplatnici&lt;/item>
+<span class="lineno">  10</span>     &lt;/plurals>
+<span class="lineno">  11</span>     &lt;plurals name="uv_articles">
+<span class="lineno">  12</span>         <span class="errorspan">&lt;item quantity="one">&#269;lanak&lt;/item></span>
+<span class="lineno">  13</span>         &lt;item quantity="other">&#269;lanci&lt;/item>
+<span class="lineno">  14</span>     &lt;/plurals>
+</pre>
+<button id="ImpliedQuantityDivLink" onclick="reveal('ImpliedQuantityDiv');" />+ 4 More Occurrences...</button>
+<div id="ImpliedQuantityDiv" style="display: none">
+<span class="location"><a href="../../res/values-fr/strings.xml">../../res/values-fr/strings.xml</a>:15</span>: <span class="message">The quantity 'one' matches more than one specific number in this locale, but the message did not include a formatting argument (such as %d). This is usually an internationalization error. See full issue explanation for more.</span><br /><pre class="errorlines">
+<span class="lineno">  12</span>     &lt;/plurals>
+<span class="lineno">  13</span>     
+<span class="lineno">  14</span>     &lt;plurals name="uv_articles">
+<span class="lineno">  15</span>         <span class="errorspan">&lt;item quantity="one">article&lt;/item></span>
+<span class="lineno">  16</span>         &lt;item quantity="other">articles&lt;/item>
+<span class="lineno">  17</span>     &lt;/plurals>
+</pre>
+<span class="location"><a href="../../res/values-hr/strings.xml">../../res/values-hr/strings.xml</a>:16</span>: <span class="message">The quantity 'one' matches more than one specific number in this locale, but the message did not include a formatting argument (such as %d). This is usually an internationalization error. See full issue explanation for more.</span><br /><pre class="errorlines">
+<span class="lineno">  13</span>         &lt;item quantity="other">&#269;lanci&lt;/item>
+<span class="lineno">  14</span>     &lt;/plurals>
+<span class="lineno">  15</span>     &lt;plurals name="uv_ideas">
+<span class="lineno">  16</span>         <span class="errorspan">&lt;item quantity="one">ideja&lt;/item></span>
+<span class="lineno">  17</span>         &lt;item quantity="other">ideje&lt;/item>
+<span class="lineno">  18</span>     &lt;/plurals>
+</pre>
+<span class="location"><a href="../../res/values-fr/strings.xml">../../res/values-fr/strings.xml</a>:20</span>: <span class="message">The quantity 'one' matches more than one specific number in this locale, but the message did not include a formatting argument (such as %d). This is usually an internationalization error. See full issue explanation for more.</span><br /><pre class="errorlines">
+<span class="lineno">  17</span>     &lt;/plurals>
+<span class="lineno">  18</span>     
+<span class="lineno">  19</span>     &lt;plurals name="uv_ideas">
+<span class="lineno">  20</span>         <span class="errorspan">&lt;item quantity="one">idée&lt;/item></span>
+<span class="lineno">  21</span>         &lt;item quantity="other">idées&lt;/item>
+<span class="lineno">  22</span>     &lt;/plurals>
+</pre>
+<span class="location"><a href="../../res/values-fr/strings.xml">../../res/values-fr/strings.xml</a>:25</span>: <span class="message">The quantity 'one' matches more than one specific number in this locale, but the message did not include a formatting argument (such as %d). This is usually an internationalization error. See full issue explanation for more.</span><br /><pre class="errorlines">
+<span class="lineno">  22</span>     &lt;/plurals>
+<span class="lineno">  23</span>     
+<span class="lineno">  24</span>     &lt;plurals name="uv_people">
+<span class="lineno">  25</span>         <span class="errorspan">&lt;item quantity="one">personne&lt;/item></span>
+<span class="lineno">  26</span>         &lt;item quantity="other">personnes&lt;/item>
+<span class="lineno">  27</span>     &lt;/plurals>
+</pre>
+</div>
+</div>
+<div class="metadata">Priority: 5 / 10<br/>
+Category: Correctness:Messages</div>
+Severity: <span class="error">Error</span><div class="summary">
+Explanation: Looks for quantity string translations which do not include the quantity.</div>
+<div class="explanation">
+Plural strings should generally include a <code>%s</code> or <code>%d</code> formatting argument. In locales like English, the <code>one</code> quantity only applies to a single value, 1, but that's not true everywhere. For example, in Slovene, the <code>one</code> quantity will apply to 1, 101, 201, 301, and so on. Similarly, there are locales where multiple values match the <code>zero</code> and <code>two</code> quantities.<br/>
+<br/>
+In these locales, it is usually an error to have a message which does not include a formatting argument (such as '%d'), since it will not be clear from the grammar what quantity the quantity string is describing.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals">http://developer.android.com/guide/topics/resources/string-resource.html#Plurals</a>
+</div><br/>To suppress this error, use the issue id "ImpliedQuantity" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="UnusedQuantity"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">UnusedQuantity: Unused quantity translations</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:4</span>: <span class="message">For language "ru" (Russian) the following quantities are not relevant: few</span><br /><pre class="errorlines">
+<span class="lineno">   1</span> &lt;?xml version="1.0" encoding="utf-8"?>
+<span class="lineno">   2</span> &lt;resources>
+<span class="lineno">   3</span> 
+<span class="lineno">   4</span>     <span class="errorspan">&lt;plurals name="uv_comments"></span>
+<span class="lineno">   5</span>         &lt;item quantity="one">&#1082;&#1086;&#1084;&#1084;&#1077;&#1085;&#1090;&#1072;&#1088;&#1080;&#1081;&lt;/item>
+<span class="lineno">   6</span>         &lt;item quantity="few">&#1082;&#1086;&#1084;&#1084;&#1077;&#1085;&#1090;&#1072;&#1088;&#1080;&#1103;&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-zh-rTW/strings.xml">../../res/values-zh-rTW/strings.xml</a>:4</span>: <span class="message">For language "zh" (Chinese) the following quantities are not relevant: one</span><br /><pre class="errorlines">
+<span class="lineno">   1</span> &lt;?xml version="1.0" encoding="utf-8"?>
+<span class="lineno">   2</span> &lt;resources>
+<span class="lineno">   3</span> 
+<span class="lineno">   4</span>     <span class="errorspan">&lt;plurals name="uv_comments"></span>
+<span class="lineno">   5</span>         &lt;item quantity="one">&#35413;&#35542;&lt;/item>
+<span class="lineno">   6</span>         &lt;item quantity="other">&#35413;&#35542;&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-zh-rTW/strings.xml">../../res/values-zh-rTW/strings.xml</a>:8</span>: <span class="message">For language "zh" (Chinese) the following quantities are not relevant: one</span><br /><pre class="errorlines">
+<span class="lineno">   5</span>         &lt;item quantity="one">&#35413;&#35542;&lt;/item>
+<span class="lineno">   6</span>         &lt;item quantity="other">&#35413;&#35542;&lt;/item>
+<span class="lineno">   7</span>     &lt;/plurals>
+<span class="lineno">   8</span>     <span class="errorspan">&lt;plurals name="uv_subscribers"></span>
+<span class="lineno">   9</span>         &lt;item quantity="one">&#35330;&#38321;&#32773;&lt;/item>
+<span class="lineno">  10</span>         &lt;item quantity="other">&#35330;&#38321;&#32773;&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:9</span>: <span class="message">For language "ru" (Russian) the following quantities are not relevant: few</span><br /><pre class="errorlines">
+<span class="lineno">   6</span>         &lt;item quantity="few">&#1082;&#1086;&#1084;&#1084;&#1077;&#1085;&#1090;&#1072;&#1088;&#1080;&#1103;&lt;/item>
+<span class="lineno">   7</span>         &lt;item quantity="other">&#1082;&#1086;&#1084;&#1084;&#1077;&#1085;&#1090;&#1072;&#1088;&#1080;&#1077;&#1074;&lt;/item>
+<span class="lineno">   8</span>     &lt;/plurals>
+<span class="lineno">   9</span>     <span class="errorspan">&lt;plurals name="uv_subscribers"></span>
+<span class="lineno">  10</span>         &lt;item quantity="one">&#1087;&#1086;&#1076;&#1087;&#1080;&#1089;&#1095;&#1080;&#1082;&lt;/item>
+<span class="lineno">  11</span>         &lt;item quantity="few">&#1087;&#1086;&#1076;&#1087;&#1080;&#1089;&#1095;&#1080;&#1082;&#1072;&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-zh-rTW/strings.xml">../../res/values-zh-rTW/strings.xml</a>:12</span>: <span class="message">For language "zh" (Chinese) the following quantities are not relevant: one</span><br /><pre class="errorlines">
+<span class="lineno">   9</span>         &lt;item quantity="one">&#35330;&#38321;&#32773;&lt;/item>
+<span class="lineno">  10</span>         &lt;item quantity="other">&#35330;&#38321;&#32773;&lt;/item>
+<span class="lineno">  11</span>     &lt;/plurals>
+<span class="lineno">  12</span>     <span class="errorspan">&lt;plurals name="uv_articles"></span>
+<span class="lineno">  13</span>         &lt;item quantity="one">&#25991;&#31456;&lt;/item>
+<span class="lineno">  14</span>         &lt;item quantity="other">&#25991;&#31456;&lt;/item>
+</pre>
+<button id="UnusedQuantityDivLink" onclick="reveal('UnusedQuantityDiv');" />+ 6 More Occurrences...</button>
+<div id="UnusedQuantityDiv" style="display: none">
+<span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:14</span>: <span class="message">For language "ru" (Russian) the following quantities are not relevant: few</span><br /><pre class="errorlines">
+<span class="lineno">  11</span>         &lt;item quantity="few">&#1087;&#1086;&#1076;&#1087;&#1080;&#1089;&#1095;&#1080;&#1082;&#1072;&lt;/item>
+<span class="lineno">  12</span>         &lt;item quantity="other">&#1087;&#1086;&#1076;&#1087;&#1080;&#1089;&#1095;&#1080;&#1082;&#1086;&#1074;&lt;/item>
+<span class="lineno">  13</span>     &lt;/plurals>
+<span class="lineno">  14</span>     <span class="errorspan">&lt;plurals name="uv_articles"></span>
+<span class="lineno">  15</span>         &lt;item quantity="one">&#1089;&#1090;&#1072;&#1090;&#1100;&#1103;&lt;/item>
+<span class="lineno">  16</span>         &lt;item quantity="few">&#1089;&#1090;&#1072;&#1090;&#1100;&#1080;&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-zh-rTW/strings.xml">../../res/values-zh-rTW/strings.xml</a>:16</span>: <span class="message">For language "zh" (Chinese) the following quantities are not relevant: one</span><br /><pre class="errorlines">
+<span class="lineno">  13</span>         &lt;item quantity="one">&#25991;&#31456;&lt;/item>
+<span class="lineno">  14</span>         &lt;item quantity="other">&#25991;&#31456;&lt;/item>
+<span class="lineno">  15</span>     &lt;/plurals>
+<span class="lineno">  16</span>     <span class="errorspan">&lt;plurals name="uv_ideas"></span>
+<span class="lineno">  17</span>         &lt;item quantity="one">&#24847;&#35211;&lt;/item>
+<span class="lineno">  18</span>         &lt;item quantity="other">&#24847;&#35211;&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:19</span>: <span class="message">For language "ru" (Russian) the following quantities are not relevant: few</span><br /><pre class="errorlines">
+<span class="lineno">  16</span>         &lt;item quantity="few">&#1089;&#1090;&#1072;&#1090;&#1100;&#1080;&lt;/item>
+<span class="lineno">  17</span>         &lt;item quantity="other">&#1089;&#1090;&#1072;&#1090;&#1077;&#1081;&lt;/item>
+<span class="lineno">  18</span>     &lt;/plurals>
+<span class="lineno">  19</span>     <span class="errorspan">&lt;plurals name="uv_ideas"></span>
+<span class="lineno">  20</span>         &lt;item quantity="one">&#1080;&#1076;&#1077;&#1103;&lt;/item>
+<span class="lineno">  21</span>         &lt;item quantity="few">&#1080;&#1076;&#1077;&#1080;&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-zh-rTW/strings.xml">../../res/values-zh-rTW/strings.xml</a>:20</span>: <span class="message">For language "zh" (Chinese) the following quantities are not relevant: one</span><br /><pre class="errorlines">
+<span class="lineno">  17</span>         &lt;item quantity="one">&#24847;&#35211;&lt;/item>
+<span class="lineno">  18</span>         &lt;item quantity="other">&#24847;&#35211;&lt;/item>
+<span class="lineno">  19</span>     &lt;/plurals>
+<span class="lineno">  20</span>     <span class="errorspan">&lt;plurals name="uv_people"></span>
+<span class="lineno">  21</span>         &lt;item quantity="one">&#20154;&lt;/item>
+<span class="lineno">  22</span>         &lt;item quantity="other">&#20154;&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:24</span>: <span class="message">For language "ru" (Russian) the following quantities are not relevant: few</span><br /><pre class="errorlines">
+<span class="lineno">  21</span>         &lt;item quantity="few">&#1080;&#1076;&#1077;&#1080;&lt;/item>
+<span class="lineno">  22</span>         &lt;item quantity="other">&#1080;&#1076;&#1077;&#1081;&lt;/item>
+<span class="lineno">  23</span>     &lt;/plurals>
+<span class="lineno">  24</span>     <span class="errorspan">&lt;plurals name="uv_people"></span>
+<span class="lineno">  25</span>         &lt;item quantity="one">&#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082;&lt;/item>
+<span class="lineno">  26</span>         &lt;item quantity="few">&#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082;&#1072;&lt;/item>
+</pre>
+<span class="location"><a href="../../res/values-zh-rTW/strings.xml">../../res/values-zh-rTW/strings.xml</a>:24</span>: <span class="message">For language "zh" (Chinese) the following quantities are not relevant: one</span><br /><pre class="errorlines">
+<span class="lineno">  21</span>         &lt;item quantity="one">&#20154;&lt;/item>
+<span class="lineno">  22</span>         &lt;item quantity="other">&#20154;&lt;/item>
+<span class="lineno">  23</span>     &lt;/plurals>
+<span class="lineno">  24</span>     <span class="errorspan">&lt;plurals name="uv_number_of_subscribers_format"></span>
+<span class="lineno">  25</span>         &lt;item quantity="one">%1$s &#21916;&#27489;&#36889;&#20491;&#24847;&#35211;&lt;/item>
+<span class="lineno">  26</span>         &lt;item quantity="other">%1$s &#21916;&#27489;&#36889;&#20491;&#24847;&#35211;&lt;/item>
+</pre>
+</div>
+</div>
+<div class="metadata">Priority: 3 / 10<br/>
+Category: Correctness:Messages</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Checks for quantity string translations which are not used in this language.</div>
+<div class="explanation">
+Android defines a number of different quantity strings, such as <code>zero</code>, <code>one</code>, <code>few</code> and <code>many</code>. However, many languages do not distinguish grammatically between all these different quantities.<br/>
+<br/>
+This lint check looks at the quantity strings defined for each translation and flags any quantity strings that are unused (because the language does not make that quantity distinction, and Android will therefore not look it up.).<br/>
+For example, in Chinese, only the <code>other</code> quantity is used, so even if you provide translations for <code>zero</code> and <code>one</code>, these strings will <b>not</b> be returned when <code>getQuantityString()</code> is called, even with <code>0</code> or <code>1</code>.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals">http://developer.android.com/guide/topics/resources/string-resource.html#Plurals</a>
+</div><br/>To suppress this error, use the issue id "UnusedQuantity" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Security"></a>
+<div class="category"><a href="#" title="Return to top">Security</a><div class="categorySeparator"></div>
+</div>
+<a name="AllowBackup"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">AllowBackup: Missing <code>allowBackup</code> attribute</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../AndroidManifest.xml">../../AndroidManifest.xml</a></span>: <span class="message">Should explicitly set android:allowBackup to true or false (it's true by default, and that can have some security implications for the application's data)</span><br />
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 3 / 10<br/>
+Category: Security</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Ensure that allowBackup is explicitly set in the application's manifest.</div>
+<div class="explanation">
+The allowBackup attribute determines if an application's data can be backed up and restored. It is documented at <a href="http://developer.android.com/reference/android/R.attr.html#allowBackup">http://developer.android.com/reference/android/R.attr.html#allowBackup</a><br/>
+<br/>
+By default, this flag is set to <code>true</code>. When this flag is set to <code>true</code>, application data can be backed up and restored by the user using <code>adb backup</code> and <code>adb restore</code>.<br/>
+<br/>
+This may have security consequences for an application. <code>adb backup</code> allows users who have enabled USB debugging to copy application data off of the device. Once backed up, all application data can be read by the user. <code>adb restore</code> allows creation of application data from a source specified by the user. Following a restore, applications should not assume that the data, file permissions, and directory permissions were created by the application itself.<br/>
+<br/>
+Setting <code>allowBackup="false"</code> opts an application out of both backup and restore.<br/>
+<br/>
+To fix this warning, decide whether your application should support backup, and explicitly set <code>android:allowBackup=(true|false)"</code>
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/android/R.attr.html#allowBackup">http://developer.android.com/reference/android/R.attr.html#allowBackup</a>
+</div><br/>To suppress this error, use the issue id "AllowBackup" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Performance"></a>
+<div class="category"><a href="#" title="Return to top">Performance</a><div class="categorySeparator"></div>
+</div>
+<a name="InefficientWeight"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">InefficientWeight: Inefficient layout weight</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../res/layout/uv_signin_layout.xml">../../res/layout/uv_signin_layout.xml</a>:33</span>: <span class="message">Use a layout_width of 0dp instead of match_parent for better performance</span><br /><pre class="errorlines">
+<span class="lineno">  30</span> 
+<span class="lineno">  31</span>         &lt;EditText
+<span class="lineno">  32</span>             android:id="@+id/uv_signin_password"
+<span class="lineno">  33</span>             <span class="errorspan">android:layout_width="match_parent"</span>
+<span class="lineno">  34</span>             android:layout_height="wrap_content"
+<span class="lineno">  35</span>             android:layout_weight="1"
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 3 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for inefficient weight declarations in LinearLayouts.</div>
+<div class="explanation">
+When only a single widget in a LinearLayout defines a weight, it is more efficient to assign a width/height of <code>0dp</code> to it since it will absorb all the remaining space anyway. With a declared width/height of <code>0dp</code> it does not have to measure its own size first.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "InefficientWeight" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="Overdraw"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">Overdraw: Overdraw: Painting regions more than once</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../res/layout/uv_divider.xml">../../res/layout/uv_divider.xml</a>:6</span>: <span class="message">Possible overdraw: Root element paints background #20000000 with a theme that also paints a background (inferred theme is @android:style/Theme.Holo)</span><br /><pre class="errorlines">
+<span class="lineno">   3</span>     android:id="@+id/uv_divider"
+<span class="lineno">   4</span>     android:layout_width="match_parent"
+<span class="lineno">   5</span>     android:layout_height="1px"
+<span class="lineno">   6</span>     <span class="errorspan">android:background="#20000000" /></span>
+<span class="lineno">   7</span> 
+
+</pre>
+</div>
+<div class="metadata">Priority: 3 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for overdraw issues (where a view is painted only to be fully painted over)</div>
+<div class="explanation">
+If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called "overdraw".<br/>
+<br/>
+NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it's currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.<br/>
+<br/>
+If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.<br/>
+<br/>
+Of course it's possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead.<br/>
+
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "Overdraw" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="UnusedResources"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">UnusedResources: Unused resources</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../res/values-sw720dp-land/dimens.xml">../../res/values-sw720dp-land/dimens.xml</a>:7</span>: <span class="message">The resource R.dimen.activity_horizontal_margin appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">   4</span>          Customize dimensions originally defined in res/values/dimens.xml (such as
+<span class="lineno">   5</span>          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
+<span class="lineno">   6</span>     -->
+<span class="lineno">   7</span>     &lt;dimen <span class="errorspan">name="activity_horizontal_margin">128dp&lt;/dimen></span>
+<span class="lineno">   8</span> 
+<span class="lineno">   9</span> &lt;/resources>
+</pre>
+<span class="location"><a href="../../res/values/strings.xml">../../res/values/strings.xml</a>:20</span>: <span class="message">The resource R.plurals.uv_people appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  17</span>         &lt;item quantity="one">idea&lt;/item>
+<span class="lineno">  18</span>         &lt;item quantity="other">ideas&lt;/item>
+<span class="lineno">  19</span>     &lt;/plurals>
+<span class="lineno">  20</span>     &lt;plurals <span class="errorspan">name="uv_people"></span>
+<span class="lineno">  21</span>         &lt;item quantity="one">person&lt;/item>
+<span class="lineno">  22</span>         &lt;item quantity="other">people&lt;/item>
+</pre>
+<ul></ul><button id="Location2DivLink" onclick="reveal('Location2Div');" />+ 9 Additional Locations...</button>
+<div id="Location2Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../res/values-cs/strings.xml">../../res/values-cs/strings.xml</a>:20</span>
+<li> <span class="location"><a href="../../res/values-de/strings.xml">../../res/values-de/strings.xml</a>:20</span>
+<li> <span class="location"><a href="../../res/values-en/strings.xml">../../res/values-en/strings.xml</a>:20</span>
+<li> <span class="location"><a href="../../res/values-fr/strings.xml">../../res/values-fr/strings.xml</a>:24</span>
+<li> <span class="location"><a href="../../res/values-hr/strings.xml">../../res/values-hr/strings.xml</a>:19</span>
+<li> <span class="location"><a href="../../res/values-nl/strings.xml">../../res/values-nl/strings.xml</a>:20</span>
+<li> <span class="location"><a href="../../res/values-pt/strings.xml">../../res/values-pt/strings.xml</a>:20</span>
+<li> <span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:24</span>
+<li> <span class="location"><a href="../../res/values-zh-rTW/strings.xml">../../res/values-zh-rTW/strings.xml</a>:20</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../res/values/strings.xml">../../res/values/strings.xml</a>:39</span>: <span class="message">The resource R.string.uv_title_idea appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  36</span>     &lt;string name="uv_password">Password&lt;/string>
+<span class="lineno">  37</span>     &lt;string name="uv_forgot_password">Forgot password&lt;/string>
+<span class="lineno">  38</span>     &lt;string name="uv_msg_comment_posted">Your comment has been posted&lt;/string>
+<span class="lineno">  39</span>     &lt;string <span class="errorspan">name="uv_title_idea">Idea&lt;/string></span>
+<span class="lineno">  40</span>     &lt;string name="uv_posted_by_format">Posted by %1$s on %2$s&lt;/string>
+<span class="lineno">  41</span>     &lt;string name="uv_all_articles">All Articles&lt;/string>
+</pre>
+<ul></ul><button id="Location3DivLink" onclick="reveal('Location3Div');" />+ 9 Additional Locations...</button>
+<div id="Location3Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../res/values-cs/strings.xml">../../res/values-cs/strings.xml</a>:40</span>
+<li> <span class="location"><a href="../../res/values-de/strings.xml">../../res/values-de/strings.xml</a>:39</span>
+<li> <span class="location"><a href="../../res/values-en/strings.xml">../../res/values-en/strings.xml</a>:39</span>
+<li> <span class="location"><a href="../../res/values-fr/strings.xml">../../res/values-fr/strings.xml</a>:44</span>
+<li> <span class="location"><a href="../../res/values-hr/strings.xml">../../res/values-hr/strings.xml</a>:37</span>
+<li> <span class="location"><a href="../../res/values-nl/strings.xml">../../res/values-nl/strings.xml</a>:39</span>
+<li> <span class="location"><a href="../../res/values-pt/strings.xml">../../res/values-pt/strings.xml</a>:39</span>
+<li> <span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:40</span>
+<li> <span class="location"><a href="../../res/values-zh-rTW/strings.xml">../../res/values-zh-rTW/strings.xml</a>:39</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../res/values/strings.xml">../../res/values/strings.xml</a>:49</span>: <span class="message">The resource R.string.uv_remove_votes appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  46</span>     &lt;string name="uv_failed_signin_error">Incorrect email or password&lt;/string>
+<span class="lineno">  47</span>     &lt;string name="uv_msg_forgot_password">Forgot password email sent&lt;/string>
+<span class="lineno">  48</span>     &lt;string name="uv_subscribe_dialog_title">Subscribe to this idea&lt;/string>
+<span class="lineno">  49</span>     &lt;string <span class="errorspan">name="uv_remove_votes">Remove Votes&lt;/string></span>
+<span class="lineno">  50</span>     &lt;string name="uv_feedback_forum">Feedback Forum&lt;/string>
+<span class="lineno">  51</span>     &lt;string name="uv_knowledge_base">Knowledge Base&lt;/string>
+</pre>
+<ul></ul><button id="Location4DivLink" onclick="reveal('Location4Div');" />+ 9 Additional Locations...</button>
+<div id="Location4Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../res/values-cs/strings.xml">../../res/values-cs/strings.xml</a>:50</span>
+<li> <span class="location"><a href="../../res/values-de/strings.xml">../../res/values-de/strings.xml</a>:49</span>
+<li> <span class="location"><a href="../../res/values-en/strings.xml">../../res/values-en/strings.xml</a>:49</span>
+<li> <span class="location"><a href="../../res/values-fr/strings.xml">../../res/values-fr/strings.xml</a>:54</span>
+<li> <span class="location"><a href="../../res/values-hr/strings.xml">../../res/values-hr/strings.xml</a>:47</span>
+<li> <span class="location"><a href="../../res/values-nl/strings.xml">../../res/values-nl/strings.xml</a>:49</span>
+<li> <span class="location"><a href="../../res/values-pt/strings.xml">../../res/values-pt/strings.xml</a>:49</span>
+<li> <span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:50</span>
+<li> <span class="location"><a href="../../res/values-zh-rTW/strings.xml">../../res/values-zh-rTW/strings.xml</a>:49</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../res/values/strings.xml">../../res/values/strings.xml</a>:55</span>: <span class="message">The resource R.string.uv_none_of_these_help appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  52</span>     &lt;string name="uv_admin_response_format">Admin response: %1$s&lt;/string>
+<span class="lineno">  53</span>     &lt;string name="uv_post_comment">Post comment&lt;/string>
+<span class="lineno">  54</span>     &lt;string name="uv_next">Next&lt;/string>
+<span class="lineno">  55</span>     &lt;string <span class="errorspan">name="uv_none_of_these_help">None of these help&lt;/string></span>
+<span class="lineno">  56</span>     &lt;string name="uv_send_message">Send message&lt;/string>
+<span class="lineno">  57</span>     &lt;string name="uv_your_email_address">Your email address&lt;/string>
+</pre>
+<ul></ul><button id="Location5DivLink" onclick="reveal('Location5Div');" />+ 9 Additional Locations...</button>
+<div id="Location5Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../res/values-cs/strings.xml">../../res/values-cs/strings.xml</a>:56</span>
+<li> <span class="location"><a href="../../res/values-de/strings.xml">../../res/values-de/strings.xml</a>:55</span>
+<li> <span class="location"><a href="../../res/values-en/strings.xml">../../res/values-en/strings.xml</a>:55</span>
+<li> <span class="location"><a href="../../res/values-fr/strings.xml">../../res/values-fr/strings.xml</a>:60</span>
+<li> <span class="location"><a href="../../res/values-hr/strings.xml">../../res/values-hr/strings.xml</a>:53</span>
+<li> <span class="location"><a href="../../res/values-nl/strings.xml">../../res/values-nl/strings.xml</a>:55</span>
+<li> <span class="location"><a href="../../res/values-pt/strings.xml">../../res/values-pt/strings.xml</a>:55</span>
+<li> <span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:56</span>
+<li> <span class="location"><a href="../../res/values-zh-rTW/strings.xml">../../res/values-zh-rTW/strings.xml</a>:55</span>
+</ul>
+</div><br/><br/>
+<button id="UnusedResourcesDivLink" onclick="reveal('UnusedResourcesDiv');" />+ 8 More Occurrences...</button>
+<div id="UnusedResourcesDiv" style="display: none">
+<span class="location"><a href="../../res/values/strings.xml">../../res/values/strings.xml</a>:62</span>: <span class="message">The resource R.string.uv_article appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  59</span>     &lt;string name="uv_name_hint">&#8220;Anonymous&#8221;&lt;/string>
+<span class="lineno">  60</span>     &lt;string name="uv_select_one">Select one&lt;/string>
+<span class="lineno">  61</span>     &lt;string name="uv_value">Value&lt;/string>
+<span class="lineno">  62</span>     &lt;string <span class="errorspan">name="uv_article">Article&lt;/string></span>
+<span class="lineno">  63</span>     &lt;string name="uv_idea">Idea&lt;/string>
+<span class="lineno">  64</span>     &lt;string name="uv_msg_ticket_created">Your message has been sent&lt;/string>
+</pre>
+<ul></ul><button id="Location6DivLink" onclick="reveal('Location6Div');" />+ 9 Additional Locations...</button>
+<div id="Location6Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../res/values-cs/strings.xml">../../res/values-cs/strings.xml</a>:63</span>
+<li> <span class="location"><a href="../../res/values-de/strings.xml">../../res/values-de/strings.xml</a>:62</span>
+<li> <span class="location"><a href="../../res/values-en/strings.xml">../../res/values-en/strings.xml</a>:62</span>
+<li> <span class="location"><a href="../../res/values-fr/strings.xml">../../res/values-fr/strings.xml</a>:67</span>
+<li> <span class="location"><a href="../../res/values-hr/strings.xml">../../res/values-hr/strings.xml</a>:60</span>
+<li> <span class="location"><a href="../../res/values-nl/strings.xml">../../res/values-nl/strings.xml</a>:62</span>
+<li> <span class="location"><a href="../../res/values-pt/strings.xml">../../res/values-pt/strings.xml</a>:62</span>
+<li> <span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:63</span>
+<li> <span class="location"><a href="../../res/values-zh-rTW/strings.xml">../../res/values-zh-rTW/strings.xml</a>:62</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../res/values/strings.xml">../../res/values/strings.xml</a>:63</span>: <span class="message">The resource R.string.uv_idea appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  60</span>     &lt;string name="uv_select_one">Select one&lt;/string>
+<span class="lineno">  61</span>     &lt;string name="uv_value">Value&lt;/string>
+<span class="lineno">  62</span>     &lt;string name="uv_article">Article&lt;/string>
+<span class="lineno">  63</span>     &lt;string <span class="errorspan">name="uv_idea">Idea&lt;/string></span>
+<span class="lineno">  64</span>     &lt;string name="uv_msg_ticket_created">Your message has been sent&lt;/string>
+<span class="lineno">  65</span>     &lt;string name="uv_msg_idea_created">Your idea has been created&lt;/string>
+</pre>
+<ul></ul><button id="Location7DivLink" onclick="reveal('Location7Div');" />+ 9 Additional Locations...</button>
+<div id="Location7Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../res/values-cs/strings.xml">../../res/values-cs/strings.xml</a>:64</span>
+<li> <span class="location"><a href="../../res/values-de/strings.xml">../../res/values-de/strings.xml</a>:63</span>
+<li> <span class="location"><a href="../../res/values-en/strings.xml">../../res/values-en/strings.xml</a>:63</span>
+<li> <span class="location"><a href="../../res/values-fr/strings.xml">../../res/values-fr/strings.xml</a>:68</span>
+<li> <span class="location"><a href="../../res/values-hr/strings.xml">../../res/values-hr/strings.xml</a>:61</span>
+<li> <span class="location"><a href="../../res/values-nl/strings.xml">../../res/values-nl/strings.xml</a>:63</span>
+<li> <span class="location"><a href="../../res/values-pt/strings.xml">../../res/values-pt/strings.xml</a>:63</span>
+<li> <span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:64</span>
+<li> <span class="location"><a href="../../res/values-zh-rTW/strings.xml">../../res/values-zh-rTW/strings.xml</a>:63</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../res/values/strings.xml">../../res/values/strings.xml</a>:67</span>: <span class="message">The resource R.string.uv_suggestion_instant_answer_question appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  64</span>     &lt;string name="uv_msg_ticket_created">Your message has been sent&lt;/string>
+<span class="lineno">  65</span>     &lt;string name="uv_msg_idea_created">Your idea has been created&lt;/string>
+<span class="lineno">  66</span>     &lt;string name="uv_article_instant_answer_question">Is this article helpful?&lt;/string>
+<span class="lineno">  67</span>     &lt;string <span class="errorspan">name="uv_suggestion_instant_answer_question">Is this idea helpful?&lt;/string></span>
+<span class="lineno">  68</span>     &lt;string name="uv_no">No&lt;/string>
+<span class="lineno">  69</span>     &lt;string name="uv_yes">Yes&lt;/string>
+</pre>
+<ul></ul><button id="Location8DivLink" onclick="reveal('Location8Div');" />+ 9 Additional Locations...</button>
+<div id="Location8Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../res/values-cs/strings.xml">../../res/values-cs/strings.xml</a>:68</span>
+<li> <span class="location"><a href="../../res/values-de/strings.xml">../../res/values-de/strings.xml</a>:67</span>
+<li> <span class="location"><a href="../../res/values-en/strings.xml">../../res/values-en/strings.xml</a>:67</span>
+<li> <span class="location"><a href="../../res/values-fr/strings.xml">../../res/values-fr/strings.xml</a>:72</span>
+<li> <span class="location"><a href="../../res/values-hr/strings.xml">../../res/values-hr/strings.xml</a>:65</span>
+<li> <span class="location"><a href="../../res/values-nl/strings.xml">../../res/values-nl/strings.xml</a>:67</span>
+<li> <span class="location"><a href="../../res/values-pt/strings.xml">../../res/values-pt/strings.xml</a>:67</span>
+<li> <span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:68</span>
+<li> <span class="location"><a href="../../res/values-zh-rTW/strings.xml">../../res/values-zh-rTW/strings.xml</a>:67</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../res/values/strings.xml">../../res/values/strings.xml</a>:81</span>: <span class="message">The resource R.string.uv_new_comment appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  78</span>     &lt;string name="uv_idea_form_help">When you post an idea on our forum, others will be able to subscribe to it and make comments. When we respond to the idea, you\'ll get notified.&lt;/string>
+<span class="lineno">  79</span>     &lt;string name="uv_contact_us">Contact us&lt;/string>
+<span class="lineno">  80</span>     &lt;string name="uv_close">Close&lt;/string>
+<span class="lineno">  81</span>     &lt;string <span class="errorspan">name="uv_new_comment">New comment&lt;/string></span>
+<span class="lineno">  82</span>     &lt;string name="uv_error">Error&lt;/string>
+<span class="lineno">  83</span>     &lt;string name="uv_msg_user_identity_validation">Please enter your email address&lt;/string>
+</pre>
+<ul></ul><button id="Location9DivLink" onclick="reveal('Location9Div');" />+ 9 Additional Locations...</button>
+<div id="Location9Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../res/values-cs/strings.xml">../../res/values-cs/strings.xml</a>:82</span>
+<li> <span class="location"><a href="../../res/values-de/strings.xml">../../res/values-de/strings.xml</a>:81</span>
+<li> <span class="location"><a href="../../res/values-en/strings.xml">../../res/values-en/strings.xml</a>:81</span>
+<li> <span class="location"><a href="../../res/values-fr/strings.xml">../../res/values-fr/strings.xml</a>:85</span>
+<li> <span class="location"><a href="../../res/values-hr/strings.xml">../../res/values-hr/strings.xml</a>:79</span>
+<li> <span class="location"><a href="../../res/values-nl/strings.xml">../../res/values-nl/strings.xml</a>:81</span>
+<li> <span class="location"><a href="../../res/values-pt/strings.xml">../../res/values-pt/strings.xml</a>:81</span>
+<li> <span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:82</span>
+<li> <span class="location"><a href="../../res/values-zh-rTW/strings.xml">../../res/values-zh-rTW/strings.xml</a>:81</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../res/values/strings.xml">../../res/values/strings.xml</a>:84</span>: <span class="message">The resource R.string.uv_status_format appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  81</span>     &lt;string name="uv_new_comment">New comment&lt;/string>
+<span class="lineno">  82</span>     &lt;string name="uv_error">Error&lt;/string>
+<span class="lineno">  83</span>     &lt;string name="uv_msg_user_identity_validation">Please enter your email address&lt;/string>
+<span class="lineno">  84</span>     &lt;string <span class="errorspan">name="uv_status_format">Status: %1$s&lt;/string></span>
+<span class="lineno">  85</span>     &lt;string name="uv_subscribe">Subscribe&lt;/string>
+<span class="lineno">  86</span>     &lt;string name="uv_nevermind">Nevermind&lt;/string>
+</pre>
+<ul></ul><button id="Location10DivLink" onclick="reveal('Location10Div');" />+ 9 Additional Locations...</button>
+<div id="Location10Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../res/values-cs/strings.xml">../../res/values-cs/strings.xml</a>:85</span>
+<li> <span class="location"><a href="../../res/values-de/strings.xml">../../res/values-de/strings.xml</a>:84</span>
+<li> <span class="location"><a href="../../res/values-en/strings.xml">../../res/values-en/strings.xml</a>:84</span>
+<li> <span class="location"><a href="../../res/values-fr/strings.xml">../../res/values-fr/strings.xml</a>:88</span>
+<li> <span class="location"><a href="../../res/values-hr/strings.xml">../../res/values-hr/strings.xml</a>:82</span>
+<li> <span class="location"><a href="../../res/values-nl/strings.xml">../../res/values-nl/strings.xml</a>:84</span>
+<li> <span class="location"><a href="../../res/values-pt/strings.xml">../../res/values-pt/strings.xml</a>:84</span>
+<li> <span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:85</span>
+<li> <span class="location"><a href="../../res/values-zh-rTW/strings.xml">../../res/values-zh-rTW/strings.xml</a>:84</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="../../res/values-ru/strings.xml">../../res/values-ru/strings.xml</a>:99</span>: <span class="message">The resource R.string.uv_number_of_subscribers_format appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  96</span>     &lt;string name="uv_post_idea_continue_button">&#1071; &#1074;&#1089;&#1105; &#1077;&#1097;&#1105; &#1093;&#1086;&#1095;&#1091; &#1086;&#1090;&#1087;&#1088;&#1072;&#1074;&#1080;&#1090;&#1100; &#1089;&#1074;&#1086;&#1102; &#1080;&#1076;&#1077;&#1102;&lt;/string>
+<span class="lineno">  97</span>     &lt;string name="uv_contact_continue_button">&#1071; &#1074;&#1089;&#1105; &#1077;&#1097;&#1105; &#1093;&#1086;&#1095;&#1091; &#1086;&#1090;&#1087;&#1088;&#1072;&#1074;&#1080;&#1090;&#1100; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1085;&#1080;&#1077;&lt;/string>
+<span class="lineno">  98</span>     &lt;string name="uv_i_want_this">&#1044;&#1072;, &#1103; &#1093;&#1086;&#1095;&#1091;!&lt;/string>
+<span class="lineno">  99</span>     &lt;string <span class="errorspan">name="uv_number_of_subscribers_format">%1$s &#1093;&#1086;&#1090;&#1103;&#1090; &#1101;&#1090;&#1086;&#1075;&#1086;&lt;/string></span>
+<span class="lineno"> 100</span>     &lt;string name="uv_post_a_comment">&#1054;&#1090;&#1087;&#1088;&#1072;&#1074;&#1080;&#1090;&#1100; &#1082;&#1086;&#1084;&#1084;&#1077;&#1085;&#1090;&#1072;&#1088;&#1080;&#1081;&lt;/string>
+<span class="lineno"> 101</span>     &lt;string name="uv_all_results_filter">&#1042;&#1057;&#1045;&lt;/string>
+</pre>
+<span class="location"><a href="../../res/drawable/uv_admin_response.xml">../../res/drawable/uv_admin_response.xml</a></span>: <span class="message">The resource R.drawable.uv_admin_response appears to be unused</span><br />
+<span class="location"><a href="../../res/layout/uv_list_content.xml">../../res/layout/uv_list_content.xml</a></span>: <span class="message">The resource R.layout.uv_list_content appears to be unused</span><br />
+</div>
+</div>
+<div class="metadata">Priority: 3 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for unused resources.</div>
+<div class="explanation">
+Unused resources make applications larger and slow down builds.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "UnusedResources" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="UselessParent"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">UselessParent: Useless parent layout</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../res/layout/uv_article_layout.xml">../../res/layout/uv_article_layout.xml</a>:7</span>: <span class="message">This ScrollView layout or its ViewFlipper parent is useless</span><br /><pre class="errorlines">
+<span class="lineno">   4</span>     android:layout_width="match_parent"
+<span class="lineno">   5</span>     android:layout_height="match_parent" >
+<span class="lineno">   6</span> 
+<span class="lineno">   7</span>     <span class="errorspan">&lt;ScrollView</span>
+<span class="lineno">   8</span>         android:layout_width="match_parent"
+<span class="lineno">   9</span>         android:layout_height="match_parent" >
+</pre>
+<span class="location"><a href="../../res/layout/uv_article_layout.xml">../../res/layout/uv_article_layout.xml</a>:55</span>: <span class="message">This TableRow layout or its TableLayout parent is useless</span><br /><pre class="errorlines">
+<span class="lineno">  52</span>                         android:columnCount="2"
+<span class="lineno">  53</span>                         android:paddingTop="10dp" >
+<span class="lineno">  54</span> 
+<span class="lineno">  55</span>                         <span class="errorspan">&lt;TableRow></span>
+<span class="lineno">  56</span> 
+<span class="lineno">  57</span>                             &lt;Button
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 2 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Checks whether a parent layout can be removed.</div>
+<div class="explanation">
+A layout with children that has no siblings, is not a scrollview or a root layout, and does not have a background, can be removed and have its children moved directly into the parent for a flatter and more efficient layout hierarchy.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "UselessParent" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Usability:Icons"></a>
+<div class="category"><a href="#" title="Return to top">Usability:Icons</a><div class="categorySeparator"></div>
+</div>
+<a name="IconDipSize"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">IconDipSize: Icon density-independent size validation</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../res/drawable-ldpi/uv_comment.png">../../res/drawable-ldpi/uv_comment.png</a></span>: <span class="message">The image uv_comment.png varies significantly in its density-independent (dip) size across the various density versions: drawable-xhdpi/uv_comment.png: 20x12 dp (39x24 px), drawable-mdpi/uv_comment.png: 20x12 dp (20x12 px), drawable-hdpi/uv_comment.png: 17x11 dp (26x16 px), drawable-ldpi/uv_comment.png: 17x11 dp (13x8 px)</span><br />
+<ul></ul><button id="Location1DivLink" onclick="reveal('Location1Div');" />+ 3 Additional Locations...</button>
+<div id="Location1Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../res/drawable-hdpi/uv_comment.png">../../res/drawable-hdpi/uv_comment.png</a></span>
+<li> <span class="location"><a href="../../res/drawable-mdpi/uv_comment.png">../../res/drawable-mdpi/uv_comment.png</a></span>
+<li> <span class="location"><a href="../../res/drawable-xhdpi/uv_comment.png">../../res/drawable-xhdpi/uv_comment.png</a></span>
+</ul>
+</div><br/><br/>
+<table><tr><td><a href="../../res/drawable-xhdpi/uv_comment.png"><img border="0" align="top" src="../../res/drawable-xhdpi/uv_comment.png" /></a>
+</td><td><a href="../../res/drawable-hdpi/uv_comment.png"><img border="0" align="top" src="../../res/drawable-hdpi/uv_comment.png" /></a>
+</td><td><a href="../../res/drawable-mdpi/uv_comment.png"><img border="0" align="top" src="../../res/drawable-mdpi/uv_comment.png" /></a>
+</td><td><a href="../../res/drawable-ldpi/uv_comment.png"><img border="0" align="top" src="../../res/drawable-ldpi/uv_comment.png" /></a>
+</td></tr><tr><th>xhdpi</th><th>hdpi</th><th>mdpi</th><th>ldpi</th></tr>
+</table>
+</div>
+<div class="metadata">Priority: 5 / 10<br/>
+Category: Usability:Icons</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Ensures that icons across densities provide roughly the same density-independent size.</div>
+<div class="explanation">
+Checks the all icons which are provided in multiple densities, all compute to roughly the same density-independent pixel (<code>dip</code>) size. This catches errors where images are either placed in the wrong folder, or icons are changed to new sizes but some folders are forgotten.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "IconDipSize" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Usability"></a>
+<div class="category"><a href="#" title="Return to top">Usability</a><div class="categorySeparator"></div>
+</div>
+<a name="SmallSp"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">SmallSp: Text size is too small</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../res/layout/uv_idea_dialog.xml">../../res/layout/uv_idea_dialog.xml</a>:17</span>: <span class="message">Avoid using sizes smaller than 12sp: 11sp</span><br /><pre class="errorlines">
+<span class="lineno">  14</span>         android:paddingTop="4dip"
+<span class="lineno">  15</span>         android:text="Started"
+<span class="lineno">  16</span>         android:textColor="#FFFFFF"
+<span class="lineno">  17</span>         <span class="errorspan">android:textSize="11sp"</span>
+<span class="lineno">  18</span>         android:textStyle="bold" />
+<span class="lineno">  19</span> 
+</pre>
+<span class="location"><a href="../../res/layout/uv_idea_dialog_header.xml">../../res/layout/uv_idea_dialog_header.xml</a>:41</span>: <span class="message">Avoid using sizes smaller than 12sp: 11sp</span><br /><pre class="errorlines">
+<span class="lineno">  38</span>         android:paddingTop="2dp"
+<span class="lineno">  39</span>         android:text="Posted by Anonymous on Jul 21, 2011"
+<span class="lineno">  40</span>         android:textColor="#999999"
+<span class="lineno">  41</span>         <span class="errorspan">android:textSize="11sp" /></span>
+<span class="lineno">  42</span> 
+<span class="lineno">  43</span>     &lt;include layout="@layout/uv_divider" />
+</pre>
+<span class="location"><a href="../../res/layout/uv_idea_dialog_header.xml">../../res/layout/uv_idea_dialog_header.xml</a>:74</span>: <span class="message">Avoid using sizes smaller than 12sp: 11sp</span><br /><pre class="errorlines">
+<span class="lineno">  71</span>                 android:layout_height="wrap_content"
+<span class="lineno">  72</span>                 android:text="12 people want this"
+<span class="lineno">  73</span>                 android:textColor="#999999"
+<span class="lineno">  74</span>                 <span class="errorspan">android:textSize="11sp" /></span>
+<span class="lineno">  75</span>         &lt;/LinearLayout>
+<span class="lineno">  76</span> 
+</pre>
+<span class="location"><a href="../../res/layout/uv_idea_help_item.xml">../../res/layout/uv_idea_help_item.xml</a>:11</span>: <span class="message">Avoid using sizes smaller than 12sp: 10sp</span><br /><pre class="errorlines">
+<span class="lineno">   8</span>         android:layout_width="wrap_content"
+<span class="lineno">   9</span>         android:layout_height="wrap_content"
+<span class="lineno">  10</span>         android:text="@string/uv_idea_form_help"
+<span class="lineno">  11</span>         <span class="errorspan">android:textSize="10sp"</span>
+<span class="lineno">  12</span>         android:paddingLeft="20dip"
+<span class="lineno">  13</span>         android:paddingRight="20dip"
+</pre>
+<span class="location"><a href="../../res/layout/uv_instant_answer_item.xml">../../res/layout/uv_instant_answer_item.xml</a>:74</span>: <span class="message">Avoid using sizes smaller than 12sp: 10sp</span><br /><pre class="errorlines">
+<span class="lineno">  71</span> 						android:layout_height="wrap_content"
+<span class="lineno">  72</span> 						android:text="UNDER REVIEW"
+<span class="lineno">  73</span> 						android:textColor="#999999"
+<span class="lineno">  74</span> 						<span class="errorspan">android:textSize="10sp" /></span>
+<span class="lineno">  75</span> 				&lt;/LinearLayout>
+<span class="lineno">  76</span> 			&lt;/LinearLayout>
+</pre>
+<span class="location"><a href="../../res/layout/uv_suggestion_item.xml">../../res/layout/uv_suggestion_item.xml</a>:44</span>: <span class="message">Avoid using sizes smaller than 12sp: 10sp</span><br /><pre class="errorlines">
+<span class="lineno">  41</span>                 android:text="12"
+<span class="lineno">  42</span>                 android:paddingLeft="3dp"
+<span class="lineno">  43</span>                 android:textColor="#999999"
+<span class="lineno">  44</span>                 <span class="errorspan">android:textSize="10sp" /></span>
+<span class="lineno">  45</span> 
+<span class="lineno">  46</span>             &lt;View
+</pre>
+<span class="location"><a href="../../res/layout/uv_suggestion_item.xml">../../res/layout/uv_suggestion_item.xml</a>:61</span>: <span class="message">Avoid using sizes smaller than 12sp: 10sp</span><br /><pre class="errorlines">
+<span class="lineno">  58</span>                 android:layout_height="wrap_content"
+<span class="lineno">  59</span>                 android:text="UNDER REVIEW"
+<span class="lineno">  60</span>                 android:textColor="#999999"
+<span class="lineno">  61</span>                 <span class="errorspan">android:textSize="10sp" /></span>
+<span class="lineno">  62</span>         &lt;/LinearLayout>
+<span class="lineno">  63</span>     &lt;/LinearLayout>
+</pre>
+</div>
+<div class="metadata">Priority: 4 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for text sizes that are too small.</div>
+<div class="explanation">
+Avoid using sizes smaller than 12sp.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "SmallSp" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="AlwaysShowAction"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">AlwaysShowAction: Usage of <code>showAsAction=always</code></a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../res/menu/uv_portal.xml">../../res/menu/uv_portal.xml</a>:7</span>: <span class="message">Prefer "ifRoom" instead of "always"</span><br /><pre class="errorlines">
+<span class="lineno">   4</span>     &lt;item android:id="@+id/uv_action_search"
+<span class="lineno">   5</span>           android:icon="@android:drawable/ic_menu_search"
+<span class="lineno">   6</span>           android:title="@string/uv_menu_search"
+<span class="lineno">   7</span>           <span class="errorspan">uv:showAsAction="always|collapseActionView"</span>
+<span class="lineno">   8</span>           uv:actionViewClass="android.support.v7.widget.SearchView" />
+<span class="lineno">   9</span> 
+</pre>
+<ul></ul><button id="Location1DivLink" onclick="reveal('Location1Div');" />+ 1 Additional Locations...</button>
+<div id="Location1Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="../../res/menu/uv_portal.xml">../../res/menu/uv_portal.xml</a>:11</span>
+</ul>
+</div><br/><br/>
+</div>
+<div class="metadata">Priority: 3 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Checks for uses of <code>showAsAction="always"</code> and suggests <code>showAsAction="ifRoom"</code> instead.</div>
+<div class="explanation">
+Using <code>showAsAction="always"</code> in menu XML, or <code>MenuItem.SHOW_AS_ACTION_ALWAYS</code> in Java code is usually a deviation from the user interface style guide.Use <code>ifRoom</code> or the corresponding <code>MenuItem.SHOW_AS_ACTION_IF_ROOM</code> instead.<br/>
+<br/>
+If <code>always</code> is used sparingly there are usually no problems and behavior is roughly equivalent to <code>ifRoom</code> but with preference over other <code>ifRoom</code> items. Using it more than twice in the same menu is a bad idea.<br/>
+<br/>
+This check looks for menu XML files that contain more than two <code>always</code> actions, or some <code>always</code> actions and no <code>ifRoom</code> actions. In Java code, it looks for projects that contain references to <code>MenuItem.SHOW_AS_ACTION_ALWAYS</code> and no references to <code>MenuItem.SHOW_AS_ACTION_IF_ROOM</code>.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/patterns/actionbar.html">http://developer.android.com/design/patterns/actionbar.html</a>
+</div><br/>To suppress this error, use the issue id "AlwaysShowAction" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Accessibility"></a>
+<div class="category"><a href="#" title="Return to top">Accessibility</a><div class="categorySeparator"></div>
+</div>
+<a name="ContentDescription"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">ContentDescription: Image without <code>contentDescription</code></a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../res/layout/uv_comment_item.xml">../../res/layout/uv_comment_item.xml</a>:56</span>: <span class="message">[Accessibility] Missing contentDescription attribute on image</span><br /><pre class="errorlines">
+<span class="lineno">  53</span>                 android:textSize="12sp" />
+<span class="lineno">  54</span>         &lt;/LinearLayout>
+<span class="lineno">  55</span> 
+<span class="lineno">  56</span>         <span class="errorspan">&lt;ImageView</span>
+<span class="lineno">  57</span>             android:id="@+id/uv_avatar"
+<span class="lineno">  58</span>             android:layout_width="50dp"
+</pre>
+<span class="location"><a href="../../res/layout/uv_idea_dialog_header.xml">../../res/layout/uv_idea_dialog_header.xml</a>:158</span>: <span class="message">[Accessibility] Missing contentDescription attribute on image</span><br /><pre class="errorlines">
+<span class="lineno"> 155</span>                     android:textSize="12sp" />
+<span class="lineno"> 156</span>             &lt;/LinearLayout>
+<span class="lineno"> 157</span> 
+<span class="lineno"> 158</span>             <span class="errorspan">&lt;ImageView</span>
+<span class="lineno"> 159</span>                 android:id="@+id/uv_admin_avatar"
+<span class="lineno"> 160</span>                 android:layout_width="50dp"
+</pre>
+<span class="location"><a href="../../res/layout/uv_idea_dialog_header.xml">../../res/layout/uv_idea_dialog_header.xml</a>:203</span>: <span class="message">[Accessibility] Missing contentDescription attribute on image</span><br /><pre class="errorlines">
+<span class="lineno"> 200</span>             android:layout_height="match_parent"
+<span class="lineno"> 201</span>             android:background="#20000000" />
+<span class="lineno"> 202</span> 
+<span class="lineno"> 203</span>         <span class="errorspan">&lt;ImageView</span>
+<span class="lineno"> 204</span>             android:layout_width="wrap_content"
+<span class="lineno"> 205</span>             android:layout_height="wrap_content"
+</pre>
+<span class="location"><a href="../../res/layout/uv_instant_answer_item.xml">../../res/layout/uv_instant_answer_item.xml</a>:14</span>: <span class="message">[Accessibility] Missing contentDescription attribute on image</span><br /><pre class="errorlines">
+<span class="lineno">  11</span> 		android:layout_height="wrap_content"
+<span class="lineno">  12</span> 		android:orientation="horizontal" >
+<span class="lineno">  13</span> 
+<span class="lineno">  14</span> 		<span class="errorspan">&lt;ImageView</span>
+<span class="lineno">  15</span> 			android:layout_width="wrap_content"
+<span class="lineno">  16</span> 			android:layout_height="wrap_content"
+</pre>
+<span class="location"><a href="../../res/layout/uv_suggestion_item.xml">../../res/layout/uv_suggestion_item.xml</a>:31</span>: <span class="message">[Accessibility] Missing contentDescription attribute on image</span><br /><pre class="errorlines">
+<span class="lineno">  28</span>             android:orientation="horizontal"
+<span class="lineno">  29</span>             android:paddingTop="3dp" >
+<span class="lineno">  30</span> 
+<span class="lineno">  31</span>             <span class="errorspan">&lt;ImageView</span>
+<span class="lineno">  32</span>                 android:layout_width="wrap_content"
+<span class="lineno">  33</span>                 android:layout_height="wrap_content"
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 3 / 10<br/>
+Category: Accessibility</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Ensures that image widgets provide a contentDescription.</div>
+<div class="explanation">
+Non-textual widgets like ImageViews and ImageButtons should use the <code>contentDescription</code> attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.<br/>
+<br/>
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore="ContentDescription" attribute.<br/>
+<br/>
+Note that for text fields, you should not set both the <code>hint</code> and the <code>contentDescription</code> attributes since the hint will never be shown. Just set the <code>hint</code>. See <a href="http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases">http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases</a>.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "ContentDescription" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Internationalization"></a>
+<div class="category"><a href="#" title="Return to top">Internationalization</a><div class="categorySeparator"></div>
+</div>
+<a name="HardcodedText"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">HardcodedText: Hardcoded text</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../res/layout/uv_comment_item.xml">../../res/layout/uv_comment_item.xml</a>:34</span>: <span class="message">[I18N] Hardcoded string "Evan Hamilton", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  31</span>                     android:layout_width="wrap_content"
+<span class="lineno">  32</span>                     android:layout_height="wrap_content"
+<span class="lineno">  33</span>                     android:paddingRight="5dp"
+<span class="lineno">  34</span>                     <span class="errorspan">android:text="Evan Hamilton"</span>
+<span class="lineno">  35</span>                     android:textSize="12sp" />
+<span class="lineno">  36</span> 
+</pre>
+<span class="location"><a href="../../res/layout/uv_comment_item.xml">../../res/layout/uv_comment_item.xml</a>:41</span>: <span class="message">[I18N] Hardcoded string "Feb 12, 2013", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  38</span>                     android:id="@+id/uv_date"
+<span class="lineno">  39</span>                     android:layout_width="wrap_content"
+<span class="lineno">  40</span>                     android:layout_height="wrap_content"
+<span class="lineno">  41</span>                     <span class="errorspan">android:text="Feb 12, 2013"</span>
+<span class="lineno">  42</span>                     android:textColor="#999999"
+<span class="lineno">  43</span>                     android:textSize="12sp" />
+</pre>
+<span class="location"><a href="../../res/layout/uv_comment_item.xml">../../res/layout/uv_comment_item.xml</a>:51</span>: <span class="message">[I18N] Hardcoded string "We are looking into this. Please check back and leave additional comments and we will be in touch!", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  48</span>                 android:layout_width="wrap_content"
+<span class="lineno">  49</span>                 android:layout_height="wrap_content"
+<span class="lineno">  50</span>                 android:paddingTop="2dp"
+<span class="lineno">  51</span>                 <span class="errorspan">android:text="We are looking into this. Please check back and leave additional comments and we will be in touch!"</span>
+<span class="lineno">  52</span>                 android:textColor="#999999"
+<span class="lineno">  53</span>                 android:textSize="12sp" />
+</pre>
+<span class="location"><a href="../../res/layout/uv_idea_dialog.xml">../../res/layout/uv_idea_dialog.xml</a>:15</span>: <span class="message">[I18N] Hardcoded string "Started", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  12</span>         android:paddingBottom="4dip"
+<span class="lineno">  13</span>         android:paddingLeft="10dip"
+<span class="lineno">  14</span>         android:paddingTop="4dip"
+<span class="lineno">  15</span>         <span class="errorspan">android:text="Started"</span>
+<span class="lineno">  16</span>         android:textColor="#FFFFFF"
+<span class="lineno">  17</span>         android:textSize="11sp"
+</pre>
+<span class="location"><a href="../../res/layout/uv_idea_dialog_header.xml">../../res/layout/uv_idea_dialog_header.xml</a>:17</span>: <span class="message">[I18N] Hardcoded string "Make the app more Android friendly", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  14</span>         android:layout_height="wrap_content"
+<span class="lineno">  15</span>         android:paddingLeft="5dp"
+<span class="lineno">  16</span>         android:paddingRight="5dp"
+<span class="lineno">  17</span>         <span class="errorspan">android:text="Make the app more Android friendly"</span>
+<span class="lineno">  18</span>         android:textAppearance="?android:attr/textAppearanceLarge" />
+<span class="lineno">  19</span> 
+</pre>
+<button id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 15 More Occurrences...</button>
+<div id="HardcodedTextDiv" style="display: none">
+<span class="location"><a href="../../res/layout/uv_idea_dialog_header.xml">../../res/layout/uv_idea_dialog_header.xml</a>:27</span>: <span class="message">[I18N] Hardcoded string "Badges are cool, and we'd like to give them out to our active users.", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  24</span>         android:paddingLeft="5dp"
+<span class="lineno">  25</span>         android:paddingRight="5dp"
+<span class="lineno">  26</span>         android:paddingTop="10dp"
+<span class="lineno">  27</span>         <span class="errorspan">android:text="Badges are cool, and we&amp;apos;d like to give them out to our active users."</span>
+<span class="lineno">  28</span>         android:textAppearance="?android:attr/textAppearanceSmall"
+<span class="lineno">  29</span>         android:textColor="#999999" />
+</pre>
+<span class="location"><a href="../../res/layout/uv_idea_dialog_header.xml">../../res/layout/uv_idea_dialog_header.xml</a>:39</span>: <span class="message">[I18N] Hardcoded string "Posted by Anonymous on Jul 21, 2011", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  36</span>         android:paddingLeft="5dp"
+<span class="lineno">  37</span>         android:paddingRight="5dp"
+<span class="lineno">  38</span>         android:paddingTop="2dp"
+<span class="lineno">  39</span>         <span class="errorspan">android:text="Posted by Anonymous on Jul 21, 2011"</span>
+<span class="lineno">  40</span>         android:textColor="#999999"
+<span class="lineno">  41</span>         android:textSize="11sp" />
+</pre>
+<span class="location"><a href="../../res/layout/uv_idea_dialog_header.xml">../../res/layout/uv_idea_dialog_header.xml</a>:72</span>: <span class="message">[I18N] Hardcoded string "12 people want this", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  69</span>                 android:id="@+id/uv_subscriber_count"
+<span class="lineno">  70</span>                 android:layout_width="match_parent"
+<span class="lineno">  71</span>                 android:layout_height="wrap_content"
+<span class="lineno">  72</span>                 <span class="errorspan">android:text="12 people want this"</span>
+<span class="lineno">  73</span>                 android:textColor="#999999"
+<span class="lineno">  74</span>                 android:textSize="11sp" />
+</pre>
+<span class="location"><a href="../../res/layout/uv_idea_dialog_header.xml">../../res/layout/uv_idea_dialog_header.xml</a>:100</span>: <span class="message">[I18N] Hardcoded string "admin response: started", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  97</span>             android:paddingBottom="2dp"
+<span class="lineno">  98</span>             android:paddingLeft="5dp"
+<span class="lineno">  99</span>             android:paddingRight="5dp"
+<span class="lineno"> 100</span>             <span class="errorspan">android:text="admin response: started"</span>
+<span class="lineno"> 101</span>             android:textAllCaps="true"
+<span class="lineno"> 102</span>             android:textColor="#8dc13c"
+</pre>
+<span class="location"><a href="../../res/layout/uv_idea_dialog_header.xml">../../res/layout/uv_idea_dialog_header.xml</a>:136</span>: <span class="message">[I18N] Hardcoded string "Evan Hamilton", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno"> 133</span>                         android:layout_width="wrap_content"
+<span class="lineno"> 134</span>                         android:layout_height="wrap_content"
+<span class="lineno"> 135</span>                         android:paddingRight="5dp"
+<span class="lineno"> 136</span>                         <span class="errorspan">android:text="Evan Hamilton"</span>
+<span class="lineno"> 137</span>                         android:textSize="12sp" />
+<span class="lineno"> 138</span> 
+</pre>
+<span class="location"><a href="../../res/layout/uv_idea_dialog_header.xml">../../res/layout/uv_idea_dialog_header.xml</a>:143</span>: <span class="message">[I18N] Hardcoded string "Feb 12, 2013", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno"> 140</span>                         android:id="@+id/uv_response_date"
+<span class="lineno"> 141</span>                         android:layout_width="wrap_content"
+<span class="lineno"> 142</span>                         android:layout_height="wrap_content"
+<span class="lineno"> 143</span>                         <span class="errorspan">android:text="Feb 12, 2013"</span>
+<span class="lineno"> 144</span>                         android:textColor="#999999"
+<span class="lineno"> 145</span>                         android:textSize="12sp" />
+</pre>
+<span class="location"><a href="../../res/layout/uv_idea_dialog_header.xml">../../res/layout/uv_idea_dialog_header.xml</a>:153</span>: <span class="message">[I18N] Hardcoded string "We are looking into this. Please check back and leave additional comments and we will be in touch!", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno"> 150</span>                     android:layout_width="wrap_content"
+<span class="lineno"> 151</span>                     android:layout_height="wrap_content"
+<span class="lineno"> 152</span>                     android:paddingTop="2dp"
+<span class="lineno"> 153</span>                     <span class="errorspan">android:text="We are looking into this. Please check back and leave additional comments and we will be in touch!"</span>
+<span class="lineno"> 154</span>                     android:textColor="#999999"
+<span class="lineno"> 155</span>                     android:textSize="12sp" />
+</pre>
+<span class="location"><a href="../../res/layout/uv_idea_dialog_header.xml">../../res/layout/uv_idea_dialog_header.xml</a>:176</span>: <span class="message">[I18N] Hardcoded string "14 comments", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno"> 173</span>             android:id="@+id/uv_comment_count"
+<span class="lineno"> 174</span>             style="@style/uv_ListSeparatorLight"
+<span class="lineno"> 175</span>             android:paddingLeft="5dp"
+<span class="lineno"> 176</span>             <span class="errorspan">android:text="14 comments"</span>
+<span class="lineno"> 177</span>             android:textIsSelectable="false" />
+<span class="lineno"> 178</span>     &lt;/LinearLayout>
+</pre>
+<span class="location"><a href="../../res/layout/uv_instant_answer_item.xml">../../res/layout/uv_instant_answer_item.xml</a>:35</span>: <span class="message">[I18N] Hardcoded string "Medium Text", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  32</span> 				android:layout_width="wrap_content"
+<span class="lineno">  33</span> 				android:layout_height="wrap_content"
+<span class="lineno">  34</span> 				android:paddingTop="5dp"
+<span class="lineno">  35</span> 				<span class="errorspan">android:text="Medium Text"</span>
+<span class="lineno">  36</span> 				android:textAppearance="?android:attr/textAppearanceMedium" />
+<span class="lineno">  37</span> 
+</pre>
+<span class="location"><a href="../../res/layout/uv_instant_answer_item.xml">../../res/layout/uv_instant_answer_item.xml</a>:48</span>: <span class="message">[I18N] Hardcoded string "Small Text", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  45</span> 					android:id="@+id/uv_detail"
+<span class="lineno">  46</span> 					android:layout_width="wrap_content"
+<span class="lineno">  47</span> 					android:layout_height="wrap_content"
+<span class="lineno">  48</span> 					<span class="errorspan">android:text="Small Text"</span>
+<span class="lineno">  49</span> 					android:textSize="12sp"
+<span class="lineno">  50</span> 					android:textColor="#75778c" />
+</pre>
+<span class="location"><a href="../../res/layout/uv_instant_answer_item.xml">../../res/layout/uv_instant_answer_item.xml</a>:72</span>: <span class="message">[I18N] Hardcoded string "UNDER REVIEW", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  69</span> 						android:id="@+id/uv_suggestion_status"
+<span class="lineno">  70</span> 						android:layout_width="wrap_content"
+<span class="lineno">  71</span> 						android:layout_height="wrap_content"
+<span class="lineno">  72</span> 						<span class="errorspan">android:text="UNDER REVIEW"</span>
+<span class="lineno">  73</span> 						android:textColor="#999999"
+<span class="lineno">  74</span> 						android:textSize="10sp" />
+</pre>
+<span class="location"><a href="../../res/layout/uv_powered_by_item.xml">../../res/layout/uv_powered_by_item.xml</a>:23</span>: <span class="message">[I18N] Hardcoded string "Android SDK v1.0", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  20</span>         android:layout_width="match_parent"
+<span class="lineno">  21</span>         android:layout_height="wrap_content"
+<span class="lineno">  22</span>         android:gravity="center_horizontal"
+<span class="lineno">  23</span>         <span class="errorspan">android:text="Android SDK v1.0"</span>
+<span class="lineno">  24</span>         android:textColor="#CCCCCC"
+<span class="lineno">  25</span>         android:textSize="12sp" />
+</pre>
+<span class="location"><a href="../../res/layout/uv_suggestion_item.xml">../../res/layout/uv_suggestion_item.xml</a>:22</span>: <span class="message">[I18N] Hardcoded string "Suggestion Title", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  19</span>             android:id="@+id/uv_suggestion_title"
+<span class="lineno">  20</span>             android:layout_width="wrap_content"
+<span class="lineno">  21</span>             android:layout_height="wrap_content"
+<span class="lineno">  22</span>             <span class="errorspan">android:text="Suggestion Title"</span>
+<span class="lineno">  23</span>             android:textSize="14sp" />
+<span class="lineno">  24</span> 
+</pre>
+<span class="location"><a href="../../res/layout/uv_suggestion_item.xml">../../res/layout/uv_suggestion_item.xml</a>:41</span>: <span class="message">[I18N] Hardcoded string "12", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  38</span>                 android:id="@+id/uv_subscriber_count"
+<span class="lineno">  39</span>                 android:layout_width="wrap_content"
+<span class="lineno">  40</span>                 android:layout_height="wrap_content"
+<span class="lineno">  41</span>                 <span class="errorspan">android:text="12"</span>
+<span class="lineno">  42</span>                 android:paddingLeft="3dp"
+<span class="lineno">  43</span>                 android:textColor="#999999"
+</pre>
+<span class="location"><a href="../../res/layout/uv_suggestion_item.xml">../../res/layout/uv_suggestion_item.xml</a>:59</span>: <span class="message">[I18N] Hardcoded string "UNDER REVIEW", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  56</span>                 android:id="@+id/uv_suggestion_status"
+<span class="lineno">  57</span>                 android:layout_width="wrap_content"
+<span class="lineno">  58</span>                 android:layout_height="wrap_content"
+<span class="lineno">  59</span>                 <span class="errorspan">android:text="UNDER REVIEW"</span>
+<span class="lineno">  60</span>                 android:textColor="#999999"
+<span class="lineno">  61</span>                 android:textSize="10sp" />
+</pre>
+</div>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 5 / 10<br/>
+Category: Internationalization</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for hardcoded text attributes which should be converted to resource lookup.</div>
+<div class="explanation">
+Hardcoding text attributes directly in layout files is bad for several reasons:<br/>
+<br/>
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)<br/>
+<br/>
+* The application cannot be translated to other languages by just adding new translations for existing string resources.<br/>
+<br/>
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "HardcodedText" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="MissingIssues"></a>
+<div class="category">Disabled Checks<div class="categorySeparator"></div>
+</div>
+The following issues were not run by lint, either because the check is not enabled by default, or because it was disabled with a command line flag or via one or more lint.xml configuration files in the project directories.
+<br/><br/>
+<a name="BackButton"></a>
+<div class="issue">
+<div class="id">BackButton<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 6 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for Back buttons, which are not common on the Android platform.</div>
+<div class="explanation">
+According to the Android Design Guide,<br/>
+<br/>
+"Other platforms use an explicit back button with label to allow the user to navigate up the application's hierarchy. Instead, Android uses the main action bar's app icon for hierarchical navigation and the navigation bar's back button for temporal navigation."<br/>
+This check is not very sophisticated (it just looks for buttons with the label "Back"), so it is disabled by default to not trigger on common scenarios like pairs of Back/Next buttons to paginate through screens.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/patterns/pure-android.html">http://developer.android.com/design/patterns/pure-android.html</a>
+</div><br/>To suppress this error, use the issue id "BackButton" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="EasterEgg"></a>
+<div class="issue">
+<div class="id">EasterEgg<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 6 / 10<br/>
+Category: Security</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for hidden easter eggs.</div>
+<div class="explanation">
+An "easter egg" is code deliberately hidden in the code, both from potential users and even from other developers. This lint check looks for code which looks like it may be hidden from sight.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "EasterEgg" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="FieldGetter"></a>
+<div class="issue">
+<div class="id">FieldGetter<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 4 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Suggests replacing uses of getters with direct field access within a class.</div>
+<div class="explanation">
+Accessing a field within the class that defines a getter for that field is at least 3 times faster than calling the getter. For simple getters that do nothing other than return the field, you might want to just reference the local field directly instead.<br/>
+<br/>
+<b>NOTE</b>: As of Android 2.3 (Gingerbread), this optimization is performed automatically by Dalvik, so there is no need to change your code; this is only relevant if you are targeting older versions of Android.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/design/performance.html#internal_get_set">http://developer.android.com/guide/practices/design/performance.html#internal_get_set</a>
+</div><br/>To suppress this error, use the issue id "FieldGetter" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="GradleDynamicVersion"></a>
+<div class="issue">
+<div class="id">GradleDynamicVersion<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 4 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for dependencies using a dynamic version rather than a fixed version.</div>
+<div class="explanation">
+Using <code>+</code> in dependencies lets you automatically pick up the latest available version rather than a specific, named version. However, this is not recommended; your builds are not repeatable; you may have tested with a slightly different version than what the build server used. (Using a dynamic version as the major version number is more problematic than using it in the minor version position.)
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "GradleDynamicVersion" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="IconExpectedSize"></a>
+<div class="issue">
+<div class="id">IconExpectedSize<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 5 / 10<br/>
+Category: Usability:Icons</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Ensures that launcher icons, notification icons etc have the correct size.</div>
+<div class="explanation">
+There are predefined sizes (for each density) for launcher icons. You should follow these conventions to make sure your icons fit in with the overall look of the platform.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/style/iconography.html">http://developer.android.com/design/style/iconography.html</a>
+</div><br/>To suppress this error, use the issue id "IconExpectedSize" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="NewerVersionAvailable"></a>
+<div class="issue">
+<div class="id">NewerVersionAvailable<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 4 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for Gradle library dependencies that can be replaced by newer versions.</div>
+<div class="explanation">
+This detector checks with a central repository to see if there are newer versions available for the dependencies used by this project.<br/>
+This is similar to the <code>GradleDependency</code> check, which checks for newer versions available in the Android SDK tools and libraries, but this works with any MavenCentral dependency, and connects to the library every time, which makes it more flexible but also <b>much</b> slower.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "NewerVersionAvailable" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="RtlCompat"></a>
+<div class="issue">
+<div class="id">RtlCompat<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 6 / 10<br/>
+Category: Bi-directional Text</div>
+Severity: <span class="error">Error</span><div class="summary">
+Explanation: Looks for compatibility issues with RTL support.</div>
+<div class="explanation">
+API 17 adds a <code>textAlignment</code> attribute to specify text alignment. However, if you are supporting older versions than API 17, you must <b>also</b> specify a gravity or layout_gravity attribute, since older platforms will ignore the <code>textAlignment</code> attribute.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "RtlCompat" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="RtlEnabled"></a>
+<div class="issue">
+<div class="id">RtlEnabled<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 3 / 10<br/>
+Category: Bi-directional Text</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for usages of right-to-left text constants without enabling RTL support.</div>
+<div class="explanation">
+To enable right-to-left support, when running on API 17 and higher, you must set the <code>android:supportsRtl</code> attribute in the manifest <code>&lt;application></code> element.<br/>
+If you have started adding RTL attributes, but have not yet finished the migration, you can set the attribute to false to satisfy this lint check.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "RtlEnabled" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="RtlHardcoded"></a>
+<div class="issue">
+<div class="id">RtlHardcoded<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 5 / 10<br/>
+Category: Bi-directional Text</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for hardcoded left/right constants which could be start/end for bidirectional text.</div>
+<div class="explanation">
+Using <code>Gravity#LEFT</code> and <code>Gravity#RIGHT</code> can lead to problems when a layout is rendered in locales where text flows from right to left. Use <code>Gravity#START</code> and <code>Gravity#END</code> instead. Similarly, in XML <code>gravity</code> and <code>layout_gravity</code> attributes, use <code>start</code> rather than <code>left</code>.<br/>
+For XML attributes such as paddingLeft and <code>layout_marginLeft</code>, use <code>paddingStart</code> and <code>layout_marginStart</code>. <b>NOTE</b>: If your <code>minSdkVersion</code> is less than 17, you should add <b>both</b> the older left/right attributes <b>as well as</b> the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.<br/>
+(Note: For <code>Gravity#LEFT</code> and <code>Gravity#START</code>, you can use these constants even when targeting older platforms, because the <code>start</code> bitmask is a superset of the <code>left</code> bitmask. Therefore, you can use <code>gravity="start"</code> rather than <code>gravity="left|start"</code>.)
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "RtlHardcoded" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="RtlSymmetry"></a>
+<div class="issue">
+<div class="id">RtlSymmetry<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 6 / 10<br/>
+Category: Bi-directional Text</div>
+Severity: <span class="error">Error</span><div class="summary">
+Explanation: Ensures that specifying padding on one side is matched by padding on the other.</div>
+<div class="explanation">
+If you specify padding or margin on the left side of a layout, you should probably also specify padding on the right side (and vice versa) for right-to-left layout symmetry.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "RtlSymmetry" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="SelectableText"></a>
+<div class="issue">
+<div class="id">SelectableText<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 7 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for TextViews which should probably allow their text to be selected.</div>
+<div class="explanation">
+If a <code>&lt;TextView></code> is used to display data, the user might want to copy that data and paste it elsewhere. To allow this, the <code>&lt;TextView></code> should specify <code>android:textIsSelectable="true"</code>.<br/>
+<br/>
+This lint check looks for TextViews which are likely to be displaying data: views whose text is set dynamically. This value will be ignored on platforms older than API 11, so it is okay to set it regardless of your <code>minSdkVersion</code>.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "SelectableText" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="StopShip"></a>
+<div class="issue">
+<div class="id">StopShip<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 10 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for comment markers of the form <code>//STOPSHIP</code> which indicates that code should not be released yet.</div>
+<div class="explanation">
+Using the comment <code>// STOPSHIP</code> can be used to flag code that is incomplete but checked in. This comment marker can be used to indicate that the code should not be shipped until the issue is addressed, and lint will look for these.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "StopShip" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="TypographyQuotes"></a>
+<div class="issue">
+<div class="id">TypographyQuotes<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Disabled By: Default<br/>
+Priority: 5 / 10<br/>
+Category: Usability:Typography</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for straight quotes which can be replaced by curvy quotes.</div>
+<div class="explanation">
+Straight single quotes and double quotes, when used as a pair, can be replaced by "curvy quotes" (or directional quotes). This can make the text more readable.<br/>
+<br/>
+Note that you should never use grave accents and apostrophes to quote, `like this'.<br/>
+<br/>
+(Also note that you should not use curvy quotes for code fragments.)
+</div>
+<br/><div class="moreinfo">More info: <a href="http://en.wikipedia.org/wiki/Quotation_mark">http://en.wikipedia.org/wiki/Quotation_mark</a>
+</div><br/>To suppress this error, use the issue id "TypographyQuotes" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="UnusedIds"></a>
+<div class="issue">
+<div class="id">UnusedIds<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 1 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for unused id's.</div>
+<div class="explanation">
+This resource id definition appears not to be needed since it is not referenced from anywhere. Having id definitions, even if unused, is not necessarily a bad idea since they make working on layouts and menus easier, so there is not a strong reason to delete these.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "UnusedIds" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="SuppressInfo"></a>
+<div class="category">Suppressing Warnings and Errors<div class="categorySeparator"></div>
+</div>
+Lint errors can be suppressed in a variety of ways:<br/>
+<br/>
+1. With a @SuppressLint annotation in the Java code<br/>
+2. With a tools:ignore attribute in the XML file<br/>
+3. With a lint.xml configuration file in the project<br/>
+4. With a lint.xml configuration file passed to lint via the --config flag<br/>
+5. With the --ignore flag passed to lint.<br/>
+<br/>
+To suppress a lint warning with an annotation, add a @SuppressLint("id") annotation on the class, method or variable declaration closest to the warning instance you want to disable. The id can be one or more issue id's, such as "UnusedResources" or {"UnusedResources","UnusedIds"}, or it can be "all" to suppress all lint warnings in the given scope.<br/>
+<br/>
+To suppress a lint warning in an XML file, add a tools:ignore="id" attribute on the element containing the error, or one of its surrounding elements. You also need to define the namespace for the tools prefix on the root element in your document, next to the xmlns:android declaration:<br/>
+* xmlns:tools="http://schemas.android.com/tools"<br/>
+<br/>
+To suppress lint warnings with a configuration XML file, create a file named lint.xml and place it at the root directory of the project in which it applies. (If you use the Eclipse plugin's Lint view, you can suppress errors there via the toolbar and Eclipse will create the lint.xml file for you.).<br/>
+<br/>
+The format of the lint.xml file is something like the following:<br/>
+<br/>
+&lt;?xml version="1.0" encoding="UTF-8"?><br/>
+&lt;lint><br/>
+    &lt;!-- Disable this given check in this project --><br/>
+    &lt;issue id="IconMissingDensityFolder" severity="ignore" /><br/>
+<br/>
+    &lt;!-- Ignore the ObsoleteLayoutParam issue in the given files --><br/>
+    &lt;issue id="ObsoleteLayoutParam"><br/>
+        &lt;ignore path="res/layout/activation.xml" /><br/>
+        &lt;ignore path="res/layout-xlarge/activation.xml" /><br/>
+    &lt;/issue><br/>
+<br/>
+    &lt;!-- Ignore the UselessLeaf issue in the given file --><br/>
+    &lt;issue id="UselessLeaf"><br/>
+        &lt;ignore path="res/layout/main.xml" /><br/>
+    &lt;/issue><br/>
+<br/>
+    &lt;!-- Change the severity of hardcoded strings to "error" --><br/>
+    &lt;issue id="HardcodedText" severity="error" /><br/>
+&lt;/lint><br/>
+<br/>
+To suppress lint checks from the command line, pass the --ignore flag with a comma separated list of ids to be suppressed, such as:<br/>
+"lint --ignore UnusedResources,UselessLeaf /my/project/path"<br/>
+
+
+</body>
+</html>

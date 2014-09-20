@@ -1,0 +1,3125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 23.0.2">
+
+    <issue
+        id="DuplicateIds"
+        severity="Fatal"
+        message="Duplicate id @+id/uv_text_field, already defined earlier in this layout"
+        category="Correctness"
+        priority="7"
+        summary="Checks for duplicate ids within a single layout"
+        explanation="Within a layout, id&apos;s should be unique since otherwise `findViewById()` can return an unexpected view."
+        errorLine1="                android:id=&quot;@+id/uv_text_field&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_comment_dialog.xml"
+            line="51"
+            column="17"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_comment_dialog.xml"
+            line="34"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="WebViewLayout"
+        severity="Error"
+        message="Placing a &lt;WebView> in a parent element that uses a wrap_content size can lead to subtle bugs; use match_parent"
+        category="Correctness"
+        priority="7"
+        summary="Ensures that WebViews are not placed in parents with wrap_content layout"
+        explanation="The WebView implementation has certain performance optimizations which will not work correctly if the parent view is using `wrap_content` rather than `match_parent`. This can lead to subtle UI bugs."
+        errorLine1="            &lt;WebView"
+        errorLine2="            ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_article_layout.xml"
+            line="17"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_article_layout.xml"
+            line="14"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="GradleDeprecated"
+        severity="Warning"
+        message="&apos;android-library&apos; is deprecated; use &apos;com.android.library&apos; instead"
+        category="Correctness"
+        priority="6"
+        summary="Looks for deprecated Gradle constructs"
+        explanation="This detector looks for deprecated Gradle constructs which currently work but will likely stop working in a future update."
+        errorLine1="apply plugin: &apos;android-library&apos;"
+        errorLine2="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/build.gradle"
+            line="11"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        severity="Warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
+        category="Correctness"
+        priority="6"
+        summary="Checks that the manifest specifies a targetSdkVersion that is recent"
+        explanation="When your application runs on a version of Android that is more recent than your `targetSdkVersion` specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the `targetSdkVersion` is less than 14, your app may get an option button in the UI.
+
+To fix this issue, set the `targetSdkVersion` to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        url="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        urls="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        errorLine1="    &lt;uses-sdk"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/AndroidManifest.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        severity="Warning"
+        message="Attribute &quot;columnCount&quot; is only used in API level 14 and higher (current min is 8)"
+        category="Correctness"
+        priority="6"
+        summary="Finds usages of attributes that will not be used (read) on all targeted versions"
+        explanation="This check finds attributes set in XML files that were introduced in a version newer than the oldest version targeted by your application (with the the `minSdkVersion` attribute).
+
+This is not an error; the application will simply ignore the attribute. However, if the attribute is important to the appearance of functionality of your application, you should consider finding an alternative way to achieve the same result with only available attributes, and then you can optionally create a copy of the layout in a layout-vNN folder which will be used on API NN or higher where you can take advantage of the newer attribute."
+        errorLine1="                        android:columnCount=&quot;2&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_article_layout.xml"
+            line="52"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        severity="Warning"
+        message="Attribute &quot;textIsSelectable&quot; is only used in API level 11 and higher (current min is 8)"
+        category="Correctness"
+        priority="6"
+        summary="Finds usages of attributes that will not be used (read) on all targeted versions"
+        explanation="This check finds attributes set in XML files that were introduced in a version newer than the oldest version targeted by your application (with the the `minSdkVersion` attribute).
+
+This is not an error; the application will simply ignore the attribute. However, if the attribute is important to the appearance of functionality of your application, you should consider finding an alternative way to achieve the same result with only available attributes, and then you can optionally create a copy of the layout in a layout-vNN folder which will be used on API NN or higher where you can take advantage of the newer attribute."
+        errorLine1="        android:textIsSelectable=&quot;false&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_header_item.xml"
+            line="14"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        severity="Warning"
+        message="Attribute &quot;textIsSelectable&quot; is only used in API level 11 and higher (current min is 8)"
+        category="Correctness"
+        priority="6"
+        summary="Finds usages of attributes that will not be used (read) on all targeted versions"
+        explanation="This check finds attributes set in XML files that were introduced in a version newer than the oldest version targeted by your application (with the the `minSdkVersion` attribute).
+
+This is not an error; the application will simply ignore the attribute. However, if the attribute is important to the appearance of functionality of your application, you should consider finding an alternative way to achieve the same result with only available attributes, and then you can optionally create a copy of the layout in a layout-vNN folder which will be used on API NN or higher where you can take advantage of the newer attribute."
+        errorLine1="        android:textIsSelectable=&quot;false&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_header_item_light.xml"
+            line="14"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        severity="Warning"
+        message="Attribute &quot;textIsSelectable&quot; is only used in API level 11 and higher (current min is 8)"
+        category="Correctness"
+        priority="6"
+        summary="Finds usages of attributes that will not be used (read) on all targeted versions"
+        explanation="This check finds attributes set in XML files that were introduced in a version newer than the oldest version targeted by your application (with the the `minSdkVersion` attribute).
+
+This is not an error; the application will simply ignore the attribute. However, if the attribute is important to the appearance of functionality of your application, you should consider finding an alternative way to achieve the same result with only available attributes, and then you can optionally create a copy of the layout in a layout-vNN folder which will be used on API NN or higher where you can take advantage of the newer attribute."
+        errorLine1="            android:textIsSelectable=&quot;false&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_header_item_light_no_padding.xml"
+            line="12"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        severity="Warning"
+        message="Attribute &quot;textAllCaps&quot; is only used in API level 14 and higher (current min is 8)"
+        category="Correctness"
+        priority="6"
+        summary="Finds usages of attributes that will not be used (read) on all targeted versions"
+        explanation="This check finds attributes set in XML files that were introduced in a version newer than the oldest version targeted by your application (with the the `minSdkVersion` attribute).
+
+This is not an error; the application will simply ignore the attribute. However, if the attribute is important to the appearance of functionality of your application, you should consider finding an alternative way to achieve the same result with only available attributes, and then you can optionally create a copy of the layout in a layout-vNN folder which will be used on API NN or higher where you can take advantage of the newer attribute."
+        errorLine1="            android:textAllCaps=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_idea_dialog_header.xml"
+            line="101"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        severity="Warning"
+        message="Attribute &quot;textIsSelectable&quot; is only used in API level 11 and higher (current min is 8)"
+        category="Correctness"
+        priority="6"
+        summary="Finds usages of attributes that will not be used (read) on all targeted versions"
+        explanation="This check finds attributes set in XML files that were introduced in a version newer than the oldest version targeted by your application (with the the `minSdkVersion` attribute).
+
+This is not an error; the application will simply ignore the attribute. However, if the attribute is important to the appearance of functionality of your application, you should consider finding an alternative way to achieve the same result with only available attributes, and then you can optionally create a copy of the layout in a layout-vNN folder which will be used on API NN or higher where you can take advantage of the newer attribute."
+        errorLine1="            android:textIsSelectable=&quot;false&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_idea_dialog_header.xml"
+            line="177"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        severity="Warning"
+        message="Attribute &quot;spinnerMode&quot; is only used in API level 11 and higher (current min is 8)"
+        category="Correctness"
+        priority="6"
+        summary="Finds usages of attributes that will not be used (read) on all targeted versions"
+        explanation="This check finds attributes set in XML files that were introduced in a version newer than the oldest version targeted by your application (with the the `minSdkVersion` attribute).
+
+This is not an error; the application will simply ignore the attribute. However, if the attribute is important to the appearance of functionality of your application, you should consider finding an alternative way to achieve the same result with only available attributes, and then you can optionally create a copy of the layout in a layout-vNN folder which will be used on API NN or higher where you can take advantage of the newer attribute."
+        errorLine1="            android:spinnerMode=&quot;dialog&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_select_field_item.xml"
+            line="21"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="        View view = getActivity().getLayoutInflater().inflate(R.layout.uv_comment_dialog, null);"
+        errorLine2="                                                                                          ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/dialog/CommentDialogFragment.java"
+            line="43"
+            column="91"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                view = inflater.inflate(R.layout.uv_text_field_item, null);"
+        errorLine2="                                                                     ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/ContactAdapter.java"
+            line="76"
+            column="70"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                view = inflater.inflate(R.layout.uv_select_field_item, null);"
+        errorLine2="                                                                       ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/ContactAdapter.java"
+            line="78"
+            column="72"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                            view = getLayoutInflater().inflate(R.layout.uv_text_item, null);"
+        errorLine2="                                                                                      ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/activity/ForumActivity.java"
+            line="116"
+            column="87"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                            view = getLayoutInflater().inflate(R.layout.uv_header_item_light, null);"
+        errorLine2="                                                                                              ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/activity/ForumActivity.java"
+            line="122"
+            column="95"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                view = inflater.inflate(R.layout.uv_loading_item, null);"
+        errorLine2="                                                                  ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/InstantAnswersAdapter.java"
+            line="155"
+            column="67"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                view = inflater.inflate(R.layout.uv_contact_button_item, null);"
+        errorLine2="                                                                         ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/InstantAnswersAdapter.java"
+            line="157"
+            column="74"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                view = inflater.inflate(R.layout.uv_header_item, null);"
+        errorLine2="                                                                 ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/InstantAnswersAdapter.java"
+            line="166"
+            column="66"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                view = inflater.inflate(R.layout.uv_instant_answer_item, null);"
+        errorLine2="                                                                         ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/InstantAnswersAdapter.java"
+            line="168"
+            column="74"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                view = inflater.inflate(R.layout.uv_contact_text_item, null);"
+        errorLine2="                                                                       ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/InstantAnswersAdapter.java"
+            line="173"
+            column="72"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                view = inflater.inflate(R.layout.uv_text_field_item, null);"
+        errorLine2="                                                                     ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/InstantAnswersAdapter.java"
+            line="195"
+            column="70"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                view = inflater.inflate(R.layout.uv_instant_answer_item, null);"
+        errorLine2="                                                                         ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/MixedSearchAdapter.java"
+            line="135"
+            column="74"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                view = inflater.inflate(R.layout.uv_loading_item, null);"
+        errorLine2="                                                                  ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/MixedSearchAdapter.java"
+            line="137"
+            column="67"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="        View view = getActivity().getLayoutInflater().inflate(R.layout.uv_password_dialog, null);"
+        errorLine2="                                                                                           ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/dialog/PasswordDialogFragment.java"
+            line="37"
+            column="92"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                view = inflater.inflate(R.layout.uv_loading_item, null);"
+        errorLine2="                                                                  ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/PortalAdapter.java"
+            line="216"
+            column="67"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                view = inflater.inflate(R.layout.uv_text_item, null);"
+        errorLine2="                                                               ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/PortalAdapter.java"
+            line="218"
+            column="64"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                view = inflater.inflate(R.layout.uv_header_item_light, null);"
+        errorLine2="                                                                       ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/PortalAdapter.java"
+            line="220"
+            column="72"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                view = inflater.inflate(R.layout.uv_text_item, null);"
+        errorLine2="                                                               ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/PortalAdapter.java"
+            line="222"
+            column="64"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                view = inflater.inflate(R.layout.uv_text_item, null);"
+        errorLine2="                                                               ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/PortalAdapter.java"
+            line="224"
+            column="64"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                view = inflater.inflate(R.layout.uv_text_item, null);"
+        errorLine2="                                                               ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/PortalAdapter.java"
+            line="226"
+            column="64"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="             view = inflater.inflate(R.layout.uv_powered_by_item, null);"
+        errorLine2="                                                                  ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/PortalAdapter.java"
+            line="228"
+            column="67"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                view = inflater.inflate(R.layout.uv_text_field_item, null);"
+        errorLine2="                                                                     ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/PostIdeaAdapter.java"
+            line="73"
+            column="70"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                view = inflater.inflate(R.layout.uv_select_field_item, null);"
+        errorLine2="                                                                       ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/PostIdeaAdapter.java"
+            line="81"
+            column="72"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                view = inflater.inflate(R.layout.uv_idea_help_item, null);"
+        errorLine2="                                                                    ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/PostIdeaAdapter.java"
+            line="87"
+            column="69"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="                view = inflater.inflate(R.layout.uv_header_item, null);"
+        errorLine2="                                                                 ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/ui/PostIdeaAdapter.java"
+            line="89"
+            column="66"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="        View view = inflater.inflate(R.layout.uv_signin_layout, null);"
+        errorLine2="                                                                ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/dialog/SigninDialogFragment.java"
+            line="70"
+            column="65"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="        View view = getActivity().getLayoutInflater().inflate(R.layout.uv_subscribe_dialog, null);"
+        errorLine2="                                                                                            ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/dialog/SubscribeDialogFragment.java"
+            line="42"
+            column="93"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="        view = getActivity().getLayoutInflater().inflate(R.layout.uv_idea_dialog, null);"
+        errorLine2="                                                                                  ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/dialog/SuggestionDialogFragment.java"
+            line="55"
+            column="83"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Ensures that a proper parent context is passed to a layout inflater"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        urls="http://www.doubleencore.com/2013/05/layout-inflation-as-intended"
+        errorLine1="        headerView = getActivity().getLayoutInflater().inflate(R.layout.uv_idea_dialog_header, null);"
+        errorLine2="                                                                                               ~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/src/com/uservoice/uservoicesdk/dialog/SuggestionDialogFragment.java"
+            line="56"
+            column="96"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.android.support:support-v4 than 19 is available: 21.0.0-rc1"
+        category="Correctness"
+        priority="4"
+        summary="Looks for old or obsolete Gradle library dependencies"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    compile &apos;com.android.support:support-v4:19.&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/build.gradle"
+            line="57"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.android.support:appcompat-v7 than 19.+ is available: 21.0.0-rc1"
+        category="Correctness"
+        priority="4"
+        summary="Looks for old or obsolete Gradle library dependencies"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    compile &apos;com.android.support:appcompat-v7:19.+&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/build.gradle"
+            line="58"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PxUsage"
+        severity="Warning"
+        message="Avoid using &quot;px&quot; as units; use &quot;dp&quot; instead"
+        category="Correctness"
+        priority="2"
+        summary="Looks for use of the `px` dimension"
+        explanation="For performance reasons and to keep the code simpler, the Android system uses pixels as the standard unit for expressing dimension or coordinate values. That means that the dimensions of a view are always expressed in the code using pixels, but always based on the current screen density. For instance, if `myView.getWidth()` returns 10, the view is 10 pixels wide on the current screen, but on a device with a higher density screen, the value returned might be 15. If you use pixel values in your application code to work with bitmaps that are not pre-scaled for the current screen density, you might need to scale the pixel values that you use in your code to match the un-scaled bitmap source."
+        url="http://developer.android.com/guide/practices/screens_support.html#screen-independence"
+        urls="http://developer.android.com/guide/practices/screens_support.html#screen-independence"
+        errorLine1="                    android:layout_height=&quot;2px&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_article_layout.xml"
+            line="31"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="MissingQuantity"
+        severity="Error"
+        message="For locale &quot;hr&quot; (Croatian) the following quantities should also be defined: few"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for missing quantity strings relevant to each locale"
+        explanation="Different languages have different rules for grammatical agreement with quantity. In English, for example, the quantity 1 is a special case. We write &quot;1 book&quot;, but for any other quantity we&apos;d write &quot;n books&quot;. This distinction between singular and plural is very common, but other languages make finer distinctions.
+
+This lint check looks at each translation of a `&lt;plural>` and makes sure that all the quantity strings considered by the given language are provided by this translation.
+
+For example, an English translation must provide a string for `quantity=&quot;one&quot;`. Similarly, a Czech translation must provide a string for `quantity=&quot;few&quot;`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_comments&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-hr/strings.xml"
+            line="3"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MissingQuantity"
+        severity="Error"
+        message="For locale &quot;cs&quot; (Czech) the following quantities should also be defined: few"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for missing quantity strings relevant to each locale"
+        explanation="Different languages have different rules for grammatical agreement with quantity. In English, for example, the quantity 1 is a special case. We write &quot;1 book&quot;, but for any other quantity we&apos;d write &quot;n books&quot;. This distinction between singular and plural is very common, but other languages make finer distinctions.
+
+This lint check looks at each translation of a `&lt;plural>` and makes sure that all the quantity strings considered by the given language are provided by this translation.
+
+For example, an English translation must provide a string for `quantity=&quot;one&quot;`. Similarly, a Czech translation must provide a string for `quantity=&quot;few&quot;`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_comments&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-cs/strings.xml"
+            line="4"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MissingQuantity"
+        severity="Error"
+        message="For locale &quot;ru&quot; (Russian) the following quantities should also be defined: many"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for missing quantity strings relevant to each locale"
+        explanation="Different languages have different rules for grammatical agreement with quantity. In English, for example, the quantity 1 is a special case. We write &quot;1 book&quot;, but for any other quantity we&apos;d write &quot;n books&quot;. This distinction between singular and plural is very common, but other languages make finer distinctions.
+
+This lint check looks at each translation of a `&lt;plural>` and makes sure that all the quantity strings considered by the given language are provided by this translation.
+
+For example, an English translation must provide a string for `quantity=&quot;one&quot;`. Similarly, a Czech translation must provide a string for `quantity=&quot;few&quot;`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_comments&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="4"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MissingQuantity"
+        severity="Error"
+        message="For locale &quot;hr&quot; (Croatian) the following quantities should also be defined: few"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for missing quantity strings relevant to each locale"
+        explanation="Different languages have different rules for grammatical agreement with quantity. In English, for example, the quantity 1 is a special case. We write &quot;1 book&quot;, but for any other quantity we&apos;d write &quot;n books&quot;. This distinction between singular and plural is very common, but other languages make finer distinctions.
+
+This lint check looks at each translation of a `&lt;plural>` and makes sure that all the quantity strings considered by the given language are provided by this translation.
+
+For example, an English translation must provide a string for `quantity=&quot;one&quot;`. Similarly, a Czech translation must provide a string for `quantity=&quot;few&quot;`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_subscribers&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-hr/strings.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MissingQuantity"
+        severity="Error"
+        message="For locale &quot;cs&quot; (Czech) the following quantities should also be defined: few"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for missing quantity strings relevant to each locale"
+        explanation="Different languages have different rules for grammatical agreement with quantity. In English, for example, the quantity 1 is a special case. We write &quot;1 book&quot;, but for any other quantity we&apos;d write &quot;n books&quot;. This distinction between singular and plural is very common, but other languages make finer distinctions.
+
+This lint check looks at each translation of a `&lt;plural>` and makes sure that all the quantity strings considered by the given language are provided by this translation.
+
+For example, an English translation must provide a string for `quantity=&quot;one&quot;`. Similarly, a Czech translation must provide a string for `quantity=&quot;few&quot;`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_subscribers&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-cs/strings.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MissingQuantity"
+        severity="Error"
+        message="For locale &quot;ru&quot; (Russian) the following quantities should also be defined: many"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for missing quantity strings relevant to each locale"
+        explanation="Different languages have different rules for grammatical agreement with quantity. In English, for example, the quantity 1 is a special case. We write &quot;1 book&quot;, but for any other quantity we&apos;d write &quot;n books&quot;. This distinction between singular and plural is very common, but other languages make finer distinctions.
+
+This lint check looks at each translation of a `&lt;plural>` and makes sure that all the quantity strings considered by the given language are provided by this translation.
+
+For example, an English translation must provide a string for `quantity=&quot;one&quot;`. Similarly, a Czech translation must provide a string for `quantity=&quot;few&quot;`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_subscribers&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="9"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MissingQuantity"
+        severity="Error"
+        message="For locale &quot;hr&quot; (Croatian) the following quantities should also be defined: few"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for missing quantity strings relevant to each locale"
+        explanation="Different languages have different rules for grammatical agreement with quantity. In English, for example, the quantity 1 is a special case. We write &quot;1 book&quot;, but for any other quantity we&apos;d write &quot;n books&quot;. This distinction between singular and plural is very common, but other languages make finer distinctions.
+
+This lint check looks at each translation of a `&lt;plural>` and makes sure that all the quantity strings considered by the given language are provided by this translation.
+
+For example, an English translation must provide a string for `quantity=&quot;one&quot;`. Similarly, a Czech translation must provide a string for `quantity=&quot;few&quot;`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_articles&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-hr/strings.xml"
+            line="11"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MissingQuantity"
+        severity="Error"
+        message="For locale &quot;cs&quot; (Czech) the following quantities should also be defined: few"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for missing quantity strings relevant to each locale"
+        explanation="Different languages have different rules for grammatical agreement with quantity. In English, for example, the quantity 1 is a special case. We write &quot;1 book&quot;, but for any other quantity we&apos;d write &quot;n books&quot;. This distinction between singular and plural is very common, but other languages make finer distinctions.
+
+This lint check looks at each translation of a `&lt;plural>` and makes sure that all the quantity strings considered by the given language are provided by this translation.
+
+For example, an English translation must provide a string for `quantity=&quot;one&quot;`. Similarly, a Czech translation must provide a string for `quantity=&quot;few&quot;`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_articles&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-cs/strings.xml"
+            line="12"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MissingQuantity"
+        severity="Error"
+        message="For locale &quot;ru&quot; (Russian) the following quantities should also be defined: many"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for missing quantity strings relevant to each locale"
+        explanation="Different languages have different rules for grammatical agreement with quantity. In English, for example, the quantity 1 is a special case. We write &quot;1 book&quot;, but for any other quantity we&apos;d write &quot;n books&quot;. This distinction between singular and plural is very common, but other languages make finer distinctions.
+
+This lint check looks at each translation of a `&lt;plural>` and makes sure that all the quantity strings considered by the given language are provided by this translation.
+
+For example, an English translation must provide a string for `quantity=&quot;one&quot;`. Similarly, a Czech translation must provide a string for `quantity=&quot;few&quot;`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_articles&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="14"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MissingQuantity"
+        severity="Error"
+        message="For locale &quot;hr&quot; (Croatian) the following quantities should also be defined: few"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for missing quantity strings relevant to each locale"
+        explanation="Different languages have different rules for grammatical agreement with quantity. In English, for example, the quantity 1 is a special case. We write &quot;1 book&quot;, but for any other quantity we&apos;d write &quot;n books&quot;. This distinction between singular and plural is very common, but other languages make finer distinctions.
+
+This lint check looks at each translation of a `&lt;plural>` and makes sure that all the quantity strings considered by the given language are provided by this translation.
+
+For example, an English translation must provide a string for `quantity=&quot;one&quot;`. Similarly, a Czech translation must provide a string for `quantity=&quot;few&quot;`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_ideas&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-hr/strings.xml"
+            line="15"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MissingQuantity"
+        severity="Error"
+        message="For locale &quot;cs&quot; (Czech) the following quantities should also be defined: few"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for missing quantity strings relevant to each locale"
+        explanation="Different languages have different rules for grammatical agreement with quantity. In English, for example, the quantity 1 is a special case. We write &quot;1 book&quot;, but for any other quantity we&apos;d write &quot;n books&quot;. This distinction between singular and plural is very common, but other languages make finer distinctions.
+
+This lint check looks at each translation of a `&lt;plural>` and makes sure that all the quantity strings considered by the given language are provided by this translation.
+
+For example, an English translation must provide a string for `quantity=&quot;one&quot;`. Similarly, a Czech translation must provide a string for `quantity=&quot;few&quot;`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_ideas&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-cs/strings.xml"
+            line="16"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MissingQuantity"
+        severity="Error"
+        message="For locale &quot;hr&quot; (Croatian) the following quantities should also be defined: few"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for missing quantity strings relevant to each locale"
+        explanation="Different languages have different rules for grammatical agreement with quantity. In English, for example, the quantity 1 is a special case. We write &quot;1 book&quot;, but for any other quantity we&apos;d write &quot;n books&quot;. This distinction between singular and plural is very common, but other languages make finer distinctions.
+
+This lint check looks at each translation of a `&lt;plural>` and makes sure that all the quantity strings considered by the given language are provided by this translation.
+
+For example, an English translation must provide a string for `quantity=&quot;one&quot;`. Similarly, a Czech translation must provide a string for `quantity=&quot;few&quot;`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_people&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-hr/strings.xml"
+            line="19"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MissingQuantity"
+        severity="Error"
+        message="For locale &quot;ru&quot; (Russian) the following quantities should also be defined: many"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for missing quantity strings relevant to each locale"
+        explanation="Different languages have different rules for grammatical agreement with quantity. In English, for example, the quantity 1 is a special case. We write &quot;1 book&quot;, but for any other quantity we&apos;d write &quot;n books&quot;. This distinction between singular and plural is very common, but other languages make finer distinctions.
+
+This lint check looks at each translation of a `&lt;plural>` and makes sure that all the quantity strings considered by the given language are provided by this translation.
+
+For example, an English translation must provide a string for `quantity=&quot;one&quot;`. Similarly, a Czech translation must provide a string for `quantity=&quot;few&quot;`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_ideas&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="19"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MissingQuantity"
+        severity="Error"
+        message="For locale &quot;cs&quot; (Czech) the following quantities should also be defined: few"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for missing quantity strings relevant to each locale"
+        explanation="Different languages have different rules for grammatical agreement with quantity. In English, for example, the quantity 1 is a special case. We write &quot;1 book&quot;, but for any other quantity we&apos;d write &quot;n books&quot;. This distinction between singular and plural is very common, but other languages make finer distinctions.
+
+This lint check looks at each translation of a `&lt;plural>` and makes sure that all the quantity strings considered by the given language are provided by this translation.
+
+For example, an English translation must provide a string for `quantity=&quot;one&quot;`. Similarly, a Czech translation must provide a string for `quantity=&quot;few&quot;`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_people&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-cs/strings.xml"
+            line="20"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MissingQuantity"
+        severity="Error"
+        message="For locale &quot;hr&quot; (Croatian) the following quantities should also be defined: few"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for missing quantity strings relevant to each locale"
+        explanation="Different languages have different rules for grammatical agreement with quantity. In English, for example, the quantity 1 is a special case. We write &quot;1 book&quot;, but for any other quantity we&apos;d write &quot;n books&quot;. This distinction between singular and plural is very common, but other languages make finer distinctions.
+
+This lint check looks at each translation of a `&lt;plural>` and makes sure that all the quantity strings considered by the given language are provided by this translation.
+
+For example, an English translation must provide a string for `quantity=&quot;one&quot;`. Similarly, a Czech translation must provide a string for `quantity=&quot;few&quot;`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_number_of_subscribers_format&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-hr/strings.xml"
+            line="23"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MissingQuantity"
+        severity="Error"
+        message="For locale &quot;cs&quot; (Czech) the following quantities should also be defined: few"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for missing quantity strings relevant to each locale"
+        explanation="Different languages have different rules for grammatical agreement with quantity. In English, for example, the quantity 1 is a special case. We write &quot;1 book&quot;, but for any other quantity we&apos;d write &quot;n books&quot;. This distinction between singular and plural is very common, but other languages make finer distinctions.
+
+This lint check looks at each translation of a `&lt;plural>` and makes sure that all the quantity strings considered by the given language are provided by this translation.
+
+For example, an English translation must provide a string for `quantity=&quot;one&quot;`. Similarly, a Czech translation must provide a string for `quantity=&quot;few&quot;`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_number_of_subscribers_format&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-cs/strings.xml"
+            line="24"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MissingQuantity"
+        severity="Error"
+        message="For locale &quot;ru&quot; (Russian) the following quantities should also be defined: many"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for missing quantity strings relevant to each locale"
+        explanation="Different languages have different rules for grammatical agreement with quantity. In English, for example, the quantity 1 is a special case. We write &quot;1 book&quot;, but for any other quantity we&apos;d write &quot;n books&quot;. This distinction between singular and plural is very common, but other languages make finer distinctions.
+
+This lint check looks at each translation of a `&lt;plural>` and makes sure that all the quantity strings considered by the given language are provided by this translation.
+
+For example, an English translation must provide a string for `quantity=&quot;one&quot;`. Similarly, a Czech translation must provide a string for `quantity=&quot;few&quot;`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_people&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="24"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Fatal"
+        message="&quot;uv_unhelpful_article_message_question&quot; is not translated in &quot;fr&quot; (French)"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for incomplete translations where not all strings are translated"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.
+
+If the string should *not* be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.
+
+By default this detector allows regions of a language to just provide a subset of the strings and fall back to the standard language strings. You can require all regions to provide a full translation by setting the environment variable `ANDROID_LINT_COMPLETE_REGIONS`.
+
+You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1="    &lt;string name=&quot;uv_unhelpful_article_message_question&quot;>Would you like to send us a message?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values/strings.xml"
+            line="72"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Fatal"
+        message="&quot;uv_post_an_idea&quot; is not translated in &quot;fr&quot; (French)"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for incomplete translations where not all strings are translated"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.
+
+If the string should *not* be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.
+
+By default this detector allows regions of a language to just provide a subset of the strings and fall back to the standard language strings. You can require all regions to provide a full translation by setting the environment variable `ANDROID_LINT_COMPLETE_REGIONS`.
+
+You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1="    &lt;string name=&quot;uv_post_an_idea&quot;>Post an idea&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values/strings.xml"
+            line="108"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Fatal"
+        message="&quot;uv_password_dialog_title&quot; is not translated in &quot;fr&quot; (French)"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for incomplete translations where not all strings are translated"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.
+
+If the string should *not* be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.
+
+By default this detector allows regions of a language to just provide a subset of the strings and fall back to the standard language strings. You can require all regions to provide a full translation by setting the environment variable `ANDROID_LINT_COMPLETE_REGIONS`.
+
+You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1="    &lt;string name=&quot;uv_password_dialog_title&quot;>Please enter your password&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values/strings.xml"
+            line="109"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Fatal"
+        message="&quot;uv_article_browse_question&quot; is not translated in &quot;fr&quot; (French)"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for incomplete translations where not all strings are translated"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.
+
+If the string should *not* be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.
+
+By default this detector allows regions of a language to just provide a subset of the strings and fall back to the standard language strings. You can require all regions to provide a full translation by setting the environment variable `ANDROID_LINT_COMPLETE_REGIONS`.
+
+You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1="    &lt;string name=&quot;uv_article_browse_question&quot;>Was this article helpful?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values/strings.xml"
+            line="110"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Fatal"
+        message="&quot;uv_thanks&quot; is not translated in &quot;fr&quot; (French)"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for incomplete translations where not all strings are translated"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.
+
+If the string should *not* be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.
+
+By default this detector allows regions of a language to just provide a subset of the strings and fall back to the standard language strings. You can require all regions to provide a full translation by setting the environment variable `ANDROID_LINT_COMPLETE_REGIONS`.
+
+You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1="    &lt;string name=&quot;uv_thanks&quot;>Thanks!&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values/strings.xml"
+            line="111"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Fatal"
+        message="&quot;uv_powered_by_uservoice&quot; is not translated in &quot;cs&quot; (Czech), &quot;fr&quot; (French), &quot;nl&quot; (Dutch), &quot;ru&quot; (Russian), &quot;zh-rTW&quot; (Chinese: Taiwan, Province of China)"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for incomplete translations where not all strings are translated"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.
+
+If the string should *not* be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.
+
+By default this detector allows regions of a language to just provide a subset of the strings and fall back to the standard language strings. You can require all regions to provide a full translation by setting the environment variable `ANDROID_LINT_COMPLETE_REGIONS`.
+
+You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1="    &lt;string name=&quot;uv_powered_by_uservoice&quot;>Powered by UserVoice&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values/strings.xml"
+            line="112"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Fatal"
+        message="&quot;uv_android_sdk&quot; is not translated in &quot;cs&quot; (Czech), &quot;fr&quot; (French), &quot;nl&quot; (Dutch), &quot;ru&quot; (Russian), &quot;zh-rTW&quot; (Chinese: Taiwan, Province of China)"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for incomplete translations where not all strings are translated"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.
+
+If the string should *not* be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.
+
+By default this detector allows regions of a language to just provide a subset of the strings and fall back to the standard language strings. You can require all regions to provide a full translation by setting the environment variable `ANDROID_LINT_COMPLETE_REGIONS`.
+
+You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1="    &lt;string name=&quot;uv_android_sdk&quot;>Android SDK&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values/strings.xml"
+            line="113"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Fatal"
+        message="&quot;uv_ranked&quot; is not translated in &quot;cs&quot; (Czech), &quot;de&quot; (German), &quot;fr&quot; (French), &quot;hr&quot; (Croatian), &quot;nl&quot; (Dutch), &quot;pt&quot; (Portuguese), &quot;ru&quot; (Russian), &quot;zh-rTW&quot; (Chinese: Taiwan, Province of China)"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Checks for incomplete translations where not all strings are translated"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.
+
+If the string should *not* be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.
+
+By default this detector allows regions of a language to just provide a subset of the strings and fall back to the standard language strings. You can require all regions to provide a full translation by setting the environment variable `ANDROID_LINT_COMPLETE_REGIONS`.
+
+You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1="    &lt;string name=&quot;uv_ranked&quot;>Ranked %1$s&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values/strings.xml"
+            line="115"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        severity="Warning"
+        message="&quot;immernoch&quot; is a common misspelling; did you mean &quot;immer noch&quot; ?"
+        category="Correctness:Messages"
+        priority="7"
+        summary="Looks for typos in messages"
+        explanation="This check looks through the string definitions, and if it finds any words that look like likely misspellings, they are flagged."
+        errorLine1="    &lt;string name=&quot;uv_helpful_article_message_question&quot;>Möchtest du immernoch eine Nachricht senden?&lt;/string>"
+        errorLine2="                                                                   ^"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-de/strings.xml"
+            line="71"
+            column="68"/>
+    </issue>
+
+    <issue
+        id="ExtraTranslation"
+        severity="Fatal"
+        message="&quot;uv_number_of_subscribers_format&quot; is translated here but not found in default locale"
+        category="Correctness:Messages"
+        priority="6"
+        summary="Checks for translations that appear to be unused (no default language string)"
+        explanation="If a string appears in a specific language translation file, but there is no corresponding string in the default locale, then this string is probably unused. (It&apos;s technically possible that your application is only intended to run in a specific locale, but it&apos;s still a good idea to provide a fallback.).
+
+Note that these strings can lead to crashes if the string is looked up on any locale not providing a translation, so it&apos;s important to clean them up."
+        errorLine1="    &lt;string name=&quot;uv_number_of_subscribers_format&quot;>%1$s хотят этого&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="99"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ImpliedQuantity"
+        severity="Error"
+        message="The quantity &apos;one&apos; matches more than one specific number in this locale, but the message did not include a formatting argument (such as %d). This is usually an internationalization error. See full issue explanation for more."
+        category="Correctness:Messages"
+        priority="5"
+        summary="Looks for quantity string translations which do not include the quantity"
+        explanation="Plural strings should generally include a `%s` or `%d` formatting argument. In locales like English, the `one` quantity only applies to a single value, 1, but that&apos;s not true everywhere. For example, in Slovene, the `one` quantity will apply to 1, 101, 201, 301, and so on. Similarly, there are locales where multiple values match the `zero` and `two` quantities.
+
+In these locales, it is usually an error to have a message which does not include a formatting argument (such as &apos;%d&apos;), since it will not be clear from the grammar what quantity the quantity string is describing."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="        &lt;item quantity=&quot;one&quot;>komentar&lt;/item>"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-hr/strings.xml"
+            line="4"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ImpliedQuantity"
+        severity="Error"
+        message="The quantity &apos;one&apos; matches more than one specific number in this locale, but the message did not include a formatting argument (such as %d). This is usually an internationalization error. See full issue explanation for more."
+        category="Correctness:Messages"
+        priority="5"
+        summary="Looks for quantity string translations which do not include the quantity"
+        explanation="Plural strings should generally include a `%s` or `%d` formatting argument. In locales like English, the `one` quantity only applies to a single value, 1, but that&apos;s not true everywhere. For example, in Slovene, the `one` quantity will apply to 1, 101, 201, 301, and so on. Similarly, there are locales where multiple values match the `zero` and `two` quantities.
+
+In these locales, it is usually an error to have a message which does not include a formatting argument (such as &apos;%d&apos;), since it will not be clear from the grammar what quantity the quantity string is describing."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="        &lt;item quantity=&quot;one&quot;>commentaire&lt;/item>"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-fr/strings.xml"
+            line="5"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ImpliedQuantity"
+        severity="Error"
+        message="The quantity &apos;one&apos; matches more than one specific number in this locale, but the message did not include a formatting argument (such as %d). This is usually an internationalization error. See full issue explanation for more."
+        category="Correctness:Messages"
+        priority="5"
+        summary="Looks for quantity string translations which do not include the quantity"
+        explanation="Plural strings should generally include a `%s` or `%d` formatting argument. In locales like English, the `one` quantity only applies to a single value, 1, but that&apos;s not true everywhere. For example, in Slovene, the `one` quantity will apply to 1, 101, 201, 301, and so on. Similarly, there are locales where multiple values match the `zero` and `two` quantities.
+
+In these locales, it is usually an error to have a message which does not include a formatting argument (such as &apos;%d&apos;), since it will not be clear from the grammar what quantity the quantity string is describing."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="        &lt;item quantity=&quot;one&quot;>pretplatnik&lt;/item>"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-hr/strings.xml"
+            line="8"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ImpliedQuantity"
+        severity="Error"
+        message="The quantity &apos;one&apos; matches more than one specific number in this locale, but the message did not include a formatting argument (such as %d). This is usually an internationalization error. See full issue explanation for more."
+        category="Correctness:Messages"
+        priority="5"
+        summary="Looks for quantity string translations which do not include the quantity"
+        explanation="Plural strings should generally include a `%s` or `%d` formatting argument. In locales like English, the `one` quantity only applies to a single value, 1, but that&apos;s not true everywhere. For example, in Slovene, the `one` quantity will apply to 1, 101, 201, 301, and so on. Similarly, there are locales where multiple values match the `zero` and `two` quantities.
+
+In these locales, it is usually an error to have a message which does not include a formatting argument (such as &apos;%d&apos;), since it will not be clear from the grammar what quantity the quantity string is describing."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="        &lt;item quantity=&quot;one&quot;>abonné&lt;/item>"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-fr/strings.xml"
+            line="10"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ImpliedQuantity"
+        severity="Error"
+        message="The quantity &apos;one&apos; matches more than one specific number in this locale, but the message did not include a formatting argument (such as %d). This is usually an internationalization error. See full issue explanation for more."
+        category="Correctness:Messages"
+        priority="5"
+        summary="Looks for quantity string translations which do not include the quantity"
+        explanation="Plural strings should generally include a `%s` or `%d` formatting argument. In locales like English, the `one` quantity only applies to a single value, 1, but that&apos;s not true everywhere. For example, in Slovene, the `one` quantity will apply to 1, 101, 201, 301, and so on. Similarly, there are locales where multiple values match the `zero` and `two` quantities.
+
+In these locales, it is usually an error to have a message which does not include a formatting argument (such as &apos;%d&apos;), since it will not be clear from the grammar what quantity the quantity string is describing."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="        &lt;item quantity=&quot;one&quot;>članak&lt;/item>"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-hr/strings.xml"
+            line="12"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ImpliedQuantity"
+        severity="Error"
+        message="The quantity &apos;one&apos; matches more than one specific number in this locale, but the message did not include a formatting argument (such as %d). This is usually an internationalization error. See full issue explanation for more."
+        category="Correctness:Messages"
+        priority="5"
+        summary="Looks for quantity string translations which do not include the quantity"
+        explanation="Plural strings should generally include a `%s` or `%d` formatting argument. In locales like English, the `one` quantity only applies to a single value, 1, but that&apos;s not true everywhere. For example, in Slovene, the `one` quantity will apply to 1, 101, 201, 301, and so on. Similarly, there are locales where multiple values match the `zero` and `two` quantities.
+
+In these locales, it is usually an error to have a message which does not include a formatting argument (such as &apos;%d&apos;), since it will not be clear from the grammar what quantity the quantity string is describing."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="        &lt;item quantity=&quot;one&quot;>article&lt;/item>"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-fr/strings.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ImpliedQuantity"
+        severity="Error"
+        message="The quantity &apos;one&apos; matches more than one specific number in this locale, but the message did not include a formatting argument (such as %d). This is usually an internationalization error. See full issue explanation for more."
+        category="Correctness:Messages"
+        priority="5"
+        summary="Looks for quantity string translations which do not include the quantity"
+        explanation="Plural strings should generally include a `%s` or `%d` formatting argument. In locales like English, the `one` quantity only applies to a single value, 1, but that&apos;s not true everywhere. For example, in Slovene, the `one` quantity will apply to 1, 101, 201, 301, and so on. Similarly, there are locales where multiple values match the `zero` and `two` quantities.
+
+In these locales, it is usually an error to have a message which does not include a formatting argument (such as &apos;%d&apos;), since it will not be clear from the grammar what quantity the quantity string is describing."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="        &lt;item quantity=&quot;one&quot;>ideja&lt;/item>"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-hr/strings.xml"
+            line="16"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ImpliedQuantity"
+        severity="Error"
+        message="The quantity &apos;one&apos; matches more than one specific number in this locale, but the message did not include a formatting argument (such as %d). This is usually an internationalization error. See full issue explanation for more."
+        category="Correctness:Messages"
+        priority="5"
+        summary="Looks for quantity string translations which do not include the quantity"
+        explanation="Plural strings should generally include a `%s` or `%d` formatting argument. In locales like English, the `one` quantity only applies to a single value, 1, but that&apos;s not true everywhere. For example, in Slovene, the `one` quantity will apply to 1, 101, 201, 301, and so on. Similarly, there are locales where multiple values match the `zero` and `two` quantities.
+
+In these locales, it is usually an error to have a message which does not include a formatting argument (such as &apos;%d&apos;), since it will not be clear from the grammar what quantity the quantity string is describing."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="        &lt;item quantity=&quot;one&quot;>idée&lt;/item>"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-fr/strings.xml"
+            line="20"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ImpliedQuantity"
+        severity="Error"
+        message="The quantity &apos;one&apos; matches more than one specific number in this locale, but the message did not include a formatting argument (such as %d). This is usually an internationalization error. See full issue explanation for more."
+        category="Correctness:Messages"
+        priority="5"
+        summary="Looks for quantity string translations which do not include the quantity"
+        explanation="Plural strings should generally include a `%s` or `%d` formatting argument. In locales like English, the `one` quantity only applies to a single value, 1, but that&apos;s not true everywhere. For example, in Slovene, the `one` quantity will apply to 1, 101, 201, 301, and so on. Similarly, there are locales where multiple values match the `zero` and `two` quantities.
+
+In these locales, it is usually an error to have a message which does not include a formatting argument (such as &apos;%d&apos;), since it will not be clear from the grammar what quantity the quantity string is describing."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="        &lt;item quantity=&quot;one&quot;>personne&lt;/item>"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-fr/strings.xml"
+            line="25"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedQuantity"
+        severity="Warning"
+        message="For language &quot;ru&quot; (Russian) the following quantities are not relevant: few"
+        category="Correctness:Messages"
+        priority="3"
+        summary="Checks for quantity string translations which are not used in this language"
+        explanation="Android defines a number of different quantity strings, such as `zero`, `one`, `few` and `many`. However, many languages do not distinguish grammatically between all these different quantities.
+
+This lint check looks at the quantity strings defined for each translation and flags any quantity strings that are unused (because the language does not make that quantity distinction, and Android will therefore not look it up.).
+For example, in Chinese, only the `other` quantity is used, so even if you provide translations for `zero` and `one`, these strings will *not* be returned when `getQuantityString()` is called, even with `0` or `1`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_comments&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="4"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedQuantity"
+        severity="Warning"
+        message="For language &quot;zh&quot; (Chinese) the following quantities are not relevant: one"
+        category="Correctness:Messages"
+        priority="3"
+        summary="Checks for quantity string translations which are not used in this language"
+        explanation="Android defines a number of different quantity strings, such as `zero`, `one`, `few` and `many`. However, many languages do not distinguish grammatically between all these different quantities.
+
+This lint check looks at the quantity strings defined for each translation and flags any quantity strings that are unused (because the language does not make that quantity distinction, and Android will therefore not look it up.).
+For example, in Chinese, only the `other` quantity is used, so even if you provide translations for `zero` and `one`, these strings will *not* be returned when `getQuantityString()` is called, even with `0` or `1`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_comments&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-zh-rTW/strings.xml"
+            line="4"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedQuantity"
+        severity="Warning"
+        message="For language &quot;zh&quot; (Chinese) the following quantities are not relevant: one"
+        category="Correctness:Messages"
+        priority="3"
+        summary="Checks for quantity string translations which are not used in this language"
+        explanation="Android defines a number of different quantity strings, such as `zero`, `one`, `few` and `many`. However, many languages do not distinguish grammatically between all these different quantities.
+
+This lint check looks at the quantity strings defined for each translation and flags any quantity strings that are unused (because the language does not make that quantity distinction, and Android will therefore not look it up.).
+For example, in Chinese, only the `other` quantity is used, so even if you provide translations for `zero` and `one`, these strings will *not* be returned when `getQuantityString()` is called, even with `0` or `1`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_subscribers&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-zh-rTW/strings.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedQuantity"
+        severity="Warning"
+        message="For language &quot;ru&quot; (Russian) the following quantities are not relevant: few"
+        category="Correctness:Messages"
+        priority="3"
+        summary="Checks for quantity string translations which are not used in this language"
+        explanation="Android defines a number of different quantity strings, such as `zero`, `one`, `few` and `many`. However, many languages do not distinguish grammatically between all these different quantities.
+
+This lint check looks at the quantity strings defined for each translation and flags any quantity strings that are unused (because the language does not make that quantity distinction, and Android will therefore not look it up.).
+For example, in Chinese, only the `other` quantity is used, so even if you provide translations for `zero` and `one`, these strings will *not* be returned when `getQuantityString()` is called, even with `0` or `1`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_subscribers&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="9"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedQuantity"
+        severity="Warning"
+        message="For language &quot;zh&quot; (Chinese) the following quantities are not relevant: one"
+        category="Correctness:Messages"
+        priority="3"
+        summary="Checks for quantity string translations which are not used in this language"
+        explanation="Android defines a number of different quantity strings, such as `zero`, `one`, `few` and `many`. However, many languages do not distinguish grammatically between all these different quantities.
+
+This lint check looks at the quantity strings defined for each translation and flags any quantity strings that are unused (because the language does not make that quantity distinction, and Android will therefore not look it up.).
+For example, in Chinese, only the `other` quantity is used, so even if you provide translations for `zero` and `one`, these strings will *not* be returned when `getQuantityString()` is called, even with `0` or `1`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_articles&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-zh-rTW/strings.xml"
+            line="12"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedQuantity"
+        severity="Warning"
+        message="For language &quot;ru&quot; (Russian) the following quantities are not relevant: few"
+        category="Correctness:Messages"
+        priority="3"
+        summary="Checks for quantity string translations which are not used in this language"
+        explanation="Android defines a number of different quantity strings, such as `zero`, `one`, `few` and `many`. However, many languages do not distinguish grammatically between all these different quantities.
+
+This lint check looks at the quantity strings defined for each translation and flags any quantity strings that are unused (because the language does not make that quantity distinction, and Android will therefore not look it up.).
+For example, in Chinese, only the `other` quantity is used, so even if you provide translations for `zero` and `one`, these strings will *not* be returned when `getQuantityString()` is called, even with `0` or `1`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_articles&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="14"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedQuantity"
+        severity="Warning"
+        message="For language &quot;zh&quot; (Chinese) the following quantities are not relevant: one"
+        category="Correctness:Messages"
+        priority="3"
+        summary="Checks for quantity string translations which are not used in this language"
+        explanation="Android defines a number of different quantity strings, such as `zero`, `one`, `few` and `many`. However, many languages do not distinguish grammatically between all these different quantities.
+
+This lint check looks at the quantity strings defined for each translation and flags any quantity strings that are unused (because the language does not make that quantity distinction, and Android will therefore not look it up.).
+For example, in Chinese, only the `other` quantity is used, so even if you provide translations for `zero` and `one`, these strings will *not* be returned when `getQuantityString()` is called, even with `0` or `1`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_ideas&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-zh-rTW/strings.xml"
+            line="16"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedQuantity"
+        severity="Warning"
+        message="For language &quot;ru&quot; (Russian) the following quantities are not relevant: few"
+        category="Correctness:Messages"
+        priority="3"
+        summary="Checks for quantity string translations which are not used in this language"
+        explanation="Android defines a number of different quantity strings, such as `zero`, `one`, `few` and `many`. However, many languages do not distinguish grammatically between all these different quantities.
+
+This lint check looks at the quantity strings defined for each translation and flags any quantity strings that are unused (because the language does not make that quantity distinction, and Android will therefore not look it up.).
+For example, in Chinese, only the `other` quantity is used, so even if you provide translations for `zero` and `one`, these strings will *not* be returned when `getQuantityString()` is called, even with `0` or `1`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_ideas&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="19"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedQuantity"
+        severity="Warning"
+        message="For language &quot;zh&quot; (Chinese) the following quantities are not relevant: one"
+        category="Correctness:Messages"
+        priority="3"
+        summary="Checks for quantity string translations which are not used in this language"
+        explanation="Android defines a number of different quantity strings, such as `zero`, `one`, `few` and `many`. However, many languages do not distinguish grammatically between all these different quantities.
+
+This lint check looks at the quantity strings defined for each translation and flags any quantity strings that are unused (because the language does not make that quantity distinction, and Android will therefore not look it up.).
+For example, in Chinese, only the `other` quantity is used, so even if you provide translations for `zero` and `one`, these strings will *not* be returned when `getQuantityString()` is called, even with `0` or `1`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_people&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-zh-rTW/strings.xml"
+            line="20"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedQuantity"
+        severity="Warning"
+        message="For language &quot;ru&quot; (Russian) the following quantities are not relevant: few"
+        category="Correctness:Messages"
+        priority="3"
+        summary="Checks for quantity string translations which are not used in this language"
+        explanation="Android defines a number of different quantity strings, such as `zero`, `one`, `few` and `many`. However, many languages do not distinguish grammatically between all these different quantities.
+
+This lint check looks at the quantity strings defined for each translation and flags any quantity strings that are unused (because the language does not make that quantity distinction, and Android will therefore not look it up.).
+For example, in Chinese, only the `other` quantity is used, so even if you provide translations for `zero` and `one`, these strings will *not* be returned when `getQuantityString()` is called, even with `0` or `1`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_people&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="24"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedQuantity"
+        severity="Warning"
+        message="For language &quot;zh&quot; (Chinese) the following quantities are not relevant: one"
+        category="Correctness:Messages"
+        priority="3"
+        summary="Checks for quantity string translations which are not used in this language"
+        explanation="Android defines a number of different quantity strings, such as `zero`, `one`, `few` and `many`. However, many languages do not distinguish grammatically between all these different quantities.
+
+This lint check looks at the quantity strings defined for each translation and flags any quantity strings that are unused (because the language does not make that quantity distinction, and Android will therefore not look it up.).
+For example, in Chinese, only the `other` quantity is used, so even if you provide translations for `zero` and `one`, these strings will *not* be returned when `getQuantityString()` is called, even with `0` or `1`."
+        url="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        urls="http://developer.android.com/guide/topics/resources/string-resource.html#Plurals"
+        errorLine1="    &lt;plurals name=&quot;uv_number_of_subscribers_format&quot;>"
+        errorLine2="    ^">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-zh-rTW/strings.xml"
+            line="24"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="AllowBackup"
+        severity="Warning"
+        message="Should explicitly set android:allowBackup to true or false (it&apos;s true by default, and that can have some security implications for the application&apos;s data)"
+        category="Security"
+        priority="3"
+        summary="Ensure that allowBackup is explicitly set in the application&apos;s manifest"
+        explanation="The allowBackup attribute determines if an application&apos;s data can be backed up and restored. It is documented at http://developer.android.com/reference/android/R.attr.html#allowBackup
+
+By default, this flag is set to `true`. When this flag is set to `true`, application data can be backed up and restored by the user using `adb backup` and `adb restore`.
+
+This may have security consequences for an application. `adb backup` allows users who have enabled USB debugging to copy application data off of the device. Once backed up, all application data can be read by the user. `adb restore` allows creation of application data from a source specified by the user. Following a restore, applications should not assume that the data, file permissions, and directory permissions were created by the application itself.
+
+Setting `allowBackup=&quot;false&quot;` opts an application out of both backup and restore.
+
+To fix this warning, decide whether your application should support backup, and explicitly set `android:allowBackup=(true|false)&quot;`"
+        url="http://developer.android.com/reference/android/R.attr.html#allowBackup"
+        urls="http://developer.android.com/reference/android/R.attr.html#allowBackup"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/AndroidManifest.xml"/>
+    </issue>
+
+    <issue
+        id="InefficientWeight"
+        severity="Warning"
+        message="Use a layout_width of 0dp instead of match_parent for better performance"
+        category="Performance"
+        priority="3"
+        summary="Looks for inefficient weight declarations in LinearLayouts"
+        explanation="When only a single widget in a LinearLayout defines a weight, it is more efficient to assign a width/height of `0dp` to it since it will absorb all the remaining space anyway. With a declared width/height of `0dp` it does not have to measure its own size first."
+        errorLine1="            android:layout_width=&quot;match_parent&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_signin_layout.xml"
+            line="33"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        severity="Warning"
+        message="Possible overdraw: Root element paints background #20000000 with a theme that also paints a background (inferred theme is @android:style/Theme.Holo)"
+        category="Performance"
+        priority="3"
+        summary="Looks for overdraw issues (where a view is painted only to be fully painted over)"
+        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.
+
+NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.
+
+If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.
+
+Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead.
+"
+        errorLine1="    android:background=&quot;#20000000&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_divider.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.dimen.activity_horizontal_margin appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;dimen name=&quot;activity_horizontal_margin&quot;>128dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-sw720dp-land/dimens.xml"
+            line="7"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.plurals.uv_people appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;plurals name=&quot;uv_people&quot;>"
+        errorLine2="             ~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values/strings.xml"
+            line="20"
+            column="14"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-cs/strings.xml"
+            line="20"
+            column="14"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-de/strings.xml"
+            line="20"
+            column="14"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-en/strings.xml"
+            line="20"
+            column="14"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-fr/strings.xml"
+            line="24"
+            column="14"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-hr/strings.xml"
+            line="19"
+            column="14"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-nl/strings.xml"
+            line="20"
+            column="14"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-pt/strings.xml"
+            line="20"
+            column="14"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="24"
+            column="14"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-zh-rTW/strings.xml"
+            line="20"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.uv_title_idea appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;uv_title_idea&quot;>Idea&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values/strings.xml"
+            line="39"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-cs/strings.xml"
+            line="40"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-de/strings.xml"
+            line="39"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-en/strings.xml"
+            line="39"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-fr/strings.xml"
+            line="44"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-hr/strings.xml"
+            line="37"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-nl/strings.xml"
+            line="39"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-pt/strings.xml"
+            line="39"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="40"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-zh-rTW/strings.xml"
+            line="39"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.uv_remove_votes appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;uv_remove_votes&quot;>Remove Votes&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values/strings.xml"
+            line="49"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-cs/strings.xml"
+            line="50"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-de/strings.xml"
+            line="49"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-en/strings.xml"
+            line="49"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-fr/strings.xml"
+            line="54"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-hr/strings.xml"
+            line="47"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-nl/strings.xml"
+            line="49"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-pt/strings.xml"
+            line="49"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="50"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-zh-rTW/strings.xml"
+            line="49"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.uv_none_of_these_help appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;uv_none_of_these_help&quot;>None of these help&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values/strings.xml"
+            line="55"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-cs/strings.xml"
+            line="56"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-de/strings.xml"
+            line="55"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-en/strings.xml"
+            line="55"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-fr/strings.xml"
+            line="60"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-hr/strings.xml"
+            line="53"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-nl/strings.xml"
+            line="55"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-pt/strings.xml"
+            line="55"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="56"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-zh-rTW/strings.xml"
+            line="55"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.uv_article appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;uv_article&quot;>Article&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values/strings.xml"
+            line="62"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-cs/strings.xml"
+            line="63"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-de/strings.xml"
+            line="62"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-en/strings.xml"
+            line="62"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-fr/strings.xml"
+            line="67"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-hr/strings.xml"
+            line="60"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-nl/strings.xml"
+            line="62"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-pt/strings.xml"
+            line="62"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="63"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-zh-rTW/strings.xml"
+            line="62"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.uv_idea appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;uv_idea&quot;>Idea&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values/strings.xml"
+            line="63"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-cs/strings.xml"
+            line="64"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-de/strings.xml"
+            line="63"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-en/strings.xml"
+            line="63"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-fr/strings.xml"
+            line="68"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-hr/strings.xml"
+            line="61"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-nl/strings.xml"
+            line="63"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-pt/strings.xml"
+            line="63"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="64"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-zh-rTW/strings.xml"
+            line="63"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.uv_suggestion_instant_answer_question appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;uv_suggestion_instant_answer_question&quot;>Is this idea helpful?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values/strings.xml"
+            line="67"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-cs/strings.xml"
+            line="68"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-de/strings.xml"
+            line="67"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-en/strings.xml"
+            line="67"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-fr/strings.xml"
+            line="72"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-hr/strings.xml"
+            line="65"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-nl/strings.xml"
+            line="67"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-pt/strings.xml"
+            line="67"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="68"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-zh-rTW/strings.xml"
+            line="67"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.uv_new_comment appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;uv_new_comment&quot;>New comment&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values/strings.xml"
+            line="81"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-cs/strings.xml"
+            line="82"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-de/strings.xml"
+            line="81"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-en/strings.xml"
+            line="81"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-fr/strings.xml"
+            line="85"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-hr/strings.xml"
+            line="79"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-nl/strings.xml"
+            line="81"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-pt/strings.xml"
+            line="81"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="82"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-zh-rTW/strings.xml"
+            line="81"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.uv_status_format appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;uv_status_format&quot;>Status: %1$s&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values/strings.xml"
+            line="84"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-cs/strings.xml"
+            line="85"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-de/strings.xml"
+            line="84"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-en/strings.xml"
+            line="84"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-fr/strings.xml"
+            line="88"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-hr/strings.xml"
+            line="82"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-nl/strings.xml"
+            line="84"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-pt/strings.xml"
+            line="84"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="85"
+            column="13"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-zh-rTW/strings.xml"
+            line="84"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.string.uv_number_of_subscribers_format appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;uv_number_of_subscribers_format&quot;>%1$s хотят этого&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/values-ru/strings.xml"
+            line="99"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.drawable.uv_admin_response appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/drawable/uv_admin_response.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.layout.uv_list_content appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_list_content.xml"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        severity="Warning"
+        message="This ScrollView layout or its ViewFlipper parent is useless"
+        category="Performance"
+        priority="2"
+        summary="Checks whether a parent layout can be removed."
+        explanation="A layout with children that has no siblings, is not a scrollview or a root layout, and does not have a background, can be removed and have its children moved directly into the parent for a flatter and more efficient layout hierarchy."
+        errorLine1="    &lt;ScrollView"
+        errorLine2="    ^"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_article_layout.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        severity="Warning"
+        message="This TableRow layout or its TableLayout parent is useless"
+        category="Performance"
+        priority="2"
+        summary="Checks whether a parent layout can be removed."
+        explanation="A layout with children that has no siblings, is not a scrollview or a root layout, and does not have a background, can be removed and have its children moved directly into the parent for a flatter and more efficient layout hierarchy."
+        errorLine1="                        &lt;TableRow>"
+        errorLine2="                        ^"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_article_layout.xml"
+            line="55"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="IconDipSize"
+        severity="Warning"
+        message="The image uv_comment.png varies significantly in its density-independent (dip) size across the various density versions: drawable-xhdpi/uv_comment.png: 20x12 dp (39x24 px), drawable-mdpi/uv_comment.png: 20x12 dp (20x12 px), drawable-hdpi/uv_comment.png: 17x11 dp (26x16 px), drawable-ldpi/uv_comment.png: 17x11 dp (13x8 px)"
+        category="Usability:Icons"
+        priority="5"
+        summary="Ensures that icons across densities provide roughly the same density-independent size"
+        explanation="Checks the all icons which are provided in multiple densities, all compute to roughly the same density-independent pixel (`dip`) size. This catches errors where images are either placed in the wrong folder, or icons are changed to new sizes but some folders are forgotten.">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/drawable-ldpi/uv_comment.png"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/drawable-hdpi/uv_comment.png"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/drawable-mdpi/uv_comment.png"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/drawable-xhdpi/uv_comment.png"/>
+    </issue>
+
+    <issue
+        id="SmallSp"
+        severity="Warning"
+        message="Avoid using sizes smaller than 12sp: 11sp"
+        category="Usability"
+        priority="4"
+        summary="Looks for text sizes that are too small"
+        explanation="Avoid using sizes smaller than 12sp."
+        errorLine1="        android:textSize=&quot;11sp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_idea_dialog.xml"
+            line="17"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SmallSp"
+        severity="Warning"
+        message="Avoid using sizes smaller than 12sp: 11sp"
+        category="Usability"
+        priority="4"
+        summary="Looks for text sizes that are too small"
+        explanation="Avoid using sizes smaller than 12sp."
+        errorLine1="        android:textSize=&quot;11sp&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_idea_dialog_header.xml"
+            line="41"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SmallSp"
+        severity="Warning"
+        message="Avoid using sizes smaller than 12sp: 11sp"
+        category="Usability"
+        priority="4"
+        summary="Looks for text sizes that are too small"
+        explanation="Avoid using sizes smaller than 12sp."
+        errorLine1="                android:textSize=&quot;11sp&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_idea_dialog_header.xml"
+            line="74"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="SmallSp"
+        severity="Warning"
+        message="Avoid using sizes smaller than 12sp: 10sp"
+        category="Usability"
+        priority="4"
+        summary="Looks for text sizes that are too small"
+        explanation="Avoid using sizes smaller than 12sp."
+        errorLine1="        android:textSize=&quot;10sp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_idea_help_item.xml"
+            line="11"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SmallSp"
+        severity="Warning"
+        message="Avoid using sizes smaller than 12sp: 10sp"
+        category="Usability"
+        priority="4"
+        summary="Looks for text sizes that are too small"
+        explanation="Avoid using sizes smaller than 12sp."
+        errorLine1="      android:textSize=&quot;10sp&quot; />"
+        errorLine2="      ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_instant_answer_item.xml"
+            line="74"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="SmallSp"
+        severity="Warning"
+        message="Avoid using sizes smaller than 12sp: 10sp"
+        category="Usability"
+        priority="4"
+        summary="Looks for text sizes that are too small"
+        explanation="Avoid using sizes smaller than 12sp."
+        errorLine1="                android:textSize=&quot;10sp&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_suggestion_item.xml"
+            line="44"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="SmallSp"
+        severity="Warning"
+        message="Avoid using sizes smaller than 12sp: 10sp"
+        category="Usability"
+        priority="4"
+        summary="Looks for text sizes that are too small"
+        explanation="Avoid using sizes smaller than 12sp."
+        errorLine1="                android:textSize=&quot;10sp&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_suggestion_item.xml"
+            line="61"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="AlwaysShowAction"
+        severity="Warning"
+        message="Prefer &quot;ifRoom&quot; instead of &quot;always&quot;"
+        category="Usability"
+        priority="3"
+        summary="Checks for uses of `showAsAction=&quot;always&quot;` and suggests `showAsAction=&quot;ifRoom&quot;` instead"
+        explanation="Using `showAsAction=&quot;always&quot;` in menu XML, or `MenuItem.SHOW_AS_ACTION_ALWAYS` in Java code is usually a deviation from the user interface style guide.Use `ifRoom` or the corresponding `MenuItem.SHOW_AS_ACTION_IF_ROOM` instead.
+
+If `always` is used sparingly there are usually no problems and behavior is roughly equivalent to `ifRoom` but with preference over other `ifRoom` items. Using it more than twice in the same menu is a bad idea.
+
+This check looks for menu XML files that contain more than two `always` actions, or some `always` actions and no `ifRoom` actions. In Java code, it looks for projects that contain references to `MenuItem.SHOW_AS_ACTION_ALWAYS` and no references to `MenuItem.SHOW_AS_ACTION_IF_ROOM`."
+        url="http://developer.android.com/design/patterns/actionbar.html"
+        urls="http://developer.android.com/design/patterns/actionbar.html"
+        errorLine1="          uv:showAsAction=&quot;always|collapseActionView&quot;"
+        errorLine2="          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/menu/uv_portal.xml"
+            line="7"
+            column="11"/>
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/menu/uv_portal.xml"
+            line="11"
+            column="11"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="[Accessibility] Missing contentDescription attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Ensures that image widgets provide a contentDescription"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.
+
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.
+
+Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
+        errorLine1="        &lt;ImageView"
+        errorLine2="        ^"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_comment_item.xml"
+            line="56"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="[Accessibility] Missing contentDescription attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Ensures that image widgets provide a contentDescription"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.
+
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.
+
+Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
+        errorLine1="            &lt;ImageView"
+        errorLine2="            ^"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_idea_dialog_header.xml"
+            line="158"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="[Accessibility] Missing contentDescription attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Ensures that image widgets provide a contentDescription"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.
+
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.
+
+Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
+        errorLine1="        &lt;ImageView"
+        errorLine2="        ^"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_idea_dialog_header.xml"
+            line="203"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="[Accessibility] Missing contentDescription attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Ensures that image widgets provide a contentDescription"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.
+
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.
+
+Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
+        errorLine1="  &lt;ImageView"
+        errorLine2="  ^"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_instant_answer_item.xml"
+            line="14"
+            column="3"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="[Accessibility] Missing contentDescription attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Ensures that image widgets provide a contentDescription"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.
+
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.
+
+Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
+        errorLine1="            &lt;ImageView"
+        errorLine2="            ^"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_suggestion_item.xml"
+            line="31"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Evan Hamilton&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                    android:text=&quot;Evan Hamilton&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_comment_item.xml"
+            line="34"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Feb 12, 2013&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                    android:text=&quot;Feb 12, 2013&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_comment_item.xml"
+            line="41"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;We are looking into this. Please check back and leave additional comments and we will be in touch!&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;We are looking into this. Please check back and leave additional comments and we will be in touch!&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_comment_item.xml"
+            line="51"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Started&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;Started&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_idea_dialog.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Make the app more Android friendly&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;Make the app more Android friendly&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_idea_dialog_header.xml"
+            line="17"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Badges are cool, and we&apos;d like to give them out to our active users.&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;Badges are cool, and we&amp;apos;d like to give them out to our active users.&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_idea_dialog_header.xml"
+            line="27"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Posted by Anonymous on Jul 21, 2011&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;Posted by Anonymous on Jul 21, 2011&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_idea_dialog_header.xml"
+            line="39"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;12 people want this&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;12 people want this&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_idea_dialog_header.xml"
+            line="72"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;admin response: started&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;admin response: started&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_idea_dialog_header.xml"
+            line="100"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Evan Hamilton&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                        android:text=&quot;Evan Hamilton&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_idea_dialog_header.xml"
+            line="136"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Feb 12, 2013&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                        android:text=&quot;Feb 12, 2013&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_idea_dialog_header.xml"
+            line="143"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;We are looking into this. Please check back and leave additional comments and we will be in touch!&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                    android:text=&quot;We are looking into this. Please check back and leave additional comments and we will be in touch!&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_idea_dialog_header.xml"
+            line="153"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;14 comments&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;14 comments&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_idea_dialog_header.xml"
+            line="176"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Medium Text&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="    android:text=&quot;Medium Text&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_instant_answer_item.xml"
+            line="35"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Small Text&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="     android:text=&quot;Small Text&quot;"
+        errorLine2="     ~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_instant_answer_item.xml"
+            line="48"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;UNDER REVIEW&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="      android:text=&quot;UNDER REVIEW&quot;"
+        errorLine2="      ~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_instant_answer_item.xml"
+            line="72"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Android SDK v1.0&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;Android SDK v1.0&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_powered_by_item.xml"
+            line="23"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Suggestion Title&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;Suggestion Title&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_suggestion_item.xml"
+            line="22"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;12&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;12&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_suggestion_item.xml"
+            line="41"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;UNDER REVIEW&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;UNDER REVIEW&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="/Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-android-sdk/UserVoiceSDK/res/layout/uv_suggestion_item.xml"
+            line="59"
+            column="17"/>
+    </issue>
+
+</issues>
